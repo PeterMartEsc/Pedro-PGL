@@ -7,12 +7,9 @@
     <script src="calculadora.js"></script>
 </head>
 <body>
-    
-    <div class="principal">
-        <table class="tabla">
-            <label for="">Primer numero</label>
+    <label for="">Primer numero</label>
             <br>
-            <input type="text" id="numero1">
+            <input type="number" id="numero1">
             <br>
             <select name="seleccionar" id="operacion">
                 <option value="sumar">+</option>
@@ -23,11 +20,12 @@
             <br>
             <label for="">Segundo numero</label>
             <br>
-            <input type="text" id="numero2">
+            <input type="number" id="numero2">
             <br>
-            <button id="boton">Operar</button>
+            <button id="boton" onclick="calcular()">Operar</button>
             <br>
-        </table>
+    <div class="principal">
+        <p id="resultado"></p>
     </div>
 
 </body>

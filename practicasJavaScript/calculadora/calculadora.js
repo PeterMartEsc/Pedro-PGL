@@ -1,31 +1,27 @@
 const DOM = {
-    tabla : document.getElementById("tabla"),
+    result : document.getElementById("resultado"),
     input1 : document.getElementById("numero1"),
     input2 : document.getElementById("numero2"),
     operacion : document.getElementById("operacion"),
     operar : document.getElementById("boton")
 }
 
-function operar(){
-    let resultado = "";
-
-    let fila = document.createElement("tr");
-    let columna = document.createElement("td");
+function calcular(){
+    DOM.result.innerHTML="";
 
     switch(DOM.operacion.value) {
         case "sumar":
-          // code block
-            break;
+          DOM.result.innerHTML = parseInt(DOM.input1.value) + parseInt(DOM.input2.value);
+          break;
         case "restar":
-          // code block
-            break;
+          DOM.result.innerHTML = (DOM.input1.value) - (DOM.input2.value);;
+          break;
         case "multiplicar":
-          // code block
-            break;
+          DOM.result.innerHTML = (DOM.input1.value) * (DOM.input2.value);;
+          break;
         case "dividir":
-          // code block
-            break;
+          DOM.result.innerHTML = (DOM.input1.value) / (DOM.input2.value);;
+          break;
     }
-
-    DOM.tabla.appendChild();
+    
 }
