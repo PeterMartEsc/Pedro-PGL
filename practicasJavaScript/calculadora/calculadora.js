@@ -1,27 +1,35 @@
 const DOM = {
     result : document.getElementById("resultado"),
     input1 : document.getElementById("numero1"),
-    input2 : document.getElementById("numero2"),
     operacion : document.getElementById("operacion"),
+    input2 : document.getElementById("numero2"),
     operar : document.getElementById("boton")
 }
 
 function calcular(){
     DOM.result.innerHTML="";
 
+    let num1 = parseInt(DOM.input1.value);
+    let num2 = parseInt(DOM.input2.value);
+    
+    let resultado;
+
     switch(DOM.operacion.value) {
         case "sumar":
-          DOM.result.innerHTML = parseInt(DOM.input1.value) + parseInt(DOM.input2.value);
+          resultado = num1 + num2;
           break;
         case "restar":
-          DOM.result.innerHTML = (DOM.input1.value) - (DOM.input2.value);;
+          resultado = num1 - num2;
           break;
         case "multiplicar":
-          DOM.result.innerHTML = (DOM.input1.value) * (DOM.input2.value);;
+          resultado = num1 * num2;
           break;
         case "dividir":
-          DOM.result.innerHTML = (DOM.input1.value) / (DOM.input2.value);;
+          resultado = num1 / num2;
           break;
+        default:
+          resultado = "Operacion no valida";
     }
-    
+
+    DOM.result.innerHTML = resultado;
 }

@@ -4,29 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculadora</title>
-    <script src="calculadora.js"></script>
 </head>
 <body>
     <label for="">Primer numero</label>
-            <br>
-            <input type="number" id="numero1">
-            <br>
-            <select name="seleccionar" id="operacion">
-                <option value="sumar">+</option>
-                <option value="restar">-</option>
-                <option value="multiplicar">*</option>
-                <option value="dividir">/</option>
-            </select>
-            <br>
-            <label for="">Segundo numero</label>
-            <br>
-            <input type="number" id="numero2">
-            <br>
-            <button id="boton" onclick="calcular()">Operar</button>
-            <br>
-    <div class="principal">
-        <p id="resultado"></p>
-    </div>
+        <br>
+    <input type="number" id="numero1">
+        <br>
+    <select name="seleccionar" id="operacion">
+        <option value="sumar">+</option>
+        <option value="restar">-</option>
+        <option value="multiplicar">*</option>
+        <option value="dividir">/</option>
+    </select>
+        <br>
+    <label for="">Segundo numero</label>
+        <br>
+    <input type="number" id="numero2">
+        <br>
+    <button id="boton" onclick="calcular()">Operar</button>
 
+    <div class="principal">
+        <p id="resultado">
+
+        </p>
+    </div>
+    <script src="calculadora.js"></script>
 </body>
 </html>
