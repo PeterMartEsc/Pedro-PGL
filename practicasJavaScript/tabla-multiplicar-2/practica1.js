@@ -1,38 +1,31 @@
-const DOM = {
+const DOM = {   //Mayuscula por que es const
     tabla : document.getElementById("tabla"),
     input : document.getElementById("numeroTabla"),
     boton : document.getElementById("boton")
 }
 
-function generarTabla(numero){
+function generarTabla(){
     let maximo = 10;
-    let content = "";
+    let resultado = "";
+
+    DOM.tabla.innerHTML="";
 
     for(let i = 1; i<= maximo; i++){
 
         let elFila = document.createElement("tr");
         let elCol = document.createElement("td");
-        elCol.innerHTML= numero + " * " + i + " = " + (i*numero);
+
+        resultado = i*DOM.input.value;
+
+        elCol.innerHTML= DOM.input.value + " * " + i + " = " + (resultado);
+        
         elFila.appendChild(elCol);
         DOM.tabla.appendChild(elFila);
     
     }
 }
 
-boton.addEventListener('click', () =>{
-
-    let valorAlmacenado = input.value;
-
-    if(valorAlmacenado === "" || valorAlmacenado == 2){
-        generarTabla(2);
-    }
-
-    generarTabla(valorAlmacenado);
-});
-
-generarTabla(2);
-
-
+boton.addEventListener("click", generarTabla());
 
 
 
