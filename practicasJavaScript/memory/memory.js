@@ -5,22 +5,31 @@ const DOM = {
 
 }
 
-let contenedor = document.createElement("div");
-contenedor.id="casilla";
-DOM.contenedorSup.appendChild(contenedor);
+
 
 
 function crearCasillas(){
     let maximo = 9;
     DOM.contenedorSup.innerHTML="";
-    
+
     for(let i = 1 ; i <= maximo; i++ ){
-    
-        let contenedor = document.createElement("div")
-        contenedor.className = "contenedor"+i;
+
+        let contenedor = document.createElement("div");
+        contenedor.id="casilla";
+        DOM.contenedorSup.appendChild(contenedor);
 
         //contenedor.innerHTML = ""+Math.round(1,9);
-        DOM.contenedorSup.appendChild(contenedor);
+    }
+
+
+    let arr = new int[maximo];
+    for(let i = 0; i<Math.floor(maximo/2);i++){
+
+        let numRandom = Math.round(Math.random(1,9));
+        
+        
+
+        
     }
 
 }
