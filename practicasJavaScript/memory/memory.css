@@ -1,15 +1,19 @@
-.contenedorSuperior {
-    display: grid;
+#contenedorSuperior {
+    /*display: grid;
     grid-template-rows: 100px 100px 100px;
-    grid-template-columns: 100px 100px 100px;
+    grid-template-columns: 100px 100px 100px;*/
     
+    margin: auto;
+    background-color: aquamarine;
+    min-width: 25rem;
+    max-width: 40rem;
 }
 
 /*grid-row-start: 1;
     grid-column-start: 1;
 
     grid-row-end: 2;
-    grid-column-end: 4;*/
+    grid-column-end: 4;
 
 .contenedor1{
     background-color: rgb(56, 207, 61);
@@ -65,3 +69,4 @@
     text-align: center;
 
 }
+*/
