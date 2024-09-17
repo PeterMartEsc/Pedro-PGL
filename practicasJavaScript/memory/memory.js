@@ -14,19 +14,21 @@ function crearCasillas(){
 
     for(let i = 1 ; i <= maximo; i++ ){
 
-        let contenedor = document.createElement("div");
-        contenedor.id="casilla";
-        DOM.contenedorSup.appendChild(contenedor);
+        let casilla = document.createElement("div");
+        casilla.id="casilla"+$i;
+        DOM.contenedorSup.appendChild(casilla);
 
-        //contenedor.innerHTML = ""+Math.round(1,9);
+        crearNumeroRandom();
     }
 
+}
+
+function crearNumeroRandom(){
+    let veces=1;
 
     let arr = new int[maximo];
-    for(let i = 0; i<Math.floor(maximo/2);i++){
 
-        let numRandom = Math.round(Math.random(1,9));
-        
+    for(let i = 1; i<Math.trunc(maximo/2);i++){
         
 
         
@@ -34,4 +36,11 @@ function crearCasillas(){
 
 }
 
+
+function crearNumeroRandom2(){
+    let maximo = 9;
+    let arrSet = new Set();
+
+    
+}
 
