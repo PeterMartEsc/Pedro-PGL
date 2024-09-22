@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="ahorcado.css">
+    <title>Ahorcado Juego</title>
+</head>
+<body>
+    <div class="contenedorPrincipal">
+        <div class="cabecera">
+            <p>Palabra a descubrir: </p>
+            <p id="resultado"></p>
+        </div>
+        <div class="cuerpo">
+            <canvas id="myCanvas" width="200" height="300"></canvas>
+            <p class="Mensajes">Mensajes:</p>
+            <textarea name="historialLetras" id="historialLetras"></textarea>
+        </div>
+        <div class="pie">
+            <p>Errores: </p>
+            <p id = "errores"></p>
+            <p>Apostar Letra: </p>
+            <input type="text">
+            <!--submit-->
+        </div>
+        <div id="hasPerdido"></div>
+    </div>
+</body>
+    <script src="ahorcado.js"></script>
+</html>
