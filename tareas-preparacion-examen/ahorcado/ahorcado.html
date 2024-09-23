@@ -8,34 +8,47 @@
 </head>
 <body>
     <div class="contenedorPrincipal">
+
         <div class="cabecera">
             <p>Palabra a descubrir: </p>
             <p id="resultado"></p>
         </div>
 
         <div class="cuerpo">
-            <canvas id="myCanvas" width="200" height="300"></canvas>
+            <canvas id="myCanvas" width="200" height="200"></canvas>
+
             <p class="Mensajes">Mensajes:</p>
             <textarea name="historialLetras" id="historialLetras"></textarea>
         </div>
         
         <div class="pie">
             <p>Errores: </p>
-            <p id = "errores"></p>
+            <p id = "errores">
+
+            </p>
+
             <p>Apostar Letra: </p>
             <input type="text" id="letraApostada">
-            <input type="submit">
+            <button id="boton" onclick="escribirLetra()">Enviar</button>
             <!--submit-->
         </div>
-        <div id="hasPerdido"></div>
+
+        <div id="resultadoFinal">
+
+        </div>
+
     </div>
 </body>
     <script src="ahorcado.js"></script>
 </html>
 
 <!--
-    1.-Crear el juego solo con la palabra e introducir letras
-    2.- Añadirle el historial de letras
-    3.- Añadir el canva
+    1.-Crear el juego solo con la palabra e introducir letras <- hecho
+    2.- Añadirle el historial de letras                       <- hecho
+    3.- Añadir el canva                                       <- hecho  
     4.- Añadir mensaje
+    5.- Añadirle estilo al css
+    6.- Hacer que no se mueva el imput para abajo al empezar con los fallos
+    7.- Añadir un botón para resetear el juego
+    8.- Que el ultimo canva se muestre
 -->

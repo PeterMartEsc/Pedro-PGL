@@ -1,13 +1,28 @@
+
 .contenedorPrincipal{
     background-color: aqua;
+    width: 700px;
+}
+
+.cabecera{
+    display: inline-block;
 }
 
 #resultado{
     color: blue;
+    
 }
 
-
-
-#hasPerdido{
+#errores {
     color: red;
+    height: 15px;
+}
+
+#resultadoFinal{
+    color:red
+}
+
+#historialLetras{
+    width: 130px; 
+    height: 180px;
 }
