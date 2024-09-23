@@ -12,16 +12,19 @@
             <p>Palabra a descubrir: </p>
             <p id="resultado"></p>
         </div>
+
         <div class="cuerpo">
             <canvas id="myCanvas" width="200" height="300"></canvas>
             <p class="Mensajes">Mensajes:</p>
             <textarea name="historialLetras" id="historialLetras"></textarea>
         </div>
+        
         <div class="pie">
             <p>Errores: </p>
             <p id = "errores"></p>
             <p>Apostar Letra: </p>
-            <input type="text">
+            <input type="text" id="letraApostada">
+            <input type="submit">
             <!--submit-->
         </div>
         <div id="hasPerdido"></div>
@@ -29,3 +32,10 @@
 </body>
     <script src="ahorcado.js"></script>
 </html>
+
+<!--
+    1.-Crear el juego solo con la palabra e introducir letras
+    2.- Añadirle el historial de letras
+    3.- Añadir el canva
+    4.- Añadir mensaje
+-->

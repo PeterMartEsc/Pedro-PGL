@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+</head>
+<body>
+    <canvas id="canvas" width="300px" height="300px"></canvas>
+
+    <script>
+        const DOM = {
+            canvas : document.getElementById("canvas"),
+        }
+
+
+        let ctx = DOM.canvas.getContext("2d");                  //Creas el canvas
+        ctx.clearRect(0,0, DOM.canvas.width,DOM.canvas.height); //Dimensiones del canvas
+
+        ctx.strokeStyle = "black";  //Color de la linea?
+        ctx.lineWidth = 4;
+
+        ctx.beginPath();            //Empieza a dibujar
+        
+        
+    </script>
+</body>
+</html>

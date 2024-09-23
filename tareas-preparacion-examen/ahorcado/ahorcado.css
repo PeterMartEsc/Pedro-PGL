@@ -1,10 +1,12 @@
-*{
+.contenedorPrincipal{
     background-color: aqua;
 }
 
 #resultado{
     color: blue;
 }
+
+
 
 #hasPerdido{
     color: red;
