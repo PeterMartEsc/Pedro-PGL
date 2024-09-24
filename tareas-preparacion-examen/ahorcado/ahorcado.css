@@ -1,21 +1,28 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
 
 .contenedorPrincipal{
     background-color: aqua;
-    width: 700px;
+    width: 550px;
+    padding: 20px;
+    border: solid 1px;
 }
 
-.cabecera{
+p, .pieApostar, .pieErrores{
     display: inline-block;
 }
 
+
 #resultado{
     color: blue;
-    
 }
 
 #errores {
     color: red;
-    height: 15px;
+    width: 130px;
 }
 
 #resultadoFinal{
@@ -23,6 +30,6 @@
 }
 
 #historialLetras{
-    width: 130px; 
+    width: 150px; 
     height: 180px;
 }

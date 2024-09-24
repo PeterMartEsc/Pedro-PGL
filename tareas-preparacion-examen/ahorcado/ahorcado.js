@@ -30,7 +30,12 @@ function escribirHuecos(){
 
 function escribirLetra(){
 
-    let letra = (DOM.letraApostada.value).toLowerCase();
+    let letra = (DOM.letraApostada.value).toLowerCase().trim();
+
+    if (letra === "") {
+        alert("Por favor, introduce una letra.");   //Envía una alerta si no se introduce ninguna letra, así no te deja seguir usando el botón hasta que la aceptes
+        return;
+    }
 
     if (palabraElegida.includes(letra)) {
 
@@ -41,39 +46,43 @@ function escribirLetra(){
                 arrayEspacios[i] = letra;
             }
         }
+        
+        //Escribe en el textarea de historial
+        DOM.historialLetras.value += "Letra correcta: " + letra + ", ";
+        //Actualizamos el resultado
         DOM.resultado.innerHTML = arrayEspacios.join(" ");
-
         //Limpia el hueco de la letra introducida
         DOM.letraApostada.value = "";
 
     } else {
         // Si la letra no está en la palabra elegida, la añadimos a los fallos
-        if (!arrayFallos.includes(letra)) {
-
-            arrayFallos.push(letra);
         
-            
-            
+        if (!arrayFallos.includes(letra)) {     //Comprueba que no está ya en el array de fallos
+
+            //Metemos la letra en el array de fallos
+            arrayFallos.push(letra);
+            //Llama al crear canva
+            canvasAhorcado();
             
             // Actualizamos la lista de errores
             DOM.errores.innerHTML = arrayFallos.join(", ");
-            
+            //Escribe en el textarea de historial
+            DOM.historialLetras.value += "Letra errónea: " + letra + ", ";
             //Limpia el hueco de la letra introducida
             DOM.letraApostada.value = "";
-            DOM.historialLetras.value += "Letra errónea: " + letra + ", ";
-            
-            //Llama al crear canva
-            canvasAhorcado();
+
+            if (arrayFallos.length === 8) {
+                let textoFinal = "Has perdido! La palabra era: " + palabraElegida;
+                DOM.resultadoFinal.innerHTML = textoFinal;
+                DOM.boton.style.display = "none";
+                return;     //Para que salga de la funcion
+            }
         }
     }
 
     // Comprobamos si la palabra está completa
     if (!arrayEspacios.includes("_")) {
         let textoFinal = "¡Has ganado! La palabra era: " + palabraElegida;
-        DOM.resultadoFinal.innerHTML = textoFinal;
-        DOM.boton.style.display = "none";
-    } else if (arrayFallos.length === 8) {
-        let textoFinal = "Has perdido! La palabra era: " + palabraElegida;
         DOM.resultadoFinal.innerHTML = textoFinal;
         DOM.boton.style.display = "none";
     }
@@ -83,32 +92,38 @@ function escribirLetra(){
 //Diseño del canva
 function canvasAhorcado(){
 
-    switch(arrayFallos.length){
+    let errores = arrayFallos.length;
+
+    if((errores > 0 && errores <= 8)){
     
-        case 1:
-            canvas1();
-            break;
-        case 2:
-            canvas2();
-            break;
-        case 3:
-            canvas3();
-            break;
-        case 4:
-            canvas4();
-            break;
-        case 5:
-            canvas5();
-            break;
-        case 6:
-            canvas6();
-            break;
-        case 7:
-            canvas7();
-            break;
-        case 8:
-            canva8();
-            break;
+        switch(errores){
+        
+            case 1:
+                canvas1();
+                break;
+            case 2:
+                canvas2();
+                break;
+            case 3:
+                canvas3();
+                break;
+            case 4:
+                canvas4();
+                break;
+            case 5:
+                canvas5();
+                break;
+            case 6:
+                canvas6();
+                break;
+            case 7:
+                canvas7();
+                break;
+            case 8:
+                canva8();
+                break;
+        }
+
     }
 
 }

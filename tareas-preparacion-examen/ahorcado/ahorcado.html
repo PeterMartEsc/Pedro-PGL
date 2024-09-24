@@ -17,20 +17,23 @@
         <div class="cuerpo">
             <canvas id="myCanvas" width="200" height="200"></canvas>
 
-            <p class="Mensajes">Mensajes:</p>
+            <p class="mensajes">Mensajes:</p>
             <textarea name="historialLetras" id="historialLetras"></textarea>
         </div>
         
-        <div class="pie">
+        <div class="pieErrores">
             <p>Errores: </p>
             <p id = "errores">
-
             </p>
 
-            <p>Apostar Letra: </p>
+            
+            <!--submit-->
+        </div>
+
+        <div class="pieApostar">
+            <p class="apostar">Apostar Letra: </p>
             <input type="text" id="letraApostada">
             <button id="boton" onclick="escribirLetra()">Enviar</button>
-            <!--submit-->
         </div>
 
         <div id="resultadoFinal">
