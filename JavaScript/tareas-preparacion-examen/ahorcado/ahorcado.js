@@ -120,7 +120,7 @@ function canvasAhorcado(){
                 canvas7();
                 break;
             case 8:
-                canva8();
+                canvas8();
                 break;
         }
 
@@ -419,6 +419,8 @@ function canvas8(){
 
     ctx.moveTo(145, 107);
     ctx.lineTo(125, 127); //Brazo 1
+
+    ctx.stroke();
 
     ctx.moveTo(145, 107);
     ctx.lineTo(165, 127); //Brazo 2
