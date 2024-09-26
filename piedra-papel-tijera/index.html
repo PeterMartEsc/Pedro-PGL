@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Piedra Papel Tijeras</title>
+</head>
+<body>
+    <div class="contenedorPrincipal">
+        <div class="header">        
+            <h1>Elija uno: </h1>
+        </div>
+        <div class="body">
+            <button id="boton" class="piedra" onclick="eleccionPiedra()">Piedra</button>
+            <button id="boton" onclick="eleccionPapel()">Papel</button>
+            <button id="boton" onclick="eleccionTijeras()">Tijeras</button>
+        </div>
+        <div class="contenedorResultado">
+            <p id="resultado">
+
+            </p>
+        </div>
+    </div>
+</body>
+<script src="index.js"></script>
+</html>

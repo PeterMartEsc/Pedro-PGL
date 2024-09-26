@@ -1,0 +1,15 @@
+div.contenedorPrincipal{
+    background-color: aquamarine;
+    height: 200px;
+    width: 200px;
+    padding: 10px;
+    
+}
+
+h1{
+    text-align: center;
+}
+
+div.body{
+    text-align: center;
+}
