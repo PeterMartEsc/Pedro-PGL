@@ -1,0 +1,35 @@
+body{
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.contenedorPrincipal{
+    background-color: aqua;
+    width: 550px;
+    padding: 20px;
+    border: solid 1px;
+}
+
+p, .pieApostar, .pieErrores{
+    display: inline-block;
+}
+
+
+#resultado{
+    color: blue;
+}
+
+#errores {
+    color: red;
+    width: 130px;
+}
+
+#resultadoFinal{
+    color:red
+}
+
+#historialLetras{
+    width: 150px; 
+    height: 180px;
+}
