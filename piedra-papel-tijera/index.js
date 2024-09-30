@@ -27,7 +27,7 @@ function eleccionTijeras(){
 }
 
 function eleccionIA(eleccionJugador){
-    eleccionNumIA = Math.floor(Math.random()*3);
+    eleccionNumIA = Math.floor(Math.random()*3+1);
     jugar(eleccionNumIA, eleccionJugador);
 }
 
