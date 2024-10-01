@@ -1,1 +1,7 @@
 1erTrimestre/Node/practicas/pr08/node_modules
+
+# Al trabajar en casa, instalar el 
+# node_modules simplemente para trabajar en localhost
+
+# El gitignore dentro de primeraapp no hace nada ya 
+# que actua sobre cosas dentro de node_modules

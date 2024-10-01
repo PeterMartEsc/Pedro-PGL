@@ -1,0 +1,2 @@
+Las prácticas se han realizado dentor de primeraapp/src/practicas, ya que 
+es más comodo para la comprobación.
