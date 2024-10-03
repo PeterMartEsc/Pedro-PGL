@@ -5,7 +5,7 @@ type Props = {
     num2?:number;
 }
 
-const pr05 = (props: Props) => {
+const Pr05 = (props: Props) => {
     return (
         <div>
             <h2>Suma de {props.num1} y {props.num2}:</h2>
@@ -14,6 +14,6 @@ const pr05 = (props: Props) => {
     )
 }
 
-export default pr05
+export default Pr05
 
 ////pr05<pr05 num1={2} num2={3}/>
