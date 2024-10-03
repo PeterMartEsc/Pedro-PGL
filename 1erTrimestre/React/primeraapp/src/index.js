@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom/client';
 //import './index.css';
 //import App from './App';
 import reportWebVitals from './reportWebVitals';
-import App from './practicas/pr01.js';
-import ComponenteApp from './practicas/pr03.js';
+//import App from './practicas/pr01.js';
+//import ComponenteApp from './practicas/pr03.js';
 import ComponenteApp from './practicas/pr04.js';
 
 
@@ -26,7 +26,7 @@ root.render(
   //<ComponenteApp />
 
   //pr04
-  //<ComponenteApp num1={2} num2= {3} />
+  <ComponenteApp num1={2} num2={3} />
   
 );
 
