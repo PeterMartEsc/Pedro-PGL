@@ -7,7 +7,10 @@ type Props = {
 
 const pr05 = (props: Props) => {
     return (
-        <div>pr05</div>
+        <div>
+            <h2>Suma de {props.num1} y {props.num2}:</h2>
+            <p>{props.num1}+ {props.num2}</p>
+        </div>
     )
 }
 
