@@ -11,13 +11,11 @@ import PropTypes from 'prop-types'
 
 const ComponenteApp = (props) => {
 
-    const primos = [2, 3, 5, 7];
 
     return (
         <>
-            <h1>Primeros números primos:</h1>
-            <h4>{JSON.stringify(primos)}</h4>
-            <p>Datos recibido en el componente: { props.info}</p>
+            <h3>Sumar números:</h3>
+            <p>{props.num1} + {props.num2} = {props.num1+props.num2}</p>
         </>
     );
 }
