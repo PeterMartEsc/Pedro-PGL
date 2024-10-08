@@ -9,21 +9,23 @@
  * [ ...arrayanterior, 5 ]
  */
 
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 type Props = {}
 
 const GenerarAleatorios = (props: Props) => {
 
-    const [numeros, setNumeros] = React.useState([]);
+    const [arrayNumeros, setNumeros] = useState<Array<Number>>([]);
+
     function elMetodo(){
         let dato = Math.floor(Math.random()*100)
-        setNumeros([...numeros, dato])  //agregar el número al array.
+        setNumeros([...arrayNumeros, dato]);  //agregar el número al array.
     }
+
     return (
         <>
-            <p>{JSON.stringify(numeros)}</p>
-            <button onClick={()=> elMetodo}>Añadir aleatorio</button>
+            <p>{JSON.stringify(arrayNumeros)}</p>
+            <button onClick={elMetodo}>Añadir aleatorio</button>
         </>
     )
 }
