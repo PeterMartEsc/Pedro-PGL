@@ -8,6 +8,8 @@ import RelojesMundiales from './practicas/pr06/Pr06';
 import MostrarTabla from './practicas/pr09/pr09';
 import Contador from './practicas/pr08/pr08';
 import GenerarAleatorios from './practicas/pr10/pr10';
+import Pr12 from './practicas/pr12/pr12';
+
 
 
 
@@ -19,7 +21,8 @@ root.render(
   //<MostrarTabla />
   //<Contador/>
   //<Pr05 num1=2 num2=3 />
-  <GenerarAleatorios/>
+  //<GenerarAleatorios/>
+  <Pr12/>
 );
 
 // If you want to start measuring performance in your app, pass a function

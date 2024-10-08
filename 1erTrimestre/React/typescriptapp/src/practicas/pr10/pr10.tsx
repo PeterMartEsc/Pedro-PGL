@@ -15,19 +15,28 @@ type Props = {}
 
 const GenerarAleatorios = (props: Props) => {
 
+    //Sirve para que la info se guarde al recargar la página. Recarga el reenderizado al actualizar el state
     const [arrayNumeros, setNumeros] = useState<Array<Number>>([]);
 
     function elMetodo(){
         let dato = Math.floor(Math.random()*100)
+        //arrayNumeros.push(dato);
+        //console.log(arrayNumeros);
+        //setNumeros(arrayNumeros);  //agregar el número al arrayNumeros([arr]);  //agregar el número al array.
         setNumeros([...arrayNumeros, dato]);  //agregar el número al array.
     }
 
     return (
         <>
             <p>{JSON.stringify(arrayNumeros)}</p>
+            <br/>
             <button onClick={elMetodo}>Añadir aleatorio</button>
         </>
     )
 }
 
 export default GenerarAleatorios;
+
+//onClick en mayuscula para diferenciarlo del de html
+//en el onClick puedes poner ()=> le das un patron, una función que no recibe nada ni devuelve nada
+//no se pone ()=> elMetodo por que "elMetodo" ya es una función vacía que no devuelve nada
