@@ -21,8 +21,8 @@ const pr12 = (props: Props) => {
     <>
       <h3>Realizando saludos:</h3>
       <p>Sin parámetros: <button onClick={saludoSinParametros}>amigo</button></p>
-      <p>Con params: <button onClick={()=>saludoConParametros("saludos Ana")}>ana</button></p>
-      <p>Con params: <button onClick={()=>saludoConParametros("saludos Marta")}>mara</button></p>
+      <p>Con params: <button onClick={()=>saludoConParametros("verde")}>ana</button></p>
+      <p>Con params: <button onClick={()=>saludoConParametros("azul")}>mara</button></p>
     </>
     )
 }
