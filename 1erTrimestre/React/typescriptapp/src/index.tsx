@@ -11,6 +11,7 @@ import GenerarAleatorios from './practicas/pr10/pr10';
 import Pr12 from './practicas/pr12-NO/pr12';
 import Pr13 from './practicas/pr14/pr14';
 import Pr14 from './practicas/pr14/pr14';
+import Pr17 from './practicas/pr17/pr17';
 
 
 
@@ -26,7 +27,8 @@ root.render(
   //<Pr05 num1=2 num2=3 />
   //<GenerarAleatorios/>
   //<Pr13/>
-  <Pr14/>
+  //<Pr14/>
+  <Pr17/>
 );
 
 // If you want to start measuring performance in your app, pass a function
