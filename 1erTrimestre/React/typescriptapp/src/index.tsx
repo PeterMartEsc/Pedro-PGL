@@ -12,6 +12,8 @@ import Pr12 from './practicas/pr12-NO/pr12';
 import Pr13 from './practicas/pr14/pr14';
 import Pr14 from './practicas/pr14/pr14';
 import Pr17 from './practicas/pr17/pr17';
+import EjemploUseEffec from './practicas/ejemploUseEffect/ejUseEff';
+import Pr20 from './practicas/pr20-terminar/pr20';
 
 
 
@@ -28,7 +30,9 @@ root.render(
   //<GenerarAleatorios/>
   //<Pr13/>
   //<Pr14/>
-  <Pr17/>
+  //<Pr17/>
+  //<EjemploUseEffec/>
+  <Pr20/>
 );
 
 // If you want to start measuring performance in your app, pass a function
