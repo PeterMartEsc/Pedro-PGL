@@ -1,19 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App/App';
+//import App from './App/App';
 import reportWebVitals from './reportWebVitals';
 //import Pr05 from './practicas/pr05/pr05';
-import RelojesMundiales from './practicas/pr06/Pr06';
-import MostrarTabla from './practicas/pr09-modificadoPr14/pr09';
-import Contador from './practicas/pr08/pr08';
-import GenerarAleatorios from './practicas/pr10/pr10';
-import Pr12 from './practicas/pr12-NO/pr12';
-import Pr13 from './practicas/pr14/pr14';
-import Pr14 from './practicas/pr14/pr14';
-import Pr17 from './practicas/pr17/pr17';
-import EjemploUseEffec from './practicas/ejemploUseEffect/ejUseEff';
-import Pr20 from './practicas/pr20-terminar/pr20';
+//import RelojesMundiales from './practicas/pr06/Pr06';
+//import MostrarTabla from './practicas/pr09-modificadoPr14/pr09';
+//import Contador from './practicas/pr08/pr08';
+//import GenerarAleatorios from './practicas/pr10/pr10';
+//import Pr12 from './practicas/pr12-NO/pr12';
+//import Pr13 from './practicas/pr14/pr14';
+//import Pr14 from './practicas/pr14/pr14';
+//import Pr17 from './practicas/pr17/pr17';
+//import EjemploUseEffec from './practicas/ejemploUseEffect/ejUseEff';
+//import Pr20 from './practicas/pr20-terminar/pr20';
+import Pr24 from './practicas/pr24/pr24';
+import Pr26 from './practicas/pr26/pr26';
 
 
 
@@ -32,7 +34,8 @@ root.render(
   //<Pr14/>
   //<Pr17/>
   //<EjemploUseEffec/>
-  <Pr20/>
+  //<Pr20/>
+  <Pr24/>
 );
 
 // If you want to start measuring performance in your app, pass a function
