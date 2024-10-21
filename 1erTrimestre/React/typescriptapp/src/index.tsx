@@ -15,7 +15,7 @@ import reportWebVitals from './reportWebVitals';
 //import EjemploUseEffec from './practicas/ejemploUseEffect/ejUseEff';
 //import Pr20 from './practicas/pr20-terminar/pr20';
 import Pr24 from './practicas/pr24/pr24';
-import Pr26 from './practicas/pr26/pr26';
+import Pr26 from './practicas/pr26-terminar/pr26';
 
 
 
