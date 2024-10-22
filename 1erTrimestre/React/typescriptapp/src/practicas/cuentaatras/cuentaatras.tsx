@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from 'react'
 
 type Props = {}
 
-const Pr27 = (props: Props) => {
+const Cuentaatras = (props: Props) => {
     const [contador, setcontador] = useState(20);
     const [stateFecha, setstateFecha] = useState<string>("");
     const [stateButton, setstateButton] = useState<boolean>(false);
@@ -38,4 +38,4 @@ const Pr27 = (props: Props) => {
     )
 }
 
-export default Pr27
+export default Cuentaatras
