@@ -20,6 +20,7 @@ import Cuentaatras from './practicas/cuentaatras/cuentaatras';
 import Pr27 from './practicas/pr27-NO/pr27';
 import Pr28 from './practicas/pr28/pr28';
 import Pr29 from './practicas/pr29/pr29';
+import Pr30 from './practicas/pr30/pr30';
 
 
 
@@ -43,7 +44,8 @@ root.render(
   //<Cuentaatras/>
   //<Pr27/>
   //<Pr28/>
-  <Pr29/>
+  //<Pr29/>
+  <Pr30/>
 );
 
 // If you want to start measuring performance in your app, pass a function
