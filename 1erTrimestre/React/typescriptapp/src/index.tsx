@@ -17,7 +17,9 @@ import reportWebVitals from './reportWebVitals';
 //import Pr24 from './practicas/pr24/pr24';
 //import Pr26 from './practicas/pr26-terminar/pr26';
 import Cuentaatras from './practicas/cuentaatras/cuentaatras';
-import Pr27 from './practicas/pr27/pr27';
+import Pr27 from './practicas/pr27-NO/pr27';
+import Pr28 from './practicas/pr28/pr28';
+import Pr29 from './practicas/pr29/pr29';
 
 
 
@@ -39,7 +41,9 @@ root.render(
   //<Pr20/>
   //<Pr24/>
   //<Cuentaatras/>
-  <Pr27/>
+  //<Pr27/>
+  //<Pr28/>
+  <Pr29/>
 );
 
 // If you want to start measuring performance in your app, pass a function

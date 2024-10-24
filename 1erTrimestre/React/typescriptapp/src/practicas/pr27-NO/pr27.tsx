@@ -21,8 +21,8 @@ const Pr27 = (props: Props) => {
     
     function actualizarHora(){
 
-        inputnumero.current = Number(inputnumero.current) - 1;
-        setcontador(inputnumero.current);
+        //inputnumero.current = Number(inputnumero.current) - 1;
+        //setcontador(inputnumero.current);
     }
 
     function iniciarCronometro(){
