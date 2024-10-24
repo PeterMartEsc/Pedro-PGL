@@ -2,6 +2,6 @@
     grid-template-columns: 3;
 }
 
-.inactive{
-    visibility: hidden;
+button{
+    /*width: 25px;*/
 }
