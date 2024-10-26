@@ -6,4 +6,5 @@ export default class Boton {
         this.id = id;
         this.mostrando = false;
     }
+
 }
