@@ -16,16 +16,13 @@ const Pr31 = (props: Props) => {
     const [arrayNumeros, setarrayNumeros] = useState<Boton []>
         ([new Boton(1), new Boton(2), new Boton(3), new Boton(4),
         new Boton(5), new Boton(6), new Boton(7), new Boton(8)]);
-    
     const [aux, setaux] = useState(1);
-
     const [resultado, setresultado] = useState("");
 
 
     //Variable mostrar numeros o no
     const [botonActualRefresh, setbotonActualRefresh] = useState<number | null>(null);
     
-
 
     //Variable contar fallos
     const [fallos, setfallos] = useState(0);
@@ -113,7 +110,7 @@ const Pr31 = (props: Props) => {
                 {
                     arrayNumeros.map((num, index) => (
                         <button className="numeros" key={index} onMouseDown={()=>mostrarNumero(num)} onMouseUp={()=>comprobar(num)}>
-                            {countEnd ? (num.mostrando ? num.id :'.') : num.id}
+                            {countEnd ? (num.mostrando ? num.id :'?') : num.id}
                         </button>
                     ))
                 }
