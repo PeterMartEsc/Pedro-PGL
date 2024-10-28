@@ -16,12 +16,13 @@ import reportWebVitals from './reportWebVitals';
 //import Pr20 from './practicas/pr20-terminar/pr20';
 //import Pr24 from './practicas/pr24/pr24';
 //import Pr26 from './practicas/pr26-terminar/pr26';
-import Cuentaatras from './practicas/cuentaatras/cuentaatras';
+import Cuentaatras from './practicas/ejemplos/cuentaatras/cuentaatras';
 import Pr27 from './practicas/pr27-NO/pr27';
 import Pr28 from './practicas/pr28/pr28';
 import Pr29 from './practicas/pr29/pr29';
 import Pr30 from './practicas/pr30/pr30';
 import Pr31 from './practicas/pr31/pr31';
+import PadreModificadoPorHijo from './practicas/ejemplos/ejemploPadreHijo';
 
 
 
@@ -47,7 +48,8 @@ root.render(
   //<Pr28/>
   //<Pr29/>
   //<Pr30/>
-  <Pr31/>
+  //<Pr31/>
+  <PadreModificadoPorHijo/>
 );
 
 // If you want to start measuring performance in your app, pass a function
