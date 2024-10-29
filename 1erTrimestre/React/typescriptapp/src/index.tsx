@@ -23,6 +23,8 @@ import Pr29 from './practicas/pr29/pr29';
 import Pr30 from './practicas/pr30/pr30';
 import Pr31 from './practicas/pr31/pr31';
 import PadreModificadoPorHijo from './practicas/ejemplos/ejemploPadreHijo/ejemploPadreHijo';
+import EjStateByProps from './practicas/pr35/Pr35';
+import Padre from './practicas/pr36/Pr36';
 
 
 
@@ -49,7 +51,9 @@ root.render(
   //<Pr29/>
   //<Pr30/>
   //<Pr31/>
-  <PadreModificadoPorHijo/>
+  //<PadreModificadoPorHijo/>
+  //<EjStateByProps/>
+  <Padre/>
 );
 
 // If you want to start measuring performance in your app, pass a function
