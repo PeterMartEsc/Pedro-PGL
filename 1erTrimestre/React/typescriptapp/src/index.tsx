@@ -22,7 +22,7 @@ import Pr28 from './practicas/pr28/pr28';
 import Pr29 from './practicas/pr29/pr29';
 import Pr30 from './practicas/pr30/pr30';
 import Pr31 from './practicas/pr31/pr31';
-import PadreModificadoPorHijo from './practicas/ejemplos/ejemploPadreHijo';
+import PadreModificadoPorHijo from './practicas/ejemplos/ejemploPadreHijo/ejemploPadreHijo';
 
 
 
