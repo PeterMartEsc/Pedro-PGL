@@ -14,6 +14,10 @@ const Calculoimc = (props: Props) => {
         setArraypersonas([...arrayAux]);
     }
 
+    function activarPersona(persona : Persona){
+
+    }
+
     function aniadirPersona(id : number){
         let persona = new Persona(id+1);
         setArraypersonas([...arraypersonas, persona]);
@@ -26,7 +30,7 @@ const Calculoimc = (props: Props) => {
 
                 {
                     arraypersonas.map((persona, index) => (
-                        <li className='persona' onClick={()=>setDatos(persona)}>
+                        <li className='persona' onClick={()=>activarPersona(persona)}>
                             {index+1}, {persona.nombre}, {persona.imc}
                         </li>
                     ))
