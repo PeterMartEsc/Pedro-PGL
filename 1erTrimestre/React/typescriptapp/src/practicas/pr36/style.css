@@ -5,3 +5,12 @@
 .tarjeta{
     background-color: rgb(224, 144, 90);
 }
+
+.persona{
+    border: 1px solid black;
+}
+
+.aniadir{
+    margin: auto;
+    border-radius: 10px;
+}

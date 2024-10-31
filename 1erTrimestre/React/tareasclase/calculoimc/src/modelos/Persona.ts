@@ -1,4 +1,9 @@
+/**
+ * @author Pedro Martin Escuela
+ */
+
 export default class Persona {
+
     public id: number;
     public nombre: string;
     public apellido : string;
@@ -15,6 +20,11 @@ export default class Persona {
         this.peso = 0;
         this.edad = 0;
         this.imc = 0;
+    }
+
+    public calculoImc(): number {
+        this.imc = this.peso / (this.altura * this.altura)
+        return this.imc;
     }
 
 }
