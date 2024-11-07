@@ -28,7 +28,8 @@ import Padre from './practicas/pr36/Pr36';
 import Pr33 from './practicas/pr33/Pr33';
 import Pr32 from './practicas/pr32/Pr32';
 import Pr37 from './practicas/pr37/Pr37';
-import Pr38 from './practicas/pr38/Pr38';
+import Pr38 from './practicas/pr38-terminar/Pr38';
+import Pr39 from './practicas/pr39/Pr39';
 
 
 
@@ -62,6 +63,7 @@ root.render(
   //<Padre/>
   //<Pr37/>
   <Pr38/>
+  //<Pr39/>
 );
 
 // If you want to start measuring performance in your app, pass a function
