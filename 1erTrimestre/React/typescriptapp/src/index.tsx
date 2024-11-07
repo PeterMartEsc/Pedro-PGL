@@ -30,6 +30,7 @@ import Pr32 from './practicas/pr32/Pr32';
 import Pr37 from './practicas/pr37/Pr37';
 import Pr38 from './practicas/pr38-terminar/Pr38';
 import Pr39 from './practicas/pr39/Pr39';
+import Pr40 from './practicas/pr40/Pr40';
 
 
 
@@ -62,8 +63,9 @@ root.render(
   //<EjStateByProps/>
   //<Padre/>
   //<Pr37/>
-  <Pr38/>
+  //<Pr38/>
   //<Pr39/>
+  <Pr40/>
 );
 
 // If you want to start measuring performance in your app, pass a function
