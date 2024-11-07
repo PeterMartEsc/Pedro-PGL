@@ -62,10 +62,10 @@ root.render(
   //<Pr33/>
   //<EjStateByProps/>
   //<Padre/>
-  //<Pr37/>
+  <Pr37/>
   //<Pr38/>
   //<Pr39/>
-  <Pr40/>
+  //<Pr40/>
 );
 
 // If you want to start measuring performance in your app, pass a function

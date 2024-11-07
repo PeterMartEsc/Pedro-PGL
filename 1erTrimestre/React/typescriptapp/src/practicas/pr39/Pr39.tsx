@@ -14,7 +14,7 @@ const Pr39 = (props: Props) => {
         <div>
             <p>Practica componente hijo informa a su padre</p>
 
-            <InputToUpper onNewText={tomarDatos}/>
+            <InputToUpper onNewText={tomarDatos} />
 
             <p>
                 Recibido {datosRecibidos}
