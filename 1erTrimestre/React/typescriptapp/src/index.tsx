@@ -31,6 +31,7 @@ import Pr37 from './practicas/pr37/Pr37';
 import Pr38 from './practicas/pr38-terminar/Pr38';
 import Pr39 from './practicas/pr39/Pr39';
 import Pr40 from './practicas/pr40/Pr40';
+import Pr43 from './practicas/pr43-terminar/PokemonEjemplo';
 
 
 
@@ -62,10 +63,11 @@ root.render(
   //<Pr33/>
   //<EjStateByProps/>
   //<Padre/>
-  <Pr37/>
+  //<Pr37/>
   //<Pr38/>
   //<Pr39/>
   //<Pr40/>
+  <Pr43/>
 );
 
 // If you want to start measuring performance in your app, pass a function
