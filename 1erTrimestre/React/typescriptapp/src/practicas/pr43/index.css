@@ -1,0 +1,15 @@
+
+.card{
+    border: solid 1px black;
+    width: 200px;
+    margin: auto;
+    text-align: center;
+}
+
+.tarjetas{
+    width: 500px;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
