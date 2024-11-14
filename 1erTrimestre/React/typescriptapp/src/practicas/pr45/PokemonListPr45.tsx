@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import PokemonCard from './PokemonCardPr45';
+import { Link } from 'react-router-dom';
 
 type Props = {}
 
@@ -17,7 +18,7 @@ interface Result {
 }
 
 
-function PokemonList({}: Props) {
+function PokemonListPr45({}: Props) {
     const [cardList, setcardList] = useState<Result[]>([]);
     const uri : string  = "https://pokeapi.co/api/v2/pokemon/";
 
@@ -27,17 +28,18 @@ function PokemonList({}: Props) {
             let lista = response.data as PokemonList;
             setcardList(lista.results);
         }
-    
+
         getPokemonCard(uri);
     }, [])
     
     return (
         <div className='principal'>
+            <br />
             <div className='tarjetas'>
                 {
                     cardList.map((result, index) => (
                         <div key={index} className='card'>
-                            <PokemonCard url={result.url} name={result.name}/>
+                            <Link to={`/pokemon/${index+1}`} >{result.name}</Link> &nbsp;
                         </div>
                     ))
                 }
@@ -46,4 +48,4 @@ function PokemonList({}: Props) {
     )
 }
 
-export default PokemonList
+export default PokemonListPr45

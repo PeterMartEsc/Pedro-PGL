@@ -1,11 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
+import { useParams } from 'react-router-dom';
 
 
-type Props = {
-    name : string;
-    url : string;
-}
+type Props = {}
 
 type PokemonCardData = {
     name : string;
@@ -17,12 +15,11 @@ type PokemonCardData = {
 const PokemonCard = (props: Props) => {
 
     const [responseUrl, setresponseUrl] = useState<PokemonCardData>({} as PokemonCardData);
-    const url = props.url;
-    const name = props.name;
+    const {id} = useParams();
 
     useEffect(() => {
-        async function getPokemonCard(url : string){
-            const response = await axios.get(url);
+        async function getPokemonCard(id: string){
+            const response = await axios.get("https://pokeapi.co/api/v2/pokemon/" + id);
             const newCard : PokemonCardData = {
                 name : response.data.name,
                 img : response.data.sprites.front_default,
@@ -32,17 +29,17 @@ const PokemonCard = (props: Props) => {
             setresponseUrl(newCard);
         }
         
-        getPokemonCard(url);
+        getPokemonCard(id ? id : "");
 
-    }, [])
+    }, [id])
     
 
     return (
         <div className='card'>
             <h1>{responseUrl.name}</h1>
-            <img src={responseUrl.img} alt={name} />
-            <p>Peso: {responseUrl.weight} Kg</p>
-            <p>Altura: {responseUrl.height} m</p>
+            <img src={responseUrl.img} />
+            <p>Peso: {responseUrl.weight / 10} Kg</p>
+            <p>Altura: {responseUrl.height /10} m</p>
         </div>
     )
 }

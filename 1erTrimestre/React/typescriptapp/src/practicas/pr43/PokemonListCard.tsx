@@ -28,7 +28,7 @@ function PokemonListCard({}: Props) {
             let lista = response.data as PokemonList;
             setcardList(lista.results);
         }
-    
+
         getPokemonCard(uri);
     }, [])
     

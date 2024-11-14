@@ -1,21 +1,23 @@
 import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
-import PokemonList from './PokemonList';
 import PokemonCard from './PokemonCardPr45';
+import About from '../pr41/About';
+import PokemonListPr45 from './PokemonListPr45';
+import PokemonCardPr45 from './PokemonCardPr45';
 
 type Props = {}
 
-export default function App() {
+export default function App45() {
     
     return (
     <BrowserRouter>
-        <h1>Aplicación Monedas</h1>
+        <h1>Mi aplicación de enrutado</h1>
         <Navbar />
 
         <Routes>
-            <Route path="/" />
-            <Route path="/pokemon" element={<PokemonList />} />
-            <Route path="/pokemon/:id" />
+            <Route path="/" element={<About />}/>
+            <Route path="/pokemon" element={<PokemonListPr45 />}/>
+            <Route path="/pokemon/:id" element={<PokemonCardPr45 />}/>
         </Routes>
     </BrowserRouter>
     )
