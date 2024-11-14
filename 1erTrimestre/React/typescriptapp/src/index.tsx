@@ -33,7 +33,7 @@ import Pr39 from './practicas/pr39/Pr39';
 import Pr40 from './practicas/pr40/Pr40';
 import Pr43 from './practicas/pr43/PokemonEjemplo';
 import PokemonListCard from './practicas/pr43/PokemonListCard';
-import PokemonListCardPr45 from './practicas/pr45/PokemonListCardPr45';
+import PokemonList from './practicas/pr45/PokemonList';
 
 
 
@@ -70,7 +70,7 @@ root.render(
   //<Pr39/>
   //<Pr40/>
   //<Pr43/>
-  <PokemonListCardPr45/>
+  <PokemonListCard/>
 
 );
 

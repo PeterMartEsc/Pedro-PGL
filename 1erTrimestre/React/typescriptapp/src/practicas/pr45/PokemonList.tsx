@@ -17,9 +17,9 @@ interface Result {
 }
 
 
-function PokemonListCardPr45({}: Props) {
+function PokemonList({}: Props) {
     const [cardList, setcardList] = useState<Result[]>([]);
-    const uri : string  = "https://pokeapi.co/api/v2/pokemon?offset=20&limit=20";
+    const uri : string  = "https://pokeapi.co/api/v2/pokemon/";
 
     useEffect(() => {
         async function getPokemonCard(direccion : string){
@@ -46,4 +46,4 @@ function PokemonListCardPr45({}: Props) {
     )
 }
 
-export default PokemonListCardPr45
+export default PokemonList
