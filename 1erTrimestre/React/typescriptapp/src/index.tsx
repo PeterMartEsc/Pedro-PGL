@@ -35,6 +35,7 @@ import App41 from './practicas/pr41/App41';
 import Pr43 from './practicas/pr43/PokemonEjemplo';
 import PokemonListCard from './practicas/pr43/PokemonListCard';
 import App45 from './practicas/pr45/App45';
+import App50 from './practicas/pr50/App50';
 
 
 
@@ -73,7 +74,8 @@ root.render(
   //<App41/>
   //<Pr43/>
   //<PokemonListCard/>
-  <App45/>
+  //<App45/>
+  <App50/>
 );
 
 // If you want to start measuring performance in your app, pass a function
