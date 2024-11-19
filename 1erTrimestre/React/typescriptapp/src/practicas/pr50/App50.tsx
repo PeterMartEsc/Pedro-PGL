@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import About from '../pr41/About';
 import PokemonListPr50 from './PokemonListPr50';
-import { AppContextProvider } from './AppContextProvider';
+import { AppContext, AppContextProvider } from './AppContextProvider';
 import PokemonCardPr50 from './PokemonCardPr50';
 
 
@@ -15,7 +15,7 @@ export default function App45() {
         <AppContextProvider>
             <h1>Mi aplicación de enrutado</h1>
             <Navbar />
-
+            <PokemonFavorito/>
             <Routes>
                 <Route path="/" element={<About />}/>
                 <Route path="/pokemon" element={<PokemonListPr50 />}/>
@@ -23,6 +23,17 @@ export default function App45() {
             </Routes>
         </AppContextProvider>
     </BrowserRouter>
+    )
+}
+
+function PokemonFavorito(){
+    const context = useContext(AppContext);
+
+    return (
+        <>
+            <h2>Pokémon favorito: </h2>
+            {JSON.stringify(context.pokemon)}
+        </>
     )
 }
 
