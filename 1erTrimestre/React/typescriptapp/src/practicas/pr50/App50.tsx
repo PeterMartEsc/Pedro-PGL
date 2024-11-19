@@ -2,7 +2,8 @@ import React from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom';
 import About from '../pr41/About';
 import PokemonListPr50 from './PokemonListPr50';
-import PokemonCardPr50, { AppContextProvider } from './PokemonCardPr50';
+import { AppContextProvider } from './AppContextProvider';
+import PokemonCardPr50 from './PokemonCardPr50';
 
 
 type Props = {}

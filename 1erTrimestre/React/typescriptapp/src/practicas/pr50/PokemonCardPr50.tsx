@@ -1,6 +1,7 @@
-import React, { Dispatch, SetStateAction, createContext, useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
+import { useAppContext } from './AppContextProvider';
 
 
 type Props = {}
@@ -17,6 +18,9 @@ const PokemonCardPr50 = (props: Props) => {
 
     const [responseUrl, setresponseUrl] = useState<PokemonCardData>({} as PokemonCardData);
     const {id} = useParams();
+    
+    const {setPokemon} = useAppContext();
+
 
     useEffect(() => {
         async function getPokemonCard(id: string){
@@ -33,7 +37,6 @@ const PokemonCardPr50 = (props: Props) => {
         getPokemonCard(id ? id : "");
 
     }, [id])
-    
 
     return (
         <div className='card'>
@@ -41,7 +44,7 @@ const PokemonCardPr50 = (props: Props) => {
             <img src={responseUrl.img} />
             <p>Peso: {responseUrl.weight / 10} kg</p>
             <p>Altura: {responseUrl.height /10} m</p>
-            <button>Añadir a favoritos</button>
+            <button onClick={()=>setPokemon(responseUrl)}>Añadir a favoritos</button>
         </div>
     )
 }

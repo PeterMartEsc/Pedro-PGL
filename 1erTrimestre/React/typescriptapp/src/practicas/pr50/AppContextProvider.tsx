@@ -1,10 +1,18 @@
-import React, { createContext, useState } from 'react'
+import React, { Dispatch, SetStateAction, createContext, useContext, useState } from 'react'
+import PokemonCardPr50 from './PokemonCardPr50';
 
 type Props = {}
 
 export interface AppContextType {
     pokemon: PokemonCardData;
     setPokemon : Dispatch<SetStateAction<PokemonCardData>>
+}
+
+interface PokemonCardData{
+    name : string;
+    img : string;
+    weight : number;
+    height : number;
 }
 
 export const AppContext = createContext<AppContextType>({} as AppContextType);
@@ -14,8 +22,8 @@ export const AppContextProvider = (props: any) => {
     const [pokemon, setPokemon] = useState<PokemonCardData>({} as PokemonCardData);
     
     const contextValues: AppContextType = {
-        pokemon: pokemon,
-        setPokemon: setPokemon
+        pokemon,
+        setPokemon
     };
 
     return (
@@ -24,3 +32,7 @@ export const AppContextProvider = (props: any) => {
         </AppContext.Provider>
     );
 };
+
+export const useAppContext = () =>{
+    return useContext(AppContext); 
+}

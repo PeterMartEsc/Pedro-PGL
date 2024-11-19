@@ -1,7 +1,8 @@
 import axios from 'axios';
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import PokemonCard from './PokemonCardPr50';
 import { Link } from 'react-router-dom';
+import { AppContext } from './AppContextProvider';
 
 type Props = {}
 
@@ -23,7 +24,8 @@ interface Result {
 function PokemonListPr50({}: Props) {
     const [cardList, setcardList] = useState<Result[]>([]);
     const uri : string  = "https://pokeapi.co/api/v2/pokemon/";
-
+    const context = useContext(AppContext);
+    
     useEffect(() => {
         async function getPokemonCard(direccion : string){
             const response = await axios.get(direccion);
