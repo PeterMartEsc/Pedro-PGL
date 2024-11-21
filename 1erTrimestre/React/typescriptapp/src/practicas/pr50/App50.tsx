@@ -32,7 +32,11 @@ function PokemonFavorito(){
     return (
         <>
             <h2>Pokémon favorito: </h2>
-            {JSON.stringify(context.pokemon)}
+            <h4>{context.pokemon.name}</h4>
+            <img src={context.pokemon.img} />
+            <p>Peso: {context.pokemon.weight / 10} kg</p>
+            <p>Altura: {context.pokemon.height /10} m</p>
+            
         </>
     )
 }

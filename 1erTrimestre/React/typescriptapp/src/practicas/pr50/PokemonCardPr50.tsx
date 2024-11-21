@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import axios from 'axios';
 import { useParams } from 'react-router-dom';
-import { useAppContext } from './AppContextProvider';
+import { AppContext, useAppContext } from './AppContextProvider';
 import { usePokemonCard } from './hooks/usePokemonCard';
 
 
@@ -19,6 +19,8 @@ const PokemonCardPr50 = (props: Props) => {
 
     const {responseUrl} =usePokemonCard();
     const {setPokemon} = useAppContext();
+    const context = useContext(AppContext);
+
 
     return (
         <div className='card'>

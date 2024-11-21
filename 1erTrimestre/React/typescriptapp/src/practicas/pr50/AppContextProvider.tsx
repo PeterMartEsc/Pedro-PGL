@@ -8,7 +8,7 @@ export interface AppContextType {
     setPokemon : Dispatch<SetStateAction<PokemonCardData>>
 }
 
-interface PokemonCardData{
+export interface PokemonCardData{
     name : string;
     img : string;
     weight : number;
