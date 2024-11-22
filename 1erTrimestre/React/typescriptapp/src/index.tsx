@@ -36,6 +36,7 @@ import Pr43 from './practicas/pr43/PokemonEjemplo';
 import PokemonListCard from './practicas/pr43/PokemonListCard';
 import App45 from './practicas/pr45/App45';
 import App50 from './practicas/pr50/App50';
+import Pr11 from './practicas/pr11-NO/pr11';
 
 
 
@@ -50,6 +51,7 @@ root.render(
   //<Contador/>
   //<Pr05 num1=2 num2=3 />
   //<GenerarAleatorios/>
+  //<Pr11/>
   //<Pr13/>
   //<Pr14/>
   //<Pr17/>
