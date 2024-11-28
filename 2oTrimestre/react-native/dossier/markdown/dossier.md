@@ -37,6 +37,30 @@ pantalla:   <View style={{ backgroundColor: "lightpink", flex: 1, justifyContent
 
 ### Practica 2
 
+Reproducir el código anterior. Cambia el color del borde, redondea un poco el
+borde ( busca la propiedad, es muy parecida a CSS ) y pon otro color de fondo. Modifica
+también para que aparezcan dos botones. Uno será para incrementar ( el botón dirá:
+“incrementar” ) y otro botón para decrementar. 
+
+```
+    practias/pr02
+```
+
+<img src="../markdown/capturas/pr02.png">
+
+### Practica 3
+
+Crear la estructura de carpetas que hemos nombrado y un componente:
+InicioScreen que será el que contenga la pantalla con los botones y el contador. En
+App.tsx se hará la llamada a: <InicioScreen /> Los estilos deberán separarse usando
+StyleSheet.create() 
+
+```
+    practias/pr03
+```
+
+<img src="../markdown/capturas/pr03.png">
+
 
 
 </div>
