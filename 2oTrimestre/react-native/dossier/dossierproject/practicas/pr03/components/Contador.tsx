@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 
 type Props = {}
 
-const Practica02 = (props: Props) => {
+const Contador = (props: Props) => {
     const [contador, setcontador] = useState(0)
     return (
         <View style={styles.container}>
@@ -18,7 +18,7 @@ const Practica02 = (props: Props) => {
     )
 }
 
-export default Practica02
+export default Contador
 
 const styles = StyleSheet.create({
     container: {

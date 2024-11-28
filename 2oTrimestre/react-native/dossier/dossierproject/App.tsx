@@ -1,26 +1,10 @@
 
 import React from 'react';
 import type {PropsWithChildren} from 'react';
-import {
-  Alert,
-  Button,
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
 import Practica01 from './practicas/pr01/components/Practica01';
+import Practica02 from './practicas/pr02/components/Practica02';
+import InicioScreen from './practicas/pr03/screens/InicioScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -28,14 +12,14 @@ type SectionProps = PropsWithChildren<{
 
 function App(): React.JSX.Element {
 
-  function laquesea(){
-    Alert.alert("la que sea");
-  }
-
   return (
-    <SafeAreaView style={{flex:1}}>
-      <Practica01 />
-    </SafeAreaView>
+    //<Practica01/>
+    //<Practica02/>
+
+    //Pr03
+    <InicioScreen/>
+
+    //
   );
 }
 
