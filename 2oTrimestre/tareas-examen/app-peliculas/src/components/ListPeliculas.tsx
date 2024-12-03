@@ -24,10 +24,21 @@ const ListPeliculas = (props: Props) => {
         getPelicula(uri);
     }, [])
 
-    console.log(peliculas);
+    //console.log(peliculas);
 
     return (
-        <div>{JSON.stringify(peliculas)}</div>
+        <div className='contenedorPrincipal'>
+            {
+                peliculas.map((pelicula, index) => (
+                    <div key={index} className={'pelicula'+index}>
+                        <img src={`http://localhost:3000/${pelicula.imagen}`} alt="" />
+                        {/*<h2>{pelicula.imagen}</h2>
+                        <p>{peliculas.overview}</p>
+                        <p>Año: {pelicula.release_date.slice(0, 4)}</p>*/}
+                    </div>
+                ))
+            }
+        </div>
     )
 }
 
