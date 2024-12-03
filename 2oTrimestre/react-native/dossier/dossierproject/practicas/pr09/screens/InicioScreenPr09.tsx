@@ -8,11 +8,11 @@ type Align = "stretch" | "center" | "flex-start" | "flex-end" | undefined;
 
 const InicioScreenPr09 = (props: Props) => {
 
-    const [input, setinput] = useState(" ");
+    const [input, setinput] = useState<Content>(undefined);
     const [align, setalign] = useState<Align>(undefined);
 
-    function saveInput(currentTarget: any){
-        
+    function saveInput(text: Content){
+        setinput(text);
     }
 
     /*function changealignContent(){
@@ -61,7 +61,7 @@ const InicioScreenPr09 = (props: Props) => {
 
             </View>
 
-            <View style={{...styles.iconos, alignItems: align}}>
+            <View style={{...styles.iconos, alignItems: align, justifyContent: input}}>
         
                 <Image source={require('../images/1.jpg')} style={styles.imagen}/>
                 <Image source={require('../images/2.jpg')} style={styles.imagen}/>
@@ -84,7 +84,7 @@ const styles = StyleSheet.create({
     texto:{
         textAlign: "center",
     },
-
+    
     boton : {
         backgroundColor: "#36f0f9",
         marginHorizontal: 10,
@@ -93,20 +93,20 @@ const styles = StyleSheet.create({
         borderRadius: 5,
         justifyContent: "space-around", //Centra el texto
     },
-
+    
     input:{
         backgroundColor: "white",
         borderWidth: 2,
         margin: 10,
     },
-
+    
     iconos: {
         flex:7, 
         backgroundColor: "#c9c9c9",
         margin: 20,
         justifyContent: "space-around",
     },
-
+    
     imagen: {
         width: 100,
         height: 100,
