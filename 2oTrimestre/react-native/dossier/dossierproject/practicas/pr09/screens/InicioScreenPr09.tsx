@@ -8,7 +8,7 @@ type Align = "stretch" | "center" | "flex-start" | "flex-end" | undefined;
 
 const InicioScreenPr09 = (props: Props) => {
 
-    const [input, setinput] = useState<Content>(undefined);
+    const [input, setinput] = useState<Content>("space-around");
     const [align, setalign] = useState<Align>(undefined);
 
     function saveInput(text: Content){
