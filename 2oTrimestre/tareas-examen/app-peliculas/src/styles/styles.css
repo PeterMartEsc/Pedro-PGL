@@ -5,9 +5,13 @@
     align-items: center;
 }
 
-.contenedorCrear{
+.formulario{
     height: max-content;
     width: 600px;
+}
+
+.contenedorCrear{
+    height: max-content;
 }
 
 .cartelera{
