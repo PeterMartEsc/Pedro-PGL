@@ -30,7 +30,7 @@ export default Home
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-light bg-light">
+        <nav className="navbar navbar-light bg-navbar">
 
             <div className="container-fluid">
                 <div className="d-flex justify-content-between w-100 mx-3">

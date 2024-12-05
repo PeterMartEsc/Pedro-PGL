@@ -1,0 +1,32 @@
+.contenedorPrincipal{
+    display: grid;
+    gap: 12px; /* Espacio entre los elementos */
+    grid-template-columns: repeat(5, 1fr); /* Configura columnas */
+    align-items: center;
+}
+
+.cartelera{
+    width: 280px;
+    height: 416px;
+    object-fit: cover; /* Corta o amplía la imagen para que llene el área definida */
+    margin-top: 12px;
+    margin-bottom: 0px;
+    margin-left: 8px;
+    margin-right: 0px;
+    border-radius: 10px;
+
+}
+
+.cartelera:hover{
+    transform: scale(1.05); /* Escala el elemento al pasar el mouse */
+    transition: transform 0.3s ; /* Animación de transición */
+
+}
+
+.bg-navbar{
+    background-color: #3E51FA;
+}
+
+.bg-container{
+    background-color: #37C3FA;
+}
