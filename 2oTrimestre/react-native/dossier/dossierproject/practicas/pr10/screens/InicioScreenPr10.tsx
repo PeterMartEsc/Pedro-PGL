@@ -54,6 +54,7 @@ const InicioScreenPr10 = (props: Props) => {
     }
 
     function limpiar(){
+        setOperador("");
         const arrayAux : Array<number> =[];
         setnumeroOperarSecund(arrayAux);
         setnumeroOperar(arrayAux);
