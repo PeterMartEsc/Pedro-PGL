@@ -5,6 +5,11 @@
     align-items: center;
 }
 
+.contenedorCrear{
+    height: max-content;
+    width: 600px;
+}
+
 .cartelera{
     width: 280px;
     height: 416px;
