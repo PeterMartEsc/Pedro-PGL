@@ -14,7 +14,9 @@ type DatosCircle = {
 const ContenedorCirculosPr08 = (props: Props) => {
 
     const [datosCirculos, setDatosCirculos] = useState<DatosCircle[]>([])
-    const [display, setdisplay] = useState("flex")
+    const [direction, setdirection] = useState("")
+    //const [direction, setdirection] = useState("flex")
+
 
     function addCirculo(){
         setDatosCirculos([...datosCirculos, 
@@ -30,18 +32,40 @@ const ContenedorCirculosPr08 = (props: Props) => {
         
     }
 
+    function cambiarRow(){
+        if(direction == "row"){
+            setdirection("row-reverse");
+        } else if("row-reverse"){
+            setdirection("column");
+        } else if(direction == "column"){
+            setdirection("column-reverse");
+        } else if("column-reverse"){
+            setdirection("row");
+        }
+    }
+
+    function cambiarWrap(){
+        if(direction == "wrap"){
+            setdirection("no-wrap");
+        } else if("no-wrap"){
+            setdirection("wrap-reverse");
+        } else if(direction == "wrap-reverse"){
+            setdirection("wrap");
+        }
+    }
+
     return (
         <View style={styles.contenedor}>
             <View>
                 <Button title="Agregar Circulo" onPress={addCirculo}></Button>
             </View>
-            <TouchableOpacity onPress={() => setdisplay("wrap")}>
+            <TouchableOpacity onPress={() => cambiarRow()}>
                 <View  style={styles.row}>
                     <Text>Wrap. Pulse para cambiar</Text>
                 </View>
             </TouchableOpacity>
 
-            <TouchableOpacity onPress={() => setdisplay("row")}>
+            <TouchableOpacity onPress={() => cambiarWrap()}>
                 <View style={styles.wrap}>
                     <Text>Row. Pulse para cambiar</Text>
                 </View>

@@ -5,12 +5,12 @@ type Props = {
     name: string,
     red : number,
     green : number,
-    blue : number
+    blue : number,
 }
 
 const Circulo = (props: Props) => {
   return (
-    <View style = {styles.circulo} >
+    <View style = {{...styles.circulo, backgroundColor: `rgb(${props.red}, ${props.green}, ${props.blue})`}} >
       <Text style={{textAlign: 'center'}}>{props.name}</Text>
     </View>
   )
@@ -28,5 +28,6 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
         width: 80,
         height: 80,
+        flexDirection: "column",
     }
 })
