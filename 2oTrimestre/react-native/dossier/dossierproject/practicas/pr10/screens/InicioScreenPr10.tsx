@@ -67,6 +67,11 @@ const InicioScreenPr10 = (props: Props) => {
         
     }
 
+    function borrarUltimo(){
+        numeroOperar.pop();
+        setnumeroOperar([...numeroOperar]);
+    }
+
     return (
         <View style={{flex:1}}>
             <View style={styles.operaciones}>
@@ -74,7 +79,7 @@ const InicioScreenPr10 = (props: Props) => {
                 <Text adjustsFontSizeToFit={true} numberOfLines={1} style={styles.resultado}>{numeroOperar.some(Number) ? numeroOperar : 0}</Text>
             </View>
             <View style={{flex: 1}}>
-                <Teclado agregarNumero={agregarNumero} limpiar={limpiar} setOperador={setOperador} operar={operar} negar={negar}/>
+                <Teclado agregarNumero={agregarNumero} limpiar={limpiar} setOperador={setOperador} operar={operar} negar={negar} borrarUltimo={borrarUltimo}/>
             </View>
         </View>
     )
@@ -96,12 +101,16 @@ const styles = StyleSheet.create({
         color: "white",
         fontSize: 100,
         marginHorizontal: 20,
+        marginRight: 30,
+        textAlign: "right",
     },
 
     resultadoSecundario: {
         color: "#898787",
         fontSize: 50,
         marginHorizontal: 25,
+        marginRight: 45,
+        textAlign: "right",
         //textAlign: "right",
     }
 })

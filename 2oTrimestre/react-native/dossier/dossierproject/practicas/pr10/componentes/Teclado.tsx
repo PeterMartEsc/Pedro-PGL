@@ -7,6 +7,7 @@ type Props = {
     setOperador: (operador: string) => void,
     operar: () => void,
     negar: () => void,
+    borrarUltimo: () => void,
 }
 
 const Teclado = (props: Props) => {
@@ -16,6 +17,9 @@ const Teclado = (props: Props) => {
     const {setOperador} = props;
     const {operar} = props;
     const {negar} = props;
+    const {borrarUltimo} = props;
+
+    let borrarLast = "<-";
 
     return (
         <View style={styles.teclado}>
@@ -27,8 +31,8 @@ const Teclado = (props: Props) => {
                     <Text style={styles.textoBoton}>+-</Text>
             </TouchableOpacity>
 
-            <TouchableOpacity style={styles.botonArriba}>
-                    <Text style={styles.textoBoton}>%</Text>
+            <TouchableOpacity style={styles.botonArriba} onPress={borrarUltimo}>
+                    <Text style={styles.textoBoton}>{borrarLast}</Text>
             </TouchableOpacity>
 
             <TouchableOpacity style={styles.botonDerecha} onPress={()=>setOperador("/")}>
