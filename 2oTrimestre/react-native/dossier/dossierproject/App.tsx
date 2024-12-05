@@ -12,6 +12,7 @@ import InicioScreenPr07 from './practicas/pr07-terminar/screens/InicioScreenPr07
 import InicioScreenPr08 from './practicas/pr08-terminar/screens/InicioScreenPr08';
 import InicioScreenPr09 from './practicas/pr09/screens/InicioScreenPr09';
 import InicioScreenPr91 from './practicas/pr9.1/screens/InicioScreenPr9.1';
+import InicioScreenPr10 from './practicas/pr10/screens/InicioScreenPr10';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -37,7 +38,9 @@ function App(): React.JSX.Element {
     //Pr09
     //<InicioScreenPr09/>
     //Pr9.1
-    <InicioScreenPr91/>
+    //<InicioScreenPr91/>
+    //Pr10
+    <InicioScreenPr10/>
     );
 }
 

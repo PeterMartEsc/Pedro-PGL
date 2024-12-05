@@ -34,16 +34,22 @@ const ImagenesAleatorias = (props: Props) => {
             nombre: "Jinx",
             ubicacion: require("../images/jinx-arcane.jpg")
         },
+        {
+            id: 5,
+            nombre: "Pantheon",
+            ubicacion: require("../images/pantheon-lobo.png")
+        },
     ];
 
     function randomImage(){
-        let numeroRandom = Math.trunc(Math.random() * almacenImagenes.length+1);
+        let numeroRandom = Math.floor(Math.random() * almacenImagenes.length+1);
         setnumeroImagen(numeroRandom);
     }
 
-    function getImage(posicionIMagen : number){
+    function getImage(posicionImagen : number){
 
-        const obtenido = almacenImagenes.find( imagen => imagen.id == posicionIMagen);
+        const obtenido = almacenImagenes.find( imagen => imagen.id == posicionImagen);
+        //const obtenido = almacenImagenes[posicionImagen];
 
         if( obtenido){            
             return obtenido.ubicacion;
