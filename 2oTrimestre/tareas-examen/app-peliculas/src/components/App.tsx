@@ -6,19 +6,20 @@ import ListPeliculas from './ListPeliculas'
 import ListCategorias from './ListCategorias'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../styles/styles.css';
+import Inicio from './Inicio'
 
 type Props = {}
 
-const Home = (props: Props) => {
+const App = (props: Props) => {
     return (
         <BrowserRouter>
             <Navbar />
 
             <Routes>
-                <Route path="/"/>
+                <Route path="/" element={<Inicio/>}/>
                 <Route path="/crear-pelicula" element={<CrearPelicula/>}/>
                 <Route path="/buscar-pelicula" element={<ListPeliculas/>}/>
-                <Route path="/pelicula/:id" element={<EditarPelicula/>}/>
+                <Route path="/peliculas/:id" element={<EditarPelicula/>}/>
                 <Route path="/categorias" element={<ListCategorias/>}/>
             </Routes>
 
@@ -26,11 +27,11 @@ const Home = (props: Props) => {
     )
 }
 
-export default Home
+export default App
 
 function Navbar() {
     return (
-        <nav className="navbar navbar-light bg-navbar">
+        <nav className="navbar text-light bg-navbar">
 
             <div className="container-fluid">
                 <div className="d-flex justify-content-between w-100 mx-3">

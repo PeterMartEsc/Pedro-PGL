@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import Pelicula from '../models/Pelicula';
 import '../styles/styles.css'
+import { Link } from 'react-router-dom';
 
 
 type Props = {}
@@ -28,11 +29,13 @@ const ListPeliculas = (props: Props) => {
     //console.log(peliculas);
 
     return (
-        <div className='contenedorPrincipal bg-container'>
+        <div className='contenedorListarPeliculas bg-container'>
             {
                 peliculas.map((pelicula, index) => (
                     <div key={index} className={"pelicula"+index}>
-                        <img src={`http://localhost:3000/${pelicula.imagen}`} alt="" className='cartelera' /> 
+                        <Link to={`/peliculas/${pelicula.id}`} >
+                            <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} className='cartelera'/>
+                        </Link>
                         {/*<h2>{pelicula.imagen}</h2>
                         <p>{peliculas.overview}</p>
                         <p>Año: {pelicula.release_date.slice(0, 4)}</p>

@@ -1,17 +1,19 @@
-.contenedorPrincipal{
+.contenedorListarPeliculas{
     display: grid;
     gap: 12px; /* Espacio entre los elementos */
     grid-template-columns: repeat(5, 1fr); /* Configura columnas */
     align-items: center;
 }
 
-.formulario{
-    height: max-content;
-    width: 600px;
+.contenedorEstandar{
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
-.contenedorCrear{
-    height: max-content;
+.formulario{
+    width: 600px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #6e6e6e;
 }
 
 .cartelera{
@@ -33,9 +35,22 @@
 }
 
 .bg-navbar{
-    background-color: #3E51FA;
+    background-color: #242424;
 }
 
 .bg-container{
-    background-color: #37C3FA;
+    background-color: #000000;
+}
+
+.peliculaMostrar{
+    width: 800px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #6e6e6e;
+}
+
+.peliculaMostrar img{
+    width: 280px;
+    height: 416px;
+    object-fit: cover;
 }
