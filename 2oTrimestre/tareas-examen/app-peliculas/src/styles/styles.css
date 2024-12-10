@@ -1,4 +1,8 @@
-.contenedorListarPeliculas{
+.changeTheme{
+    height: 20px;
+}
+
+.listarPeliculas{
     display: grid;
     gap: 12px; /* Espacio entre los elementos */
     grid-template-columns: repeat(5, 1fr); /* Configura columnas */
@@ -14,6 +18,10 @@
     padding: 12px;
     border-radius: 10px;
     background-color: #6e6e6e;
+}
+
+.search{
+    width: 300px;
 }
 
 .cartelera{
@@ -34,11 +42,15 @@
 
 }
 
-.bg-navbar{
+.bg-navbar-dark{
     background-color: #242424;
 }
 
-.bg-container{
+.bg-navbar-light{
+    background-color: #d3d3d3;
+}
+
+.bg-container-dark{
     background-color: #000000;
 }
 

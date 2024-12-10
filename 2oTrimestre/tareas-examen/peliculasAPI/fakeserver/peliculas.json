@@ -512,6 +512,13 @@
       "argumento": "Los ejemplos dominan el mundo",
       "imagen": "def.jpeg",
       "director": "Ejemplar"
+    },
+    {
+      "id": "065",
+      "titulo": "Bottom Gun",
+      "director": "Yo",
+      "actores": "Pedro, Mariano, Chor",
+      "argumento": "En un lugar del Puerto..."
     }
   ]
 }

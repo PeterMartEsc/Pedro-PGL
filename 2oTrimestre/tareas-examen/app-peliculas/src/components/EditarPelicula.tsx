@@ -3,7 +3,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import Pelicula from '../models/Pelicula';
 import axios from 'axios';
 
-type Props = {}
+type Props = {
+    bgtheme: string,
+    texttheme: string,
+}
 
 const EditarPelicula = (props: Props) => {
     
@@ -99,7 +102,7 @@ const EditarPelicula = (props: Props) => {
     }
 
     return (
-        <div className='bg-container contenedorEstandar p-3'>
+        <div className={`bg-container-${props.bgtheme} contenedorEstandar p-3`}>
             <div className="formulario m-auto">
                 <form onSubmit={actualizar}>
                     <div className="row">

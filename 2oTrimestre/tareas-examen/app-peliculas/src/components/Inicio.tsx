@@ -2,7 +2,11 @@ import React, { useEffect, useState } from 'react'
 import '../styles/styles.css'
 import Pelicula from '../models/Pelicula';
 import axios from 'axios';
-type Props = {}
+
+type Props = {
+    bgtheme: string,
+    texttheme: string,
+}
 
 const Inicio = (props: Props) => {
 
@@ -29,7 +33,7 @@ const Inicio = (props: Props) => {
     }, [peliculas]);
 
     return (
-        <div className='contenedorEstandar bg-container p-4'>
+        <div className={`contenedorEstandar bg-container-${props.bgtheme} p-4`}>
             <div className="peliculaMostrar d-flex mx-auto align-items-center">
                     <img src={`http://localhost:3000/${seleccionada?.imagen}`} alt={seleccionada?.titulo} />
                     <div className="texto ms-3">

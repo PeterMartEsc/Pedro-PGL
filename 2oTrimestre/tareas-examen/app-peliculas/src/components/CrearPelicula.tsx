@@ -3,7 +3,11 @@ import '../styles/styles.css'
 import { useNavigate } from 'react-router-dom';
 import Pelicula from '../models/Pelicula';
 import axios from 'axios';
-type Props = {}
+
+type Props = {
+    bgtheme: string,
+    texttheme: string,
+}
 
 const CrearPelicula = (props: Props) => {
 
@@ -23,16 +27,25 @@ const CrearPelicula = (props: Props) => {
     }, [])
 
     useEffect(() => {
-        let obtenerID = peliculas[peliculas.length].id;
+        if(peliculas.length > 0){
+            let lastPelicula : Pelicula = peliculas[peliculas.length-1];
+            let lastID : string = lastPelicula.id;
+            setultimoId(lastID);
+        }
+        
         //hay que actualizar todos los id para que no tengan un 0 delante, si no el numero tal cual, y así poder hacer
         // +1 al id, y ya está.
-        setultimoId(obtenerID);
 
     }, [peliculas])
 
-    async function actualizar(event : React.FormEvent<HTMLFormElement>){
+    async function crearPelicula(event : React.FormEvent<HTMLFormElement>){
         event.preventDefault();
         let formulario = event.currentTarget;
+
+        let idEntero = parseInt(ultimoId);
+        let nuevaID = idEntero + 1;
+        let id : string = "0"+nuevaID;
+
         let titulo = formulario.titulo.value;
         let director = formulario.director.value;
         let actores = formulario.actores.value;
@@ -44,6 +57,7 @@ const CrearPelicula = (props: Props) => {
         }
 
         const peliculaActualizar = {
+            id,
             titulo,
             director,
             actores,
@@ -60,13 +74,13 @@ const CrearPelicula = (props: Props) => {
             console.log('Error al crear la película:', error);
             alert('Hubo un error al crear la película');
         }
-        navigate('/buscar-pelicula');
+        navigate('/crear-pelicula');
     }
 
     return (
-        <div className='bg-container contenedorEstandar p-3'>
+        <div className={`bg-container-${props.bgtheme} contenedorEstandar p-3`}>
             <div className="formulario m-auto">
-                <form>
+                <form onSubmit={crearPelicula}>
                     <div className="row">
                         <div className="form-group col-md-6">
                             <label htmlFor="titulo">Titulo</label>
