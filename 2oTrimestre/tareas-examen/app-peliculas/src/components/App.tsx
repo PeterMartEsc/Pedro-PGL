@@ -5,6 +5,7 @@ import EditarPelicula from './EditarPelicula'
 import ListPeliculas from './ListPeliculas'
 import ListCategorias from './ListCategorias'
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'bootstrap-icons/font/bootstrap-icons.css';
 import '../styles/styles.css';
 import Inicio from './Inicio'
 
@@ -62,6 +63,7 @@ const Navbar = (props: IProps) => {
                     <Link className="nav-link" to="/buscar-pelicula">Buscar Pelicula</Link>
                     <Link className="nav-link" to="/categorias">Categorias</Link>
                     <div>
+                        {bgtheme=="dark" ? <i className="bi bi-moon"/> : <i className="bi bi-brightness-high"></i> }
                         <button className="btn btn-outline-light changeTheme" onClick={props.changeTheme}></button>
                     </div>
                 </div>
