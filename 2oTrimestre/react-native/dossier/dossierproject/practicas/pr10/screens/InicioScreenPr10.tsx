@@ -1,76 +1,13 @@
 import { StyleSheet, Text, View } from 'react-native'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import Teclado from '../componentes/Teclado'
+import usecalc from '../pr11-hook/usecalc'
 
 type Props = {}
 
 const InicioScreenPr10 = (props: Props) => {
 
-    const [numeroOperar, setnumeroOperar] = useState<Array<number>>([]);
-    const [operador, setOperador] = useState<string>("");
-    const [numeroOperarSecund, setnumeroOperarSecund] = useState<Array<number>>([]);
-
-    useEffect(() => {
-        const arrayAux : Array<number> =[];
-        setnumeroOperarSecund(numeroOperar);
-        setnumeroOperar(arrayAux);
-      
-    }, [operador])
-    
-    function operar(){
-
-        let resultado : number = 0;
-
-        switch (operador) {
-            
-            case "+":
-                resultado = (parseInt(numeroOperarSecund.join("")))+(parseInt(numeroOperar.join("")));
-                break;
-
-            case "-":
-                resultado = (parseInt(numeroOperarSecund.join("")))-(parseInt(numeroOperar.join("")));
-                break;
-
-            case "*":
-                resultado = (parseInt(numeroOperarSecund.join("")))*(parseInt(numeroOperar.join("")));
-                break;
-
-            case "/":
-                resultado = (parseInt(numeroOperarSecund.join("")))/(parseInt(numeroOperar.join("")));
-                break;
-            
-        }
-
-        let arrayAux : Array<number> = [];
-        //arrayAux.push(resultado);
-        //setnumeroOperar(arrayAux);
-        setnumeroOperar([...arrayAux, resultado]);
-        setnumeroOperarSecund(arrayAux);
-    }
-
-    function agregarNumero(numero: number){
-        //const arrayAux : Array<number> = [];
-        setnumeroOperar([...numeroOperar, numero]);
-    }
-
-    function limpiar(){
-        setOperador("");
-        const arrayAux : Array<number> =[];
-        setnumeroOperarSecund(arrayAux);
-        setnumeroOperar(arrayAux);
-    }
-
-    function negar(){
-        let arayAux : Array<number> = [];
-        let numeroNegado = parseInt("-"+numeroOperar.join(""));
-        setnumeroOperar([...arayAux, numeroNegado]);
-        
-    }
-
-    function borrarUltimo(){
-        numeroOperar.pop();
-        setnumeroOperar([...numeroOperar]);
-    }
+    const {numeroOperar, numeroOperarSecund, agregarNumero, limpiar, setOperador, operar, negar, borrarUltimo} = usecalc();
 
     return (
         <View style={{flex:1}}>
@@ -92,9 +29,6 @@ const styles = StyleSheet.create({
         flex:1,
         backgroundColor: "black",
         justifyContent: "flex-end",
-        //alignContent: "flex-end",
-        //flexWrap: "wrap-reverse",
-        //flexDirection: "column",
     },
 
     resultado: {
