@@ -50,23 +50,29 @@ const CrearPelicula = (props: Props) => {
         let director = formulario.director.value;
         let actores = formulario.actores.value;
         let argumento = formulario.argumento.value;
+        let imagen = formulario.cartelera.value;
 
         if(titulo == null || director == null || actores == null || argumento == null){
             alert("Rellene todos los campos");
             return;
         }
 
-        const peliculaActualizar = {
+        const peliculaCrear = {
             id,
             titulo,
             director,
             actores,
-            argumento
+            argumento,
+            imagen: ''
+        }
+
+        if(imagen != ""){
+            peliculaCrear.imagen = imagen;
         }
 
         try {
             // Realizar la solicitud POST al servidor
-            await axios.post(uri, peliculaActualizar);
+            await axios.post(uri, peliculaCrear);
                 alert('Película creada exitosamente');
                 //navigate('/buscar-pelicula'); // Redirigir tras la creación
 
@@ -100,8 +106,14 @@ const CrearPelicula = (props: Props) => {
                         <textarea className="form-control mb-2" id="argumento" rows={3} placeholder='En un lugar de la mancha...'></textarea>
                     </div>
                     <div className="form-group">
-                        <label htmlFor="subir-cartel" className="form-label">Cartelera</label>
-                        <input className="form-control mb-3" type="file" id="subir-cartel" />
+                        <label htmlFor="cartelera" className="form-label">Cartelera</label>
+                        <select className="form-select mb-2" id="cartelera" >
+                            {
+                                peliculas.map((pelicula, index) => (
+                                    <option key={index} value={pelicula.imagen}>{pelicula.imagen}</option>
+                                ))
+                            }
+                        </select>
                     </div>
                     <button type="submit" className="btn btn-primary my-2">Crear</button>
                 </form>

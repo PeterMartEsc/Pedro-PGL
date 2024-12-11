@@ -40,7 +40,7 @@ const ListPeliculas = (props: Props) => {
     useEffect(() => {
         let aux = [];
 
-        //Si lo escrito en el input es mayor que 0, se busca
+        //Si lo escrito en el input es mayor que 0, hay busqueda -> se busca
         if(busqueda.length>0){            
 
             //Bucle para comprobar el titulo
@@ -50,10 +50,6 @@ const ListPeliculas = (props: Props) => {
                     aux.push(peliculas[i]);
                 }
             }
-
-            /* 
-                peliculas.filter
-            */
 
             //El array que se muestra es el de la busqueda
             setArrayMostrar([...aux]);
@@ -65,7 +61,6 @@ const ListPeliculas = (props: Props) => {
         
 
     }, [busqueda])
-
 
     return (
 

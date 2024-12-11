@@ -516,9 +516,10 @@
     {
       "id": "065",
       "titulo": "Bottom Gun",
-      "director": "Yo",
+      "director": "",
       "actores": "Pedro, Mariano, Chor",
-      "argumento": "En un lugar del Puerto..."
+      "argumento": "En un lugar del Puerto...",
+      "imagen": "def.jpeg"
     }
   ]
 }
