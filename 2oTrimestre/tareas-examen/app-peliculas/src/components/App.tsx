@@ -32,7 +32,7 @@ const App = (props: Props) => {
                 <Route path="/crear-pelicula" element={<CrearPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
                 <Route path="/buscar-pelicula" element={<ListPeliculas bgtheme={bgtheme} texttheme={texttheme}/>}/>
                 <Route path="/peliculas/:id" element={<EditarPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
-                <Route path="/categorias" element={<ListCategorias/>}/>
+                <Route path="/categorias" element={<ListCategorias bgtheme={bgtheme} texttheme={texttheme}/>}/>
             </Routes>
 
         </BrowserRouter>
