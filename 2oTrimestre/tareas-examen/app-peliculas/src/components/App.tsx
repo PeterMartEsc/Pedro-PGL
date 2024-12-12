@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import CrearPelicula from './CrearPelicula'
 import EditarPelicula from './EditarPelicula'
@@ -13,14 +13,20 @@ type Props = {}
 
 const App = (props: Props) => {
 
-    const [bgtheme, setbgtheme] = useState<string>("dark");
-    const [texttheme, settexttheme] = useState<string>("light");
-
+    const [bgcookie, setbgcookie] = useState<string>(localStorage.getItem("bg-theme") || "dark");
+    const [textcookie, settextcookie] = useState(localStorage.getItem("text-theme")|| "light");
+    const [bgtheme, setbgtheme] = useState<string>(bgcookie);
+    const [texttheme, settexttheme] = useState<string>(textcookie);
 
     function changeTheme(){
         setbgtheme((bgtheme) => (bgtheme === "dark" ? "light" : "dark"));
         settexttheme((texttheme) => (texttheme === "light" ? "dark" : "light"))
     }
+
+    useEffect(() => {
+        localStorage.setItem("bg-theme", bgtheme);
+        localStorage.setItem("text-theme", texttheme);
+    }, [bgtheme, texttheme])
 
     return (
         <BrowserRouter>

@@ -568,13 +568,41 @@
       "categoria": "Ejemplo"
     },
     {
-      "id": "065",
-      "titulo": "Bottom Gun",
-      "director": "Maxi",
-      "actores": "Pedro, Mariano, Chor",
-      "argumento": "En un lugar del Puerto...",
-      "imagen": "def.jpeg",
-      "categoria": "Ejemplo"
-    }
+        "id": "065",
+        "titulo": "El Castillo Ambulante",
+        "direccion": "Hayao Miyazaki",
+        "actores": "Chieko Baisho, Takuya Kimura, Akihiro Miwa, Tatsuya Gashuin",
+        "argumento": "Sophie, una joven sombrerera, se ve envuelta en una maldición que la transforma en una anciana. En su búsqueda por romper el hechizo, conoce a Howl, un excéntrico mago que vive en un castillo ambulante, y juntos emprenden una aventura llena de magia y autodescubrimiento.",
+        "imagen": "065.jpg",
+        "categoria": "Animación"
+    },
+    {
+        "id": "066",
+        "titulo": "Mi Vecino Totoro",
+        "direccion": "Hayao Miyazaki",
+        "actores": "Noriko Hidaka, Chika Sakamoto, Shigesato Itoi, Hitoshi Takagi",
+        "argumento": "Dos niñas, Satsuki y Mei, se mudan con su padre a una casa en el campo para estar cerca del hospital donde su madre está recuperándose. Allí descubren criaturas mágicas, incluyendo al entrañable Totoro, quien las guía en un viaje de imaginación, naturaleza y esperanza.",
+        "imagen": "066.jpg",
+        "categoria": "Animación"
+    },
+    {
+        "id": "067",
+        "titulo": "El Castillo en el Cielo",
+        "direccion": "Hayao Miyazaki",
+        "actores": "Mayumi Tanaka, Keiko Yokozawa, Kotoe Hatsui, Minori Terada",
+        "argumento": "Pazu, un joven minero, y Sheeta, una misteriosa niña, se embarcan en una aventura para encontrar Laputa, una legendaria ciudad flotante que oculta secretos antiguos y peligrosos. Juntos enfrentan piratas, agentes del gobierno y revelaciones que cambiarán sus vidas.",
+        "imagen": "067.jpg",
+        "categoria": "Animación"
+    },
+    {
+      "id": "068",
+      "titulo": "El Reino de los Cielos",
+      "direccion": "Ridley Scott",
+      "actores": "Orlando Bloom, Eva Green, Liam Neeson, Jeremy Irons",
+      "argumento": "Balian, un herrero francés que sufre la pérdida de su familia, descubre que es el hijo ilegítimo de un caballero cruzado. Acompañando a su padre a Tierra Santa, Balian se convierte en un líder clave en la defensa de Jerusalén durante las Cruzadas, enfrentándose a desafíos morales y espirituales en una época de conflictos religiosos.",
+      "imagen": "068.jpg",
+      "categoria": "Medieval"
+  }
+  
   ]
 }

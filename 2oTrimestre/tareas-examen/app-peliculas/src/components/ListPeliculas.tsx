@@ -66,7 +66,7 @@ const ListPeliculas = (props: Props) => {
 
         <div className={`contenedorEstandar bg-container-${props.bgtheme}`}>
             <form className="form-inline d-flex justify-content-center">
-                <input onChange={(e)=>setbusqueda(e.target.value)} className={`form-control my-2 bg-${props.texttheme}`} type="search" placeholder="Search" aria-label="Search" id='search'/>
+                <input onChange={(e)=>setbusqueda(e.target.value)} className={`form-control my-2 bg-${props.texttheme} text-${props.bgtheme}`} placeholder="Search" id='search'/>
             </form> 
             <div className={`listarPeliculas bg-container-${props.bgtheme}`}>
                 {
