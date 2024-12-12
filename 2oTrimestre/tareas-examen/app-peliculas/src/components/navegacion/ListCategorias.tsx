@@ -80,7 +80,7 @@ const ListCategorias = (props: Props) => {
                 {
                     peliculasCategoria.map((pelicula, index) => (
                         <div key={index} >
-                            <Link to={`/pelicula/${pelicula.id}`}>
+                            <Link to={`/peliculas/${pelicula.id}`}>
                                 <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} className='cartelera'/>
                             </Link>
                         </div>
