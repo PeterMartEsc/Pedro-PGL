@@ -23,6 +23,7 @@
 
 .changeTheme{
     height: 20px;
+    width: 40px;
 }
 
 .formulario{
@@ -67,6 +68,17 @@
 }
 
 .categoria-dark{
+    padding-top: 10px;
+    display: flex;
+    border: solid 1px white;
+    border-radius: 10px;
+    justify-content: center;
+    
+    width: 200px;
+    margin: auto;
+}
+
+.categoria-light{
     padding-top: 10px;
     display: flex;
     border: solid 1px;

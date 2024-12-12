@@ -62,8 +62,10 @@ const Navbar = (props: IProps) => {
                     <Link className="nav-link" to="/crear-pelicula">Crear Pelicula</Link>
                     <Link className="nav-link" to="/buscar-pelicula">Buscar Pelicula</Link>
                     <Link className="nav-link" to="/categorias">Categorias</Link>
-                    <div>
-                        {bgtheme=="dark" ? <i className="bi bi-moon"/> : <i className="bi bi-brightness-high"></i> }
+                    <div className='d-flex'>
+                        <span className='mx-2 '>
+                            {bgtheme=="dark" ? <i className="bi bi-brightness-high"></i> : <i className="bi bi-moon"/>}
+                        </span>
                         <button className="btn btn-outline-light changeTheme" onClick={props.changeTheme}></button>
                     </div>
                 </div>

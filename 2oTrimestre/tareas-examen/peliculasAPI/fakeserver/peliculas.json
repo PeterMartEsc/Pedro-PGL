@@ -61,7 +61,7 @@
       "actores": "Austin Butler, Tom Hanks, Olivia DeJonge, Richard Roxburgh",
       "argumento": "La película explora la vida y la música de Elvis Presley (Butler) a través del prisma de su relación con el coronel Tom Parker (Hanks), su enigmático manager. La historia profundiza en la compleja dinámica que existía entre Presley y Parker que abarca más de 20 años, desde el ascenso de Presley a la fama hasta su estrellato sin precedentes, en el contexto de la revolución cultural y la pérdida de la inocencia en Estados Unidos",
       "imagen": "007.jpg",
-      "categoria": "Música"
+      "categoria": "Musical"
     },
     {
       "id": "008",
@@ -70,7 +70,7 @@
       "actores": "Colin Farrell, Brendan Gleeson, Kerry Condon, Barry Keoghan",
       "argumento": "Ambientada en una isla remota frente a la costa oeste de Irlanda en 1923, narra la historia de dos amigos de toda la vida, Pádraic y Colm, quienes se encuentran en un callejón sin salida cuando Colm pone fin a su amistad de un modo abrupto. Un Pádraic atónito, con la única comprensión de su hermana Siobhán y del simple Dominic, se esfuerza por reconstruir la relación, negándose a aceptar las negativas de su amigo de siempre.",
       "imagen": "008.jpg",
-      "categoria": "Comedia"
+      "categoria": "Drama"
     },
     {
       "id": "009",
@@ -115,7 +115,7 @@
       "actores": "Bradley Cooper, Rooney Mara, Cate Blanchett, Toni Collette",
       "argumento": "Un ambicioso buscavidas con talento para engañar y manipular a la gente se compincha con una mujer que es incluso más peligrosa que él.",
       "imagen": "013.jpg",
-      "categoria": "Suspenso"
+      "categoria": "Suspense"
     },
     {
       "id": "014",
@@ -205,7 +205,7 @@
         "actores": "Nicolas Cage, Maika Monroe, Kiernan Shipka, Alicia Witt, Blair Underwood",
         "argumento": "Mientras el FBI intenta atrapar a un retorcido asesino en serie, una agente descubre una serie de pistas que podrían llevarla hasta el criminal y poner fin a su terrorífica ola de asesinatos.",
         "imagen": "023.jpg",
-        "categoria": "Suspense"
+        "categoria": "Thriller Psicológico"
     },
     {
         "id": "024",
@@ -322,7 +322,7 @@
         "actores": "Ryan Reynolds, Morena Baccarin, Ed Skrein, T.J. Miller",
         "argumento": "Un mercenario desfigurado con un oscuro sentido del humor busca vengarse del hombre que arruinó su vida mientras rompe constantemente la cuarta pared.",
         "imagen": "036.jpg",
-        "categoria": "Comedia de Acción"
+        "categoria": "Superhéroes"
     },
     {
         "id": "037",
