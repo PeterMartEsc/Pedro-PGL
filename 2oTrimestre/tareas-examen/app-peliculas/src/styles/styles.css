@@ -1,5 +1,5 @@
-.changeTheme{
-    height: 20px;
+.contenedorEstandar{
+    height: 100vh; /* Ocupa toda la altura de la pantalla */
 }
 
 .listarPeliculas{
@@ -9,8 +9,20 @@
     align-items: center;
 }
 
-.contenedorEstandar{
-    height: 100vh; /* Ocupa toda la altura de la pantalla */
+.bg-navbar-dark{
+    background-color: #242424;
+}
+
+.bg-navbar-light{
+    background-color: #d3d3d3;
+}
+
+.bg-container-dark{
+    background-color: #000000;
+}
+
+.changeTheme{
+    height: 20px;
 }
 
 .formulario{
@@ -39,19 +51,6 @@
 .cartelera:hover{
     transform: scale(1.05); /* Escala el elemento al pasar el mouse */
     transition: transform 0.3s ; /* Animación de transición */
-
-}
-
-.bg-navbar-dark{
-    background-color: #242424;
-}
-
-.bg-navbar-light{
-    background-color: #d3d3d3;
-}
-
-.bg-container-dark{
-    background-color: #000000;
 }
 
 .peliculaMostrar{
@@ -65,4 +64,15 @@
     width: 280px;
     height: 416px;
     object-fit: cover;
+}
+
+.categoria-dark{
+    padding-top: 10px;
+    display: flex;
+    border: solid 1px;
+    border-radius: 10px;
+    justify-content: center;
+    
+    width: 200px;
+    margin: auto;
 }

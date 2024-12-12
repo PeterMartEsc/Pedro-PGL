@@ -71,7 +71,7 @@ const ListPeliculas = (props: Props) => {
             <div className={`listarPeliculas bg-container-${props.bgtheme}`}>
                 {
                     arrayMostrar.map((pelicula, index) => (
-                        <div key={index} className={"pelicula"+index}>
+                        <div key={index} >
                             <Link to={`/peliculas/${pelicula.id}`} >
                                 <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} className='cartelera'/>
                             </Link>

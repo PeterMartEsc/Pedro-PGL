@@ -537,7 +537,8 @@
       "direccion": "Chad Stahelski",
       "actores": "Keanu Reeves, Riccardo Scamarcio, Ian McShane, Ruby Rose",
       "argumento": "Obligado a cumplir una deuda de sangre, John Wick regresa a la acción enfrentándose a una red internacional de asesinos.",
-      "imagen": "061.jpg"
+      "imagen": "061.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "062",
@@ -545,7 +546,8 @@
       "direccion": "Chad Stahelski",
       "actores": "Keanu Reeves, Halle Berry, Ian McShane, Laurence Fishburne",
       "argumento": "Con una recompensa multimillonaria por su cabeza, John Wick lucha por sobrevivir mientras es perseguido por los asesinos más letales del mundo.",
-      "imagen": "062.jpg"
+      "imagen": "062.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "063",
@@ -553,7 +555,8 @@
       "direccion": "Chad Stahelski",
       "actores": "Keanu Reeves, Donnie Yen, Bill Skarsgård, Laurence Fishburne",
       "argumento": "Enfrentando a la Alta Mesa, John Wick descubre un camino para ganar su libertad, pero antes debe enfrentarse a viejos y nuevos enemigos.",
-      "imagen": "063.jpg"
+      "imagen": "063.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "064",
@@ -562,15 +565,16 @@
       "actores": "Ejemplo ejemplito ejemplado",
       "argumento": "Los ejemplos dominan el mundo",
       "imagen": "def.jpeg",
-      "director": "Ejemplar"
+      "categoria": "Ejemplo"
     },
     {
       "id": "065",
       "titulo": "Bottom Gun",
-      "director": "",
+      "director": "Maxi",
       "actores": "Pedro, Mariano, Chor",
       "argumento": "En un lugar del Puerto...",
-      "imagen": "def.jpeg"
+      "imagen": "def.jpeg",
+      "categoria": "Ejemplo"
     }
   ]
 }

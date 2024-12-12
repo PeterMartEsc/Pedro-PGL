@@ -69,19 +69,19 @@ const ListCategorias = (props: Props) => {
             <div className={`listarPeliculas bg-container-${props.bgtheme}`}>
                 {
                     categorías.map((categoria, index) => (
-                        <div key={index} className="categoria">
+                        <div key={index} className={`categoria-${props.bgtheme} mt-3`}>
                             <p className={`text-${props.texttheme}`} onClick={()=> setcategoriaElegida(categoria)}>{categoria}</p>
                         </div>
                     ))
                 }
             </div>
             
-            <div className={`listarPeliculas bg-container-${props.bgtheme}`}>
+            <div className={`listarPeliculas bg-container-${props.bgtheme} pt-3`}>
                 {
                     peliculasCategoria.map((pelicula, index) => (
-                        <div key={index} className="pelicula">
+                        <div key={index} >
                             <Link to={`/pelicula/${pelicula.id}`}>
-                                <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} />
+                                <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} className='cartelera'/>
                             </Link>
                         </div>
                     ))
