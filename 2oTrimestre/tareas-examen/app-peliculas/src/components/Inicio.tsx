@@ -38,8 +38,10 @@ const Inicio = (props: Props) => {
                     <img src={`http://localhost:3000/${seleccionada?.imagen}`} alt={seleccionada?.titulo} />
                     <div className="texto ms-3">
                         <h2><u>{seleccionada?.titulo}</u></h2>
+                        <br />
                         <h4>{seleccionada?.direccion}</h4>
                         <h5>{seleccionada?.actores}</h5>
+                        <h5>{seleccionada?.categoria}</h5>
                         <br />
                         <p>{seleccionada?.argumento}</p>
                     </div>

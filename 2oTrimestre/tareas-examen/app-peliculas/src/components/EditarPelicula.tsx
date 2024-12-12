@@ -44,8 +44,9 @@ const EditarPelicula = (props: Props) => {
         let actores = formulario.actores.value;
         let argumento = formulario.argumento.value;
         let imagen = formulario.cartelera.value;
+        let categoria = formulario.categoria.value;
 
-        if(titulo == null || director == null || actores == null || argumento == null){
+        if(titulo == null || director == null || actores == null || argumento == null || categoria == null){
             alert("Rellene todos los campos");
             return;
         }
@@ -60,7 +61,8 @@ const EditarPelicula = (props: Props) => {
             director,
             actores,
             argumento,
-            imagen: ''
+            imagen: '',
+            categoria
         }
 
         if(imagen != ""){
@@ -75,7 +77,7 @@ const EditarPelicula = (props: Props) => {
                 //navigate('/buscar-pelicula'); // Redirigir tras la creación
 
         } catch (error) {
-            console.log('Error al actualizar la película:', error);
+            //console.log('Error al actualizar la película:', error); imprime por consola el error para detectarlo
             alert('Hubo un error al actualizar la película');
         }
         navigate('/buscar-pelicula');
@@ -119,15 +121,21 @@ const EditarPelicula = (props: Props) => {
                         <label htmlFor="argumento" className="form-label">Argumento</label>
                         <textarea className="form-control mb-2" id="argumento" rows={3} placeholder='En un lugar de la mancha...' defaultValue={peliculaCargada?.argumento}></textarea>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="cartelera" className="mb-2">Cartelera</label>
-                        <select className="form-select" id="cartelera" >
-                            {
-                                peliculas.map((pelicula, index) => (
-                                    <option key={index} value={pelicula.imagen} selected={pelicula.id == id}>{pelicula.imagen}</option>
-                                ))
-                            }
-                        </select>
+                    <div className="row">
+                        <div className="form-group col-md-6">
+                                <label htmlFor="categoria">Categoria</label>
+                                <input type="text" className="form-control my-2" id="categoria" placeholder="Categoria"/>
+                        </div>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="cartelera" className="mb-2">Cartelera</label>
+                            <select className="form-select" id="cartelera" >
+                                {
+                                    peliculas.map((pelicula, index) => (
+                                        <option key={index} value={pelicula.imagen} selected={pelicula.id == id}>{pelicula.imagen}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
                     </div>
                     <button type="submit" className="btn btn-primary my-2 me-3">Actualizar</button>
                 </form>

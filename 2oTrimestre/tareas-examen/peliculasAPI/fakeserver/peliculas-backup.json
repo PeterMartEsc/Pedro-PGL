@@ -6,7 +6,8 @@
       "direccion": "Dan Kwan, Daniel Scheinert, Daniels",
       "actores": "Michelle Yeoh, Ke Huy Quan, Jamie Lee Curtis",
       "argumento": "Cuando una ruptura interdimensional altera la realidad, Evelyn (Michelle Yeoh), una inmigrante china en Estados Unidos, se ve envuelta en una aventura salvaje en la que solo ella puede salvar el mundo. Perdida en los mundos infinitos del multiverso, esta heroína inesperada debe canalizar sus nuevos poderes para luchar contra los extraños y desconcertantes peligros del multiverso mientras el destino del mundo pende de un hilo",
-      "imagen": "001.jpg"
+      "imagen": "001.jpg",
+      "categoria": "Ciencia Ficción"
     },
     {
       "id": "002",
@@ -14,7 +15,8 @@
       "direccion": "Sarah Polley",
       "actores": "Rooney Mara, Claire Foy, Ben Whishaw, Jessie Buckley",
       "argumento": "En 2010, las mujeres que integran una colonia religiosa tratan de reconciliarse con la fe tras haber sufrido una serie de agresiones sexuales.",
-      "imagen": "002.jpg"
+      "imagen": "002.jpg",
+      "categoria": "Drama"
     },
     {
       "id": "003",
@@ -22,7 +24,8 @@
       "direccion": "Ruben Östlund",
       "actores": "Harris Dickinson, Charlbi Dean, Zlatko Buric, Dolly De Leon",
       "argumento": "Tras la Semana de la moda, Carl y Yaya, pareja de modelos e influencers, son invitados a un yate en un crucero de lujo. Mientras que la tripulación brinda todas las atenciones necesarias a los ricos invitados, el capitán se niega a salir de su cabina, a pesar de la llegada inminente de la célebre cena de gala. Los eventos toman un giro inesperado y el equilibrio de poder se invierte cuando se levanta una tormenta que pone en peligro el confort de los pasajeros.",
-      "imagen": "003.jpg"
+      "imagen": "003.jpg",
+      "categoria": "Comedia"
     },
     {
       "id": "004",
@@ -30,7 +33,8 @@
       "direccion": "Joseph Kosinski",
       "actores": "Tom Cruise, Miles Teller, Jennifer Connelly, Jon Hamm",
       "argumento": "Después de más de treinta años de servicio como uno de los mejores aviadores de la Armada, Pete \"Mavericks\" Mitchel (Tom Cruise) se encuentra donde siempre quiso estar: superando los límites como un valiente piloto de pruebas y esquivando el ascenso de rango, que no le dejaría volar emplazándolo en tierra. Cuando es destinado a la academia de Top Gun con el objetivo de entrenar a los pilotos de élite para realizar una peligrosa misión",
-      "imagen": "004.jpg"
+      "imagen": "004.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "005",
@@ -38,7 +42,8 @@
       "direccion": "Todd Field",
       "actores": "Cate Blanchett, Nina Hoss, Noémie Merlant, Mark Strong",
       "argumento": "La mundialmente famosa Lydia Tár está a solo unos días de afrontar el mayor reto de su carrera profesional: grabar la sinfonía que la llevará a las alturas de su ya formidable carrera. Pero su vida personal y sus decisiones van a ir interfiriendo en su carrera musical con consecuencias imprevisibles.",
-      "imagen": "005.jpg"
+      "imagen": "005.jpg",
+      "categoria": "Drama"
     },
     {
       "id": "006",
@@ -46,7 +51,8 @@
       "direccion": "Steven Spielberg",
       "actores": "Michelle Williams, Paul Dano, Gabriel LaBelle, Seth Rogen",
       "argumento": "Film semiautobiográfico de la propia infancia y juventud de Spielberg. Ambientada a finales de la década de 1950 y principios de los años 60, un niño de Arizona llamado Sammy Fabelman, influido por su excéntrica madre, artista (Michelle Williams), y su pragmático padre, ingeniero informático (Paul Dano), descubre un secreto familiar devastador y explora cómo el poder de las películas puede ayudarlo a contar historias y a forjar su propia identidad.",
-      "imagen": "006.jpg"
+      "imagen": "006.jpg",
+      "categoria": "Biografía"
     },
     {
       "id": "007",
@@ -54,7 +60,8 @@
       "direccion": "Baz Luhrmann",
       "actores": "Austin Butler, Tom Hanks, Olivia DeJonge, Richard Roxburgh",
       "argumento": "La película explora la vida y la música de Elvis Presley (Butler) a través del prisma de su relación con el coronel Tom Parker (Hanks), su enigmático manager. La historia profundiza en la compleja dinámica que existía entre Presley y Parker que abarca más de 20 años, desde el ascenso de Presley a la fama hasta su estrellato sin precedentes, en el contexto de la revolución cultural y la pérdida de la inocencia en Estados Unidos",
-      "imagen": "007.jpg"
+      "imagen": "007.jpg",
+      "categoria": "Música"
     },
     {
       "id": "008",
@@ -62,7 +69,8 @@
       "direccion": "Martin McDonagh",
       "actores": "Colin Farrell, Brendan Gleeson, Kerry Condon, Barry Keoghan",
       "argumento": "Ambientada en una isla remota frente a la costa oeste de Irlanda en 1923, narra la historia de dos amigos de toda la vida, Pádraic y Colm, quienes se encuentran en un callejón sin salida cuando Colm pone fin a su amistad de un modo abrupto. Un Pádraic atónito, con la única comprensión de su hermana Siobhán y del simple Dominic, se esfuerza por reconstruir la relación, negándose a aceptar las negativas de su amigo de siempre.",
-      "imagen": "008.jpg"
+      "imagen": "008.jpg",
+      "categoria": "Comedia"
     },
     {
       "id": "009",
@@ -70,7 +78,8 @@
       "direccion": "James Cameron",
       "actores": "Sam Worthington, Zoe Saldana, Sigourney Weaver, Kate Winslet",
       "argumento": "Más de una década después de los acontecimientos de 'Avatar', los Na'vi Jake Sully, Neytiri y sus hijos viven en paz en los bosques de Pandora hasta que regresan los hombres del cielo. Entonces comienzan los problemas que persiguen sin descanso a la familia Sully, que decide hacer un gran sacrificio para mantener a su pueblo a salvo y seguir ellos con vida.",
-      "imagen": "009.jpg"
+      "imagen": "009.jpg",
+      "categoria": "Aventura"
     },
     {
       "id": "010",
@@ -78,7 +87,8 @@
       "direccion": "Edward Berger",
       "actores": "Felix Kammerer, Albrecht Schuch, Aaron Hilmer, Moritz Klaus",
       "argumento": "Relato de las terribles experiencias y la angustia de un joven soldado alemán en el frente occidental durante la Primera Guerra Mundial.",
-      "imagen": "010.jpg"
+      "imagen": "010.jpg",
+      "categoria": "Bélica"
     },
     {
       "id": "011",
@@ -86,7 +96,8 @@
       "direccion": "Reinaldo Marcus Green",
       "actores": "Will Smith, Aunjanue Ellis, Jon Bernthal, Saniyya Sidney",
       "argumento": "Biopic sobre Richard Williams, un padre inasequible que ayudó a formar a dos de las deportistas más extraordinarias de todos los tiempos, dos atletas que acabarían marcando época en el deporte del tenis. Richard tenía una visión muy clara del futuro de sus hijas, y sirviéndose de métodos arriesgados y poco convencionales, elaboró un plan que llevaría a Venus y Serena Williams de las calles de Compton, California, al olimpo del deporte",
-      "imagen": "011.jpg"
+      "imagen": "011.jpg",
+      "categoria": "Biografía"
     },
     {
       "id": "012",
@@ -94,7 +105,8 @@
       "direccion": "Paul Thomas Anderson",
       "actores": "Alana Haim, Cooper Hoffman, Sean Penn, Bradley Cooper",
       "argumento": "Es la historia de Alana Kane y Gary Valentine, de cómo se conocen, pasan el tiempo juntos y acaban enamorándose en el Valle de San Fernando en 1973",
-      "imagen": "012.jpg"
+      "imagen": "012.jpg",
+      "categoria": "Romántica"
     },
     {
       "id": "013",
@@ -102,7 +114,8 @@
       "direccion": "Guillermo del Toro",
       "actores": "Bradley Cooper, Rooney Mara, Cate Blanchett, Toni Collette",
       "argumento": "Un ambicioso buscavidas con talento para engañar y manipular a la gente se compincha con una mujer que es incluso más peligrosa que él.",
-      "imagen": "013.jpg"
+      "imagen": "013.jpg",
+      "categoria": "Suspenso"
     },
     {
       "id": "014",
@@ -110,15 +123,17 @@
       "direccion": "Kenneth Branagh",
       "actores": "Jude Hill, Caitriona Balfe, Jamie Dornan, Judi Dench",
       "argumento": "Drama ambientado en la tumultuosa Irlanda del Norte de finales de los años 60. Sigue al pequeño Buddy mientras crece en un ambiente de lucha obrera, cambios culturales, odio interreligioso y violencia sectaria. Buddy sueña con un futuro que le aleje de los problemas, pero, mientras tanto, encuentra consuelo en su pasión por el cine, en la niña que le gusta de su clase, y en sus carismáticos padres y abuelos.",
-      "imagen": "014.jpg"
+      "imagen": "014.jpg",
+      "categoria": "Drama"
     },
     {
       "id": "015",
       "titulo": "Sherlok Holmes",
       "direccion": "Guy Ritchie",
-      "actores": "Robert Downey Jr, Jude Law, Rachel McAdams, Mark Strong, Robert Maillet ",
+      "actores": "Robert Downey Jr, Jude Law, Rachel McAdams, Mark Strong, Robert Maillet",
       "argumento": "Sherlock Holmes y su incondicional compañero Watson, deberán usar su agudeza intelectual y toda clase de recursos y habilidades para enfrentarse a un nuevo enemigo y desenmarañar un complot que podría destruir el país.",
-      "imagen": "015.jpg"
+      "imagen": "015.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "016",
@@ -126,15 +141,17 @@
       "direccion": "Jane Campion",
       "actores": "Benedict Cumberbatch, Jesse Plemons, Kirsten Dunst, Kodi Smit-McPhee",
       "argumento": "Montana, 1925. Los acaudalados hermanos Phil (Cumberbatch) y George Burbank (Plemons) son las dos caras de la misma moneda. Phil es impetuoso y cruel, mientras George es impasible y amable. Juntos son copropietarios de un enorme rancho donde tienen ganado.",
-      "imagen": "016.jpg"
+      "imagen": "016.jpg",
+      "categoria": "Western"
     },
     {
       "id": "017",
       "titulo": "No mires arriba",
       "direccion": "Adam McKay",
       "actores": "Leonardo DiCaprio, Jennifer Lawrence, Meryl Streep, Cate Blanchett",
-      "argumento": "Kate Dibiasky (Jennifer Lawrence), estudiante de posgrado de Astronomía, y su profesor, el doctor Randall Mindy (Leonardo DiCaprio) hacen un descubrimiento tan asombros como terrorífico: un enorme cometa lleva un rumbo de colisión directa con la Tierra",
-      "imagen": "017.jpg"
+      "argumento": "Kate Dibiasky (Jennifer Lawrence), estudiante de posgrado de Astronomía, y su profesor, el doctor Randall Mindy (Leonardo DiCaprio) hacen un descubrimiento tan asombroso como terrorífico: un enorme cometa lleva un rumbo de colisión directa con la Tierra",
+      "imagen": "017.jpg",
+      "categoria": "Comedia"
     },
     {
       "id": "018",
@@ -142,103 +159,116 @@
       "direccion": "Ryûsuke Hamaguchi",
       "actores": "Hidetoshi Nishijima, Tôko Miura, Reika Kirishima, Park Yu-rim",
       "argumento": "Pese a no ser capaz de recuperarse de un drama personal, Yusuke Kafuku, actor y director de teatro, acepta montar la obra \"Tío Vania\" en un festival de Hiroshima. Allí, conoce a Misaki, una joven reservada que le han asignado como chófer. A medida que pasan los trayectos, la sinceridad creciente de sus conversaciones les obliga a enfrentarse a su pasado.",
-      "imagen": "018.jpg"
+      "imagen": "018.jpg",
+      "categoria": "Drama"
     },
     {
-      "id": "019",
-      "titulo": "Dune",
-      "direccion": "Denis Villeneuve",
-      "actores": "Timothée Chalamet, Rebecca Ferguson, Oscar Isaac, Josh Brolin",
-      "argumento": "En el Año 10191 el desértico planeta Arrakis, feudo de la familia Harkonnen desde hace generaciones, queda en manos de la Casa de los Atreides por orden del emperador. Con ello les cede la explotación de las reservas de especia, la materia prima más valiosa de la galaxia, necesaria para los viajes interestelares y también una droga capaz de amplificar la conciencia y extender la vida.",
-      "imagen": "019.jpg"
+        "id": "019",
+        "titulo": "Dune",
+        "direccion": "Denis Villeneuve",
+        "actores": "Timothée Chalamet, Rebecca Ferguson, Oscar Isaac, Josh Brolin",
+        "argumento": "En el Año 10191 el desértico planeta Arrakis, feudo de la familia Harkonnen desde hace generaciones, queda en manos de la Casa de los Atreides por orden del emperador. Con ello les cede la explotación de las reservas de especia, la materia prima más valiosa de la galaxia, necesaria para los viajes interestelares y también una droga capaz de amplificar la conciencia y extender la vida.",
+        "imagen": "019.jpg",
+        "categoria": "Ciencia ficción"
     },
     {
-      "id": "020",
-      "titulo": "El Padrino",
-      "direccion": "Francis Ford Coppola",
-      "actores": "Marlon Brando, John Cazale, Al Pacino, Richard S. Castellano, James Caan",
-      "argumento": "Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40. El hombre tiene cuatro hijos: Connie, Sonny, Fredo y Michael, que no quiere saber nada de los negocios sucios de su padre.",
-      "imagen": "020.jpg"
+        "id": "020",
+        "titulo": "El Padrino",
+        "direccion": "Francis Ford Coppola",
+        "actores": "Marlon Brando, John Cazale, Al Pacino, Richard S. Castellano, James Caan",
+        "argumento": "Don Vito Corleone es el respetado y temido jefe de una de las cinco familias de la mafia de Nueva York en los años 40. El hombre tiene cuatro hijos: Connie, Sonny, Fredo y Michael, que no quiere saber nada de los negocios sucios de su padre.",
+        "imagen": "020.jpg",
+        "categoria": "Crimen"
     },
     {
-      "id": "021",
-      "titulo": "Gladiator",
-      "direccion": "Ridley Scott",
-      "actores": "Russell Crowe, Joaquin Phoenix, Connie Nielsen, Spencer Treat Clark, Richard Harris",
-      "argumento": "El general romano Máximo es el soporte más leal del emperador Marco Aurelio, que lo ha conducido de victoria en victoria. Sin embargo, Cómodo, el hijo de Marco Aurelio, está celoso del prestigio de Máximo y aún más del amor que su padre siente por él.",
-      "imagen": "021.jpg"
+        "id": "021",
+        "titulo": "Gladiator",
+        "direccion": "Ridley Scott",
+        "actores": "Russell Crowe, Joaquin Phoenix, Connie Nielsen, Spencer Treat Clark, Richard Harris",
+        "argumento": "El general romano Máximo es el soporte más leal del emperador Marco Aurelio, que lo ha conducido de victoria en victoria. Sin embargo, Cómodo, el hijo de Marco Aurelio, está celoso del prestigio de Máximo y aún más del amor que su padre siente por él.",
+        "imagen": "021.jpg",
+        "categoria": "Acción"
     },
     {
-      "id": "022",
-      "titulo": "The Equalizer",
-      "direccion": "Antoine Fuqua",
-      "actores": "Denzel Washington, Chloë Grace Moretz, Marton Csokas, Melissa Leo, David Harbour",
-      "argumento": "Robert McCall, un antiguo comando de operaciones especiales que ha fingido su propia muerte, se ve obligado a salir de su retiro para salvar la vida de Teri, una joven que se encuentra en manos de unos proxenetas rusos.",
-      "imagen": "022.jpg"
+        "id": "022",
+        "titulo": "The Equalizer",
+        "direccion": "Antoine Fuqua",
+        "actores": "Denzel Washington, Chloë Grace Moretz, Marton Csokas, Melissa Leo, David Harbour",
+        "argumento": "Robert McCall, un antiguo comando de operaciones especiales que ha fingido su propia muerte, se ve obligado a salir de su retiro para salvar la vida de Teri, una joven que se encuentra en manos de unos proxenetas rusos.",
+        "imagen": "022.jpg",
+        "categoria": "Acción"
     },
     {
-      "id": "023",
-      "titulo": "Longlegs",
-      "direccion": "Oz Perkins",
-      "actores": "Nicolas Cage, Maika Monroe, Kiernan Shipka, Alicia Witt, Blair Underwood",
-      "argumento": "Mientras el FBI intenta atrapar a un retorcido asesino en serie, una agente descubre una serie de pistas que podrían llevarla hasta el criminal y poner fin a su terrorífica ola de asesinatos.",
-      "imagen": "023.jpg"
+        "id": "023",
+        "titulo": "Longlegs",
+        "direccion": "Oz Perkins",
+        "actores": "Nicolas Cage, Maika Monroe, Kiernan Shipka, Alicia Witt, Blair Underwood",
+        "argumento": "Mientras el FBI intenta atrapar a un retorcido asesino en serie, una agente descubre una serie de pistas que podrían llevarla hasta el criminal y poner fin a su terrorífica ola de asesinatos.",
+        "imagen": "023.jpg",
+        "categoria": "Suspense"
     },
     {
-      "id": "024",
-      "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
-      "direccion": "Peter Jackson",
-      "actores": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
-      "argumento": "Un joven hobbit llamado Frodo Bolsón se embarca en una peligrosa misión para destruir un poderoso anillo que podría traer el fin del mundo si cae en las manos equivocadas.",
-      "imagen": "024.jpg"
+        "id": "024",
+        "titulo": "El Señor de los Anillos: La Comunidad del Anillo",
+        "direccion": "Peter Jackson",
+        "actores": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
+        "argumento": "Un joven hobbit llamado Frodo Bolsón se embarca en una peligrosa misión para destruir un poderoso anillo que podría traer el fin del mundo si cae en las manos equivocadas.",
+        "imagen": "024.jpg",
+        "categoria": "Fantasía"
     },
     {
-      "id": "025",
-      "titulo": "El Señor de los Anillos: Las Dos Torres",
-      "direccion": "Peter Jackson",
-      "actores": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
-      "argumento": "Mientras Frodo y Sam continúan su viaje hacia Mordor, el resto de la Comunidad del Anillo lucha para enfrentar la creciente amenaza de las fuerzas de Saruman y Sauron.",
-      "imagen": "025.jpg"
+        "id": "025",
+        "titulo": "El Señor de los Anillos: Las Dos Torres",
+        "direccion": "Peter Jackson",
+        "actores": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
+        "argumento": "Mientras Frodo y Sam continúan su viaje hacia Mordor, el resto de la Comunidad del Anillo lucha para enfrentar la creciente amenaza de las fuerzas de Saruman y Sauron.",
+        "imagen": "025.jpg",
+        "categoria": "Fantasía"
     },
     {
-      "id": "026",
-      "titulo": "El Señor de los Anillos: El Retorno del Rey",
-      "direccion": "Peter Jackson",
-      "actores": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
-      "argumento": "En la épica conclusión, Frodo y Sam se acercan al Monte del Destino mientras la batalla final entre las fuerzas del bien y el mal define el destino de la Tierra Media.",
-      "imagen": "026.jpg"
+        "id": "026",
+        "titulo": "El Señor de los Anillos: El Retorno del Rey",
+        "direccion": "Peter Jackson",
+        "actores": "Elijah Wood, Ian McKellen, Viggo Mortensen, Orlando Bloom, Sean Astin",
+        "argumento": "En la épica conclusión, Frodo y Sam se acercan al Monte del Destino mientras la batalla final entre las fuerzas del bien y el mal define el destino de la Tierra Media.",
+        "imagen": "026.jpg",
+        "categoria": "Fantasía"
     },
     {
-      "id": "027",
-      "titulo": "The Matrix",
-      "direccion": "Lana Wachowski, Lilly Wachowski",
-      "actores": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving",
-      "argumento": "Un programador informático descubre la impactante verdad de que el mundo que conoce es una simulación y se une a un grupo de rebeldes para liberar a la humanidad.",
-      "imagen": "027.jpg"
+        "id": "027",
+        "titulo": "The Matrix",
+        "direccion": "Lana Wachowski, Lilly Wachowski",
+        "actores": "Keanu Reeves, Laurence Fishburne, Carrie-Anne Moss, Hugo Weaving",
+        "argumento": "Un programador informático descubre la impactante verdad de que el mundo que conoce es una simulación y se une a un grupo de rebeldes para liberar a la humanidad.",
+        "imagen": "027.jpg",
+        "categoria": "Ciencia ficción"
     },
     {
-      "id": "028",
-      "titulo": "La Princesa Mononoke",
-      "direccion": "Hayao Miyazaki",
-      "actores": "Yōji Matsuda, Yuriko Ishida, Yūko Tanaka, Kaoru Kobayashi",
-      "argumento": "Un joven príncipe maldecido por un demonio viaja al bosque para buscar una cura y se encuentra atrapado en el conflicto entre los espíritus de la naturaleza y una comunidad industrial.",
-      "imagen": "028.jpg"
+        "id": "028",
+        "titulo": "La Princesa Mononoke",
+        "direccion": "Hayao Miyazaki",
+        "actores": "Yōji Matsuda, Yuriko Ishida, Yūko Tanaka, Kaoru Kobayashi",
+        "argumento": "Un joven príncipe maldecido por un demonio viaja al bosque para buscar una cura y se encuentra atrapado en el conflicto entre los espíritus de la naturaleza y una comunidad industrial.",
+        "imagen": "028.jpg",
+        "categoria": "Animación"
     },
     {
-      "id": "029",
-      "titulo": "El Viaje de Chihiro",
-      "direccion": "Hayao Miyazaki",
-      "actores": "Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito",
-      "argumento": "Una niña se adentra en un mundo mágico de espíritus y criaturas sobrenaturales mientras intenta rescatar a sus padres transformados en cerdos y encontrar su camino de regreso a casa.",
-      "imagen": "029.jpg"
+        "id": "029",
+        "titulo": "El Viaje de Chihiro",
+        "direccion": "Hayao Miyazaki",
+        "actores": "Rumi Hiiragi, Miyu Irino, Mari Natsuki, Takeshi Naito",
+        "argumento": "Una niña se adentra en un mundo mágico de espíritus y criaturas sobrenaturales mientras intenta rescatar a sus padres transformados en cerdos y encontrar su camino de regreso a casa.",
+        "imagen": "029.jpg",
+        "categoria": "Animación"
     },
     {
-      "id": "030",
-      "titulo": "El Club de la Lucha",
-      "direccion": "David Fincher",
-      "actores": "Brad Pitt, Edward Norton, Helena Bonham Carter, Meat Loaf, Jared Leto",
-      "argumento": "Un hombre insomne y un vendedor de jabón carismático forman un club secreto de lucha que evoluciona en algo mucho más grande y peligroso.",
-      "imagen": "030.jpg"
+        "id": "030",
+        "titulo": "El Club de la Lucha",
+        "direccion": "David Fincher",
+        "actores": "Brad Pitt, Edward Norton, Helena Bonham Carter, Meat Loaf, Jared Leto",
+        "argumento": "Un hombre insomne y un vendedor de jabón carismático forman un club secreto de lucha que evoluciona en algo mucho más grande y peligroso.",
+        "imagen": "030.jpg",
+        "categoria": "Drama"
     },
     {
       "id": "031",
@@ -246,239 +276,260 @@
       "direccion": "Martin Scorsese",
       "actores": "Leonardo DiCaprio, Mark Ruffalo, Ben Kingsley, Michelle Williams",
       "argumento": "Dos agentes federales investigan la desaparición de una paciente de un hospital psiquiátrico, desentrañando oscuros secretos y enfrentando la delgada línea entre la realidad y la locura.",
-      "imagen": "031.jpg"
+      "imagen": "031.jpg",
+      "categoria": "Thriller Psicológico"
     },
     {
-      "id": "032",
-      "titulo": "La Princesa Prometida",
-      "direccion": "Rob Reiner",
-      "actores": "Cary Elwes, Robin Wright, Mandy Patinkin, Chris Sarandon, André the Giant",
-      "argumento": "Un cuento de hadas épico sobre amor verdadero y aventuras mientras un joven granjero intenta rescatar a su amada princesa de un príncipe malvado.",
-      "imagen": "032.jpg"
+        "id": "032",
+        "titulo": "La Princesa Prometida",
+        "direccion": "Rob Reiner",
+        "actores": "Cary Elwes, Robin Wright, Mandy Patinkin, Chris Sarandon, André the Giant",
+        "argumento": "Un cuento de hadas épico sobre amor verdadero y aventuras mientras un joven granjero intenta rescatar a su amada princesa de un príncipe malvado.",
+        "imagen": "032.jpg",
+        "categoria": "Fantasía"
     },
     {
-      "id": "033",
-      "titulo": "La Venganza del Dragón (Incident in Shinjuku)",
-      "direccion": "Wilson Yip",
-      "actores": "Donnie Yen, Takashi Kaneshiro, Shu Qi, Tony Leung",
-      "argumento": "Un maestro de artes marciales se ve atrapado en un conflicto entre facciones criminales en el distrito de Shinjuku, enfrentando traiciones y revelando secretos oscuros.",
-      "imagen": "033.jpg"
+        "id": "033",
+        "titulo": "La Venganza del Dragón (Incident in Shinjuku)",
+        "direccion": "Wilson Yip",
+        "actores": "Donnie Yen, Takashi Kaneshiro, Shu Qi, Tony Leung",
+        "argumento": "Un maestro de artes marciales se ve atrapado en un conflicto entre facciones criminales en el distrito de Shinjuku, enfrentando traiciones y revelando secretos oscuros.",
+        "imagen": "033.jpg",
+        "categoria": "Acción"
     },
     {
-      "id": "034",
-      "titulo": "Capitán América: El Soldado de Invierno",
-      "direccion": "Anthony Russo, Joe Russo",
-      "actores": "Chris Evans, Scarlett Johansson, Sebastian Stan, Anthony Mackie, Samuel L. Jackson",
-      "argumento": "Steve Rogers, alias Capitán América, descubre una conspiración dentro de S.H.I.E.L.D. y enfrenta a un nuevo enemigo formidable conocido como el Soldado de Invierno.",
-      "imagen": "034.jpg"
+        "id": "034",
+        "titulo": "Capitán América: El Soldado de Invierno",
+        "direccion": "Anthony Russo, Joe Russo",
+        "actores": "Chris Evans, Scarlett Johansson, Sebastian Stan, Anthony Mackie, Samuel L. Jackson",
+        "argumento": "Steve Rogers, alias Capitán América, descubre una conspiración dentro de S.H.I.E.L.D. y enfrenta a un nuevo enemigo formidable conocido como el Soldado de Invierno.",
+        "imagen": "034.jpg",
+        "categoria": "Superhéroes"
     },
     {
-      "id": "035",
-      "titulo": "Logan",
-      "direccion": "James Mangold",
-      "actores": "Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook",
-      "argumento": "En un futuro cercano, un envejecido Logan cuida a un enfermo Charles Xavier mientras protege a una joven mutante con habilidades extraordinarias.",
-      "imagen": "035.jpg"
+        "id": "035",
+        "titulo": "Logan",
+        "direccion": "James Mangold",
+        "actores": "Hugh Jackman, Patrick Stewart, Dafne Keen, Boyd Holbrook",
+        "argumento": "En un futuro cercano, un envejecido Logan cuida a un enfermo Charles Xavier mientras protege a una joven mutante con habilidades extraordinarias.",
+        "imagen": "035.jpg",
+        "categoria": "Superhéroes"
     },
     {
-      "id": "036",
-      "titulo": "Deadpool",
-      "direccion": "Tim Miller",
-      "actores": "Ryan Reynolds, Morena Baccarin, Ed Skrein, T.J. Miller",
-      "argumento": "Un mercenario desfigurado con un oscuro sentido del humor busca vengarse del hombre que arruinó su vida mientras rompe constantemente la cuarta pared.",
-      "imagen": "036.jpg"
+        "id": "036",
+        "titulo": "Deadpool",
+        "direccion": "Tim Miller",
+        "actores": "Ryan Reynolds, Morena Baccarin, Ed Skrein, T.J. Miller",
+        "argumento": "Un mercenario desfigurado con un oscuro sentido del humor busca vengarse del hombre que arruinó su vida mientras rompe constantemente la cuarta pared.",
+        "imagen": "036.jpg",
+        "categoria": "Comedia de Acción"
     },
     {
-      "id": "037",
-      "titulo": "Star Wars: Episodio I - La Amenaza Fantasma",
-      "direccion": "George Lucas",
-      "actores": "Liam Neeson, Ewan McGregor, Natalie Portman, Jake Lloyd, Ian McDiarmid",
-      "argumento": "La historia de cómo los Jedi descubren a Anakin Skywalker, un niño con un potencial extraordinario, mientras enfrentan una amenaza creciente de los Sith.",
-      "imagen": "037.jpg"
+        "id": "037",
+        "titulo": "Star Wars: Episodio I - La Amenaza Fantasma",
+        "direccion": "George Lucas",
+        "actores": "Liam Neeson, Ewan McGregor, Natalie Portman, Jake Lloyd, Ian McDiarmid",
+        "argumento": "La historia de cómo los Jedi descubren a Anakin Skywalker, un niño con un potencial extraordinario, mientras enfrentan una amenaza creciente de los Sith.",
+        "imagen": "037.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "038",
-      "titulo": "Star Wars: Episodio II - El Ataque de los Clones",
-      "direccion": "George Lucas",
-      "actores": "Ewan McGregor, Natalie Portman, Hayden Christensen, Christopher Lee",
-      "argumento": "Diez años después, Anakin Skywalker comienza su entrenamiento Jedi mientras una amenaza de guerra civil se cierne sobre la República.",
-      "imagen": "038.jpg"
+        "id": "038",
+        "titulo": "Star Wars: Episodio II - El Ataque de los Clones",
+        "direccion": "George Lucas",
+        "actores": "Ewan McGregor, Natalie Portman, Hayden Christensen, Christopher Lee",
+        "argumento": "Diez años después, Anakin Skywalker comienza su entrenamiento Jedi mientras una amenaza de guerra civil se cierne sobre la República.",
+        "imagen": "038.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "039",
-      "titulo": "Star Wars: Episodio III - La Venganza de los Sith",
-      "direccion": "George Lucas",
-      "actores": "Ewan McGregor, Natalie Portman, Hayden Christensen, Ian McDiarmid",
-      "argumento": "El ascenso de Darth Vader y el fin de la República se desencadenan mientras Anakin Skywalker sucumbe al lado oscuro de la Fuerza.",
-      "imagen": "039.jpg"
+        "id": "039",
+        "titulo": "Star Wars: Episodio III - La Venganza de los Sith",
+        "direccion": "George Lucas",
+        "actores": "Ewan McGregor, Natalie Portman, Hayden Christensen, Ian McDiarmid",
+        "argumento": "El ascenso de Darth Vader y el fin de la República se desencadenan mientras Anakin Skywalker sucumbe al lado oscuro de la Fuerza.",
+        "imagen": "039.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "040",
-      "titulo": "Star Wars: Episodio IV - Una Nueva Esperanza",
-      "direccion": "George Lucas",
-      "actores": "Mark Hamill, Harrison Ford, Carrie Fisher, Alec Guinness",
-      "argumento": "Un joven granjero, Luke Skywalker, se une a la Rebelión para enfrentarse al Imperio y destruir la mortal Estrella de la Muerte.",
-      "imagen": "040.jpg"
+        "id": "040",
+        "titulo": "Star Wars: Episodio IV - Una Nueva Esperanza",
+        "direccion": "George Lucas",
+        "actores": "Mark Hamill, Harrison Ford, Carrie Fisher, Alec Guinness",
+        "argumento": "Un joven granjero, Luke Skywalker, se une a la Rebelión para enfrentarse al Imperio y destruir la mortal Estrella de la Muerte.",
+        "imagen": "040.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "041",
-      "titulo": "Star Wars: Episodio V - El Imperio Contraataca",
-      "direccion": "Irvin Kershner",
-      "actores": "Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams",
-      "argumento": "La Rebelión enfrenta duros golpes mientras Luke Skywalker entrena con Yoda para enfrentarse a Darth Vader y descubrir un oscuro secreto familiar.",
-      "imagen": "041.jpg"
+        "id": "041",
+        "titulo": "Star Wars: Episodio V - El Imperio Contraataca",
+        "direccion": "Irvin Kershner",
+        "actores": "Mark Hamill, Harrison Ford, Carrie Fisher, Billy Dee Williams",
+        "argumento": "La Rebelión enfrenta duros golpes mientras Luke Skywalker entrena con Yoda para enfrentarse a Darth Vader y descubrir un oscuro secreto familiar.",
+        "imagen": "041.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "042",
-      "titulo": "Star Wars: Episodio VI - El Retorno del Jedi",
-      "direccion": "Richard Marquand",
-      "actores": "Mark Hamill, Harrison Ford, Carrie Fisher, Ian McDiarmid",
-      "argumento": "La batalla final entre la Alianza Rebelde y el Imperio decide el destino de la galaxia mientras Luke Skywalker confronta a Darth Vader y al Emperador.",
-      "imagen": "042.jpg"
+        "id": "042",
+        "titulo": "Star Wars: Episodio VI - El Retorno del Jedi",
+        "direccion": "Richard Marquand",
+        "actores": "Mark Hamill, Harrison Ford, Carrie Fisher, Ian McDiarmid",
+        "argumento": "La batalla final entre la Alianza Rebelde y el Imperio decide el destino de la galaxia mientras Luke Skywalker confronta a Darth Vader y al Emperador.",
+        "imagen": "042.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "043",
-      "titulo": "The Batman",
-      "direccion": "Matt Reeves",
-      "actores": "Robert Pattinson, Zoë Kravitz, Jeffrey Wright, Colin Farrell, Paul Dano",
-      "argumento": "En Gotham City, Batman investiga una serie de crímenes mientras descubre una oscura conspiración que conecta a la élite de la ciudad y su propia familia.",
-      "imagen": "043.jpg"
+        "id": "043",
+        "titulo": "The Batman",
+        "direccion": "Matt Reeves",
+        "actores": "Robert Pattinson, Zoë Kravitz, Jeffrey Wright, Colin Farrell, Paul Dano",
+        "argumento": "En Gotham City, Batman investiga una serie de crímenes mientras descubre una oscura conspiración que conecta a la élite de la ciudad y su propia familia.",
+        "imagen": "043.jpg",
+        "categoria": "Superhéroes"
     },
     {
-      "id": "044",
-      "titulo": "Batman Begins",
-      "direccion": "Christopher Nolan",
-      "actores": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman",
-      "argumento": "La historia de cómo Bruce Wayne se convierte en Batman, enfrentándose a Ra's al Ghul y el Espantapájaros mientras protege Gotham.",
-      "imagen": "044.jpg"
+        "id": "044",
+        "titulo": "Batman Begins",
+        "direccion": "Christopher Nolan",
+        "actores": "Christian Bale, Michael Caine, Liam Neeson, Katie Holmes, Gary Oldman",
+        "argumento": "La historia de cómo Bruce Wayne se convierte en Batman, enfrentándose a Ra's al Ghul y el Espantapájaros mientras protege Gotham.",
+        "imagen": "044.jpg",
+        "categoria": "Superhéroes"
     },
     {
-      "id": "045",
-      "titulo": "El Caballero Oscuro",
-      "direccion": "Christopher Nolan",
-      "actores": "Christian Bale, Heath Ledger, Aaron Eckhart, Maggie Gyllenhaal, Gary Oldman",
-      "argumento": "Batman enfrenta al Joker, un criminal caótico que siembra el terror en Gotham y empuja al Caballero Oscuro a sus límites.",
-      "imagen": "045.jpg"
+        "id": "045",
+        "titulo": "El Caballero Oscuro",
+        "direccion": "Christopher Nolan",
+        "actores": "Christian Bale, Heath Ledger, Aaron Eckhart, Maggie Gyllenhaal, Gary Oldman",
+        "argumento": "Batman enfrenta al Joker, un criminal caótico que siembra el terror en Gotham y empuja al Caballero Oscuro a sus límites.",
+        "imagen": "045.jpg",
+        "categoria": "Superhéroes"
     },
     {
-      "id": "046",
-      "titulo": "El Caballero Oscuro: La Leyenda Renace",
-      "direccion": "Christopher Nolan",
-      "actores": "Christian Bale, Tom Hardy, Anne Hathaway, Gary Oldman, Marion Cotillard",
-      "argumento": "Ocho años después, Bruce Wayne regresa como Batman para enfrentar a Bane y salvar Gotham de la destrucción.",
-      "imagen": "046.jpg"
+        "id": "046",
+        "titulo": "El Caballero Oscuro: La Leyenda Renace",
+        "direccion": "Christopher Nolan",
+        "actores": "Christian Bale, Tom Hardy, Anne Hathaway, Gary Oldman, Marion Cotillard",
+        "argumento": "Ocho años después, Bruce Wayne regresa como Batman para enfrentar a Bane y salvar Gotham de la destrucción.",
+        "imagen": "046.jpg",
+        "categoria": "Superhéroes"
     },
     {
-      "id": "047",
-      "titulo": "Interestellar",
-      "direccion": "Christopher Nolan",
-      "actores": "Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine",
-      "argumento": "Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
-      "imagen": "047.jpg"
+        "id": "047",
+        "titulo": "Interestellar",
+        "direccion": "Christopher Nolan",
+        "actores": "Matthew McConaughey, Anne Hathaway, Jessica Chastain, Michael Caine",
+        "argumento": "Un grupo de astronautas viaja a través de un agujero de gusano en busca de un nuevo hogar para la humanidad.",
+        "imagen": "047.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "048",
-      "titulo": "Pulp Fiction",
-      "direccion": "Quentin Tarantino",
-      "actores": "John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis",
-      "argumento": "Varias historias interconectadas de crimen y redención en Los Ángeles con un estilo narrativo único.",
-      "imagen": "048.jpg"
+        "id": "048",
+        "titulo": "Pulp Fiction",
+        "direccion": "Quentin Tarantino",
+        "actores": "John Travolta, Uma Thurman, Samuel L. Jackson, Bruce Willis",
+        "argumento": "Varias historias interconectadas de crimen y redención en Los Ángeles con un estilo narrativo único.",
+        "imagen": "048.jpg",
+        "categoria": "Crimen"
     },
     {
-      "id": "049",
-      "titulo": "Django Unchained",
-      "direccion": "Quentin Tarantino",
-      "actores": "Jamie Foxx, Christoph Waltz, Leonardo DiCaprio, Kerry Washington",
-      "argumento": "Un esclavo liberado se convierte en cazarrecompensas para rescatar a su esposa de un brutal terrateniente.",
-      "imagen": "049.jpg"
+        "id": "049",
+        "titulo": "Django Unchained",
+        "direccion": "Quentin Tarantino",
+        "actores": "Jamie Foxx, Christoph Waltz, Leonardo DiCaprio, Kerry Washington",
+        "argumento": "Un esclavo liberado se convierte en cazarrecompensas para rescatar a su esposa de un brutal terrateniente.",
+        "imagen": "049.jpg",
+        "categoria": "Western"
     },
     {
-      "id": "050",
-      "titulo": "Bullet Train",
-      "direccion": "David Leitch",
-      "actores": "Brad Pitt, Joey King, Aaron Taylor-Johnson, Brian Tyree Henry",
-      "argumento": "Cinco asesinos a bordo de un tren bala descubren que sus misiones están interconectadas en un viaje lleno de acción y humor.",
-      "imagen": "050.jpg"
+        "id": "050",
+        "titulo": "Bullet Train",
+        "direccion": "David Leitch",
+        "actores": "Brad Pitt, Joey King, Aaron Taylor-Johnson, Brian Tyree Henry",
+        "argumento": "Cinco asesinos a bordo de un tren bala descubren que sus misiones están interconectadas en un viaje lleno de acción y humor.",
+        "imagen": "050.jpg",
+        "categoria": "Acción"
     },
     {
-      "id": "051",
-      "titulo": "Troya",
-      "direccion": "Wolfgang Petersen",
-      "actores": "Brad Pitt, Eric Bana, Orlando Bloom, Diane Kruger",
-      "argumento": "La épica historia de la Guerra de Troya, centrada en la lucha entre Aquiles y Héctor.",
-      "imagen": "051.jpg"
+        "id": "051",
+        "titulo": "Troya",
+        "direccion": "Wolfgang Petersen",
+        "actores": "Brad Pitt, Eric Bana, Orlando Bloom, Diane Kruger",
+        "argumento": "La épica historia de la Guerra de Troya, centrada en la lucha entre Aquiles y Héctor.",
+        "imagen": "051.jpg",
+        "categoria": "Épica"
     },
     {
-      "id": "052",
-      "titulo": "Mystic River",
-      "direccion": "Clint Eastwood",
-      "actores": "Sean Penn, Tim Robbins, Kevin Bacon, Laura Linney",
-      "argumento": "Tres amigos de la infancia se ven implicados en un asesinato que saca a la luz oscuros secretos del pasado.",
-      "imagen": "052.jpg"
+        "id": "052",
+        "titulo": "Mystic River",
+        "direccion": "Clint Eastwood",
+        "actores": "Sean Penn, Tim Robbins, Kevin Bacon, Laura Linney",
+        "argumento": "Tres amigos de la infancia se ven implicados en un asesinato que saca a la luz oscuros secretos del pasado.",
+        "imagen": "052.jpg",
+        "categoria": "Drama"
     },
     {
-      "id": "053",
-      "titulo": "Blade Runner",
-      "direccion": "Ridley Scott",
-      "actores": "Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos",
-      "argumento": "Un blade runner, cazarrecompensas especializado en replicantes, persigue a un grupo de androides rebeldes en un futuro distópico.",
-      "imagen": "053.jpg"
+        "id": "053",
+        "titulo": "Blade Runner",
+        "direccion": "Ridley Scott",
+        "actores": "Harrison Ford, Rutger Hauer, Sean Young, Edward James Olmos",
+        "argumento": "Un blade runner, cazarrecompensas especializado en replicantes, persigue a un grupo de androides rebeldes en un futuro distópico.",
+        "imagen": "053.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "054",
-      "titulo": "Blade Runner 2049",
-      "direccion": "Denis Villeneuve",
-      "actores": "Ryan Gosling, Harrison Ford, Ana de Armas, Jared Leto",
-      "argumento": "Un nuevo blade runner descubre un secreto enterrado que podría cambiar el destino de la humanidad y los replicantes.",
-      "imagen": "054.jpg"
+        "id": "054",
+        "titulo": "Blade Runner 2049",
+        "direccion": "Denis Villeneuve",
+        "actores": "Ryan Gosling, Harrison Ford, Ana de Armas, Jared Leto",
+        "argumento": "Un nuevo blade runner descubre un secreto enterrado que podría cambiar el destino de la humanidad y los replicantes.",
+        "imagen": "054.jpg",
+        "categoria": "Ciencia Ficción"
     },
     {
-      "id": "055",
-      "titulo": "Indiana Jones en busca del Arca Perdida",
-      "direccion": "Steven Spielberg",
-      "actores": "Harrison Ford, Karen Allen, Paul Freeman, John Rhys-Davies",
-      "argumento": "El arqueólogo Indiana Jones busca el Arca de la Alianza antes de que los nazis la utilicen como arma.",
-      "imagen": "055.jpg"
+        "id": "055",
+        "titulo": "Indiana Jones en busca del Arca Perdida",
+        "direccion": "Steven Spielberg",
+        "actores": "Harrison Ford, Karen Allen, Paul Freeman, John Rhys-Davies",
+        "argumento": "El arqueólogo Indiana Jones busca el Arca de la Alianza antes de que los nazis la utilicen como arma.",
+        "imagen": "055.jpg",
+        "categoria": "Aventura"
     },
     {
-      "id": "056",
-      "titulo": "Indiana Jones y el Templo Maldito",
-      "direccion": "Steven Spielberg",
-      "actores": "Harrison Ford, Kate Capshaw, Ke Huy Quan, Amrish Puri",
-      "argumento": "Indiana Jones se enfrenta a una secta oscura mientras intenta recuperar una piedra sagrada y liberar a niños esclavizados.",
-      "imagen": "056.jpg"
+        "id": "056",
+        "titulo": "Indiana Jones y el Templo Maldito",
+        "direccion": "Steven Spielberg",
+        "actores": "Harrison Ford, Kate Capshaw, Ke Huy Quan, Amrish Puri",
+        "argumento": "Indiana Jones se enfrenta a una secta oscura mientras intenta recuperar una piedra sagrada y liberar a niños esclavizados.",
+        "imagen": "056.jpg",
+        "categoria": "Aventura"
     },
     {
-      "id": "057",
-      "titulo": "Indiana Jones y la Última Cruzada",
-      "direccion": "Steven Spielberg",
-      "actores": "Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott",
-      "argumento": "Indiana Jones y su padre buscan el Santo Grial enfrentándose a los nazis.",
-      "imagen": "057.jpg"
+        "id": "057",
+        "titulo": "Indiana Jones y la Última Cruzada",
+        "direccion": "Steven Spielberg",
+        "actores": "Harrison Ford, Sean Connery, Alison Doody, Denholm Elliott",
+        "argumento": "Indiana Jones y su padre buscan el Santo Grial enfrentándose a los nazis.",
+        "imagen": "057.jpg",
+        "categoria": "Aventura"
     },
     {
-      "id": "058",
-      "titulo": "Indiana Jones y el Reino de la Calavera de Cristal",
-      "direccion": "Steven Spielberg",
-      "actores": "Harrison Ford, Cate Blanchett, Shia LaBeouf, Karen Allen",
-      "argumento": "Indiana Jones se enfrenta a los soviéticos mientras intenta descubrir el secreto de una misteriosa calavera de cristal.",
-      "imagen": "058.jpg"
+        "id": "058",
+        "titulo": "Indiana Jones y el Reino de la Calavera de Cristal",
+        "direccion": "Steven Spielberg",
+        "actores": "Harrison Ford, Cate Blanchett, Shia LaBeouf, Karen Allen",
+        "argumento": "Indiana Jones se enfrenta a los soviéticos mientras intenta descubrir el secreto de una misteriosa calavera de cristal.",
+        "imagen": "058.jpg",
+        "categoria": "Aventura"
     },
     {
-      "id": "059",
-      "titulo": "Indiana Jones y el Dial del Destino",
-      "direccion": "James Mangold",
-      "actores": "Harrison Ford, Phoebe Waller-Bridge, Mads Mikkelsen, Antonio Banderas",
-      "argumento": "En su última aventura, Indiana Jones persigue un artefacto mítico que podría cambiar el curso de la historia.",
-      "imagen": "059.jpg"
-    },
-    {
-      "id": "060",
-      "titulo": "John Wick",
-      "direccion": "Chad Stahelski",
-      "actores": "Keanu Reeves, Michael Nyqvist, Alfie Allen, Willem Dafoe",
-      "argumento": "Un exasesino a sueldo regresa al mundo criminal en busca de venganza después de que un grupo de matones le arrebatara lo más preciado que le quedaba.",
-      "imagen": "060.jpg"
+        "id": "059",
+        "titulo": "Indiana Jones y el Dial del Destino",
+        "direccion": "James Mangold",
+        "actores": "Harrison Ford, Phoebe Waller-Bridge, Mads Mikkelsen, Antonio Banderas",
+        "argumento": "En su última aventura, Indiana Jones persigue un artefacto mítico que podría cambiar el curso de la historia.",
+        "imagen": "059.jpg",
+        "categoria": "Aventura"
     },
     {
       "id": "061",
@@ -486,7 +537,8 @@
       "direccion": "Chad Stahelski",
       "actores": "Keanu Reeves, Riccardo Scamarcio, Ian McShane, Ruby Rose",
       "argumento": "Obligado a cumplir una deuda de sangre, John Wick regresa a la acción enfrentándose a una red internacional de asesinos.",
-      "imagen": "061.jpg"
+      "imagen": "061.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "062",
@@ -494,7 +546,8 @@
       "direccion": "Chad Stahelski",
       "actores": "Keanu Reeves, Halle Berry, Ian McShane, Laurence Fishburne",
       "argumento": "Con una recompensa multimillonaria por su cabeza, John Wick lucha por sobrevivir mientras es perseguido por los asesinos más letales del mundo.",
-      "imagen": "062.jpg"
+      "imagen": "062.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "063",
@@ -502,7 +555,8 @@
       "direccion": "Chad Stahelski",
       "actores": "Keanu Reeves, Donnie Yen, Bill Skarsgård, Laurence Fishburne",
       "argumento": "Enfrentando a la Alta Mesa, John Wick descubre un camino para ganar su libertad, pero antes debe enfrentarse a viejos y nuevos enemigos.",
-      "imagen": "063.jpg"
+      "imagen": "063.jpg",
+      "categoria": "Acción"
     },
     {
       "id": "064",
@@ -511,15 +565,16 @@
       "actores": "Ejemplo ejemplito ejemplado",
       "argumento": "Los ejemplos dominan el mundo",
       "imagen": "def.jpeg",
-      "director": "Ejemplar"
+      "categoria": "Ejemplo"
     },
     {
       "id": "065",
       "titulo": "Bottom Gun",
-      "director": "",
+      "director": "Maxi",
       "actores": "Pedro, Mariano, Chor",
       "argumento": "En un lugar del Puerto...",
-      "imagen": "def.jpeg"
+      "imagen": "def.jpeg",
+      "categoria": "Ejemplo"
     }
   ]
 }

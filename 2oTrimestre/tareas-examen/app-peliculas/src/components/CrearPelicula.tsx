@@ -50,9 +50,10 @@ const CrearPelicula = (props: Props) => {
         let director = formulario.director.value;
         let actores = formulario.actores.value;
         let argumento = formulario.argumento.value;
+        let categoria = formulario.categoria.value;
         let imagen = formulario.cartelera.value;
 
-        if(titulo == null || director == null || actores == null || argumento == null){
+        if(titulo == null || director == null || actores == null || argumento == null || categoria == null){
             alert("Rellene todos los campos");
             return;
         }
@@ -63,7 +64,8 @@ const CrearPelicula = (props: Props) => {
             director,
             actores,
             argumento,
-            imagen: ''
+            imagen: '',
+            categoria
         }
 
         if(imagen != ""){
@@ -71,11 +73,10 @@ const CrearPelicula = (props: Props) => {
         }
 
         try {
-            // Realizar la solicitud POST al servidor
+            // Realizar la solicitud POST al servidor por medio del axios
             await axios.post(uri, peliculaCrear);
                 alert('Película creada exitosamente');
                 //navigate('/buscar-pelicula'); // Redirigir tras la creación
-
         } catch (error) {
             console.log('Error al crear la película:', error);
             alert('Hubo un error al crear la película');
@@ -87,6 +88,7 @@ const CrearPelicula = (props: Props) => {
         <div className={`bg-container-${props.bgtheme} contenedorEstandar p-3`}>
             <div className="formulario m-auto">
                 <form onSubmit={crearPelicula}>
+
                     <div className="row">
                         <div className="form-group col-md-6">
                             <label htmlFor="titulo">Titulo</label>
@@ -97,6 +99,7 @@ const CrearPelicula = (props: Props) => {
                             <input type="text" className="form-control my-2" id="director" placeholder="Dirección"/>
                         </div>
                     </div>
+
                     <div className="form-group">
                         <label htmlFor="actores" className="form-label">Actores</label>
                         <textarea className="form-control mb-2" id="actores" rows={2} placeholder='John Doe, Anonimo, Jane Doe, ...'></textarea>
@@ -105,15 +108,22 @@ const CrearPelicula = (props: Props) => {
                         <label htmlFor="argumento" className="form-label">Argumento</label>
                         <textarea className="form-control mb-2" id="argumento" rows={3} placeholder='En un lugar de la mancha...'></textarea>
                     </div>
-                    <div className="form-group">
-                        <label htmlFor="cartelera" className="form-label">Cartelera</label>
-                        <select className="form-select mb-2" id="cartelera" >
-                            {
-                                peliculas.map((pelicula, index) => (
-                                    <option key={index} value={pelicula.imagen}>{pelicula.imagen}</option>
-                                ))
-                            }
-                        </select>
+
+                    <div className="row">
+                        <div className="form-group col-md-6">
+                                <label htmlFor="categoria">Categoria</label>
+                                <input type="text" className="form-control my-2" id="categoria" placeholder="Categoria"/>
+                        </div>
+                        <div className="form-group col-md-6">
+                            <label htmlFor="cartelera" className="form-label">Cartelera</label>
+                            <select className="form-select mb-2" id="cartelera" >
+                                {
+                                    peliculas.map((pelicula, index) => (
+                                        <option key={index} value={pelicula.imagen} selected={pelicula.imagen == "def.jpeg"}>{pelicula.imagen}</option>
+                                    ))
+                                }
+                            </select>
+                        </div>
                     </div>
                     <button type="submit" className="btn btn-primary my-2">Crear</button>
                 </form>
