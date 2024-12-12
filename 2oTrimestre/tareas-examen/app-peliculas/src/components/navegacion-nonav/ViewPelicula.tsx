@@ -62,12 +62,15 @@ function ViewPelicula(props: Props) {
 
     function destacarPelicula(){
 
-        if(peliculaCargada){
-            console.log(peliculasDestacadas);
-            console.log(peliculaCargada);
-            if(!peliculasDestacadas.includes(peliculaCargada)){
-                peliculasDestacadas.push(peliculaCargada);
-                setPeliculasDestacadas([...peliculasDestacadas]);
+        if (peliculaCargada) {
+            // Verificar si la película ya está en la lista de destacadas
+            const yaDestacada = peliculasDestacadas.some(pelicula => pelicula.id === peliculaCargada.id);
+    
+            if (!yaDestacada) {
+                // Si no está, la agregamos
+                setPeliculasDestacadas([...peliculasDestacadas, peliculaCargada]);
+            } else {
+                alert('Esta película ya está destacada.');
             }
         }
     }
@@ -95,7 +98,7 @@ function ViewPelicula(props: Props) {
                         </div>
                     </div>
             </div>
-            <div className="boton d-flex justify-content-center mt-5">
+            <div className="boton d-flex justify-content-center mt-2">
                 <Link to={`/peliculas/edit/${peliculaCargada?.id}`} >
                     <button className="btn btn-success me-3">Editar</button>
                 </Link>
