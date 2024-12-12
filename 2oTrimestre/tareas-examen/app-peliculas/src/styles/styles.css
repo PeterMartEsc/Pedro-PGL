@@ -88,3 +88,7 @@
     width: 200px;
     margin: auto;
 }
+
+.categoria-dark:hover, .categoria-light:hover{
+    cursor: pointer;
+}
