@@ -63,8 +63,12 @@ function ViewPelicula(props: Props) {
     function destacarPelicula(){
 
         if(peliculaCargada){
-            peliculasDestacadas.push(peliculaCargada);
-            setPeliculasDestacadas([...peliculasDestacadas]);
+            console.log(peliculasDestacadas);
+            console.log(peliculaCargada);
+            if(!peliculasDestacadas.includes(peliculaCargada)){
+                peliculasDestacadas.push(peliculaCargada);
+                setPeliculasDestacadas([...peliculasDestacadas]);
+            }
         }
     }
     
