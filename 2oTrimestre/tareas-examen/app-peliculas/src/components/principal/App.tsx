@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
-import CrearPelicula from './CrearPelicula'
-import EditarPelicula from './EditarPelicula'
-import ListPeliculas from './ListPeliculas'
-import ListCategorias from './ListCategorias'
+import CrearPelicula from '../navegacion/CrearPelicula'
+import EditarPelicula from '../navegacion-nonav/EditarPelicula'
+import ListPeliculas from '../navegacion/ListPeliculas'
+import ListCategorias from '../navegacion/ListCategorias'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
-import '../styles/styles.css';
-import Inicio from './Inicio'
+import '../../styles/styles.css';
+import Inicio from '../navegacion/Inicio'
+import ViewPelicula from '../navegacion-nonav/ViewPelicula'
+import { AppContextProvider } from './AppContextProvider'
+import Favoritos from '../navegacion/Favoritos'
 
 type Props = {}
 
@@ -30,17 +33,19 @@ const App = (props: Props) => {
 
     return (
         <BrowserRouter>
+            <AppContextProvider>
+                <Navbar bgtheme={bgtheme} texttheme={texttheme} changeTheme={changeTheme}/>
 
-            <Navbar bgtheme={bgtheme} texttheme={texttheme} changeTheme={changeTheme}/>
-
-            <Routes>
-                <Route path="/" element={<Inicio bgtheme={bgtheme} texttheme={texttheme}/>}/>
-                <Route path="/crear-pelicula" element={<CrearPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
-                <Route path="/buscar-pelicula" element={<ListPeliculas bgtheme={bgtheme} texttheme={texttheme}/>}/>
-                <Route path="/peliculas/:id" element={<EditarPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
-                <Route path="/categorias" element={<ListCategorias bgtheme={bgtheme} texttheme={texttheme}/>}/>
-            </Routes>
-
+                <Routes>
+                    <Route path="/" element={<Inicio bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/crear-pelicula" element={<CrearPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/buscar-pelicula" element={<ListPeliculas bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/peliculas/:id" element={<ViewPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/peliculas/edit/:id" element={<EditarPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/categorias" element={<ListCategorias bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/favoritos" element={<Favoritos bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                </Routes>
+            </AppContextProvider>
         </BrowserRouter>
     )
 }
@@ -68,6 +73,7 @@ const Navbar = (props: IProps) => {
                     <Link className="nav-link" to="/crear-pelicula">Crear Pelicula</Link>
                     <Link className="nav-link" to="/buscar-pelicula">Buscar Pelicula</Link>
                     <Link className="nav-link" to="/categorias">Categorias</Link>
+                    <Link className="nav-link" to="/favoritos">Favoritos</Link>
                     <div className='d-flex'>
                         <span className='mx-2 '>
                             {bgtheme=="dark" ? <i className="bi bi-brightness-high"></i> : <i className="bi bi-moon"/>}

@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import Pelicula from '../models/Pelicula';
+import Pelicula from '../../models/Pelicula';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../styles/styles.css';
+import '../../styles/styles.css';
 
 type Props = {
     bgtheme: string,

@@ -6,8 +6,10 @@ export default class Pelicula {
     public argumento : string;
     public imagen : string;
     public categoria : string;
+    public trailer : string;
 
-    constructor(id : string, titulo : string, direccion : string, actores : string, argumento : string, imagen : string, categoria : string){
+
+    constructor(id : string, titulo : string, direccion : string, actores : string, argumento : string, imagen : string, categoria : string, trailer : string){
         this.id = id;
         this.titulo = titulo;
         this.direccion = direccion;
@@ -15,6 +17,7 @@ export default class Pelicula {
         this.argumento = argumento;
         this.imagen = imagen;
         this.categoria = categoria;
+        this.trailer = trailer;
     }
 
 }

@@ -1,7 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
-import Pelicula from '../models/Pelicula';
-import '../styles/styles.css'
+import Pelicula from '../../models/Pelicula';
+import '../../styles/styles.css';
 import { Link } from 'react-router-dom';
 
 

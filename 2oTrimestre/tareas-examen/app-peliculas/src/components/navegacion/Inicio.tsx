@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/styles.css'
-import Pelicula from '../models/Pelicula';
+import '../../styles/styles.css';
+import Pelicula from '../../models/Pelicula';
 import axios from 'axios';
 
 type Props = {

@@ -61,7 +61,14 @@
     background-color: #6e6e6e;
 }
 
-.peliculaMostrar img{
+.peliculaView{
+    width: 1000px;
+    padding: 12px;
+    border-radius: 10px;
+    background-color: #6e6e6e;
+}
+
+.peliculaMostrar img, .peliculaView img{
     width: 280px;
     height: 416px;
     object-fit: cover;

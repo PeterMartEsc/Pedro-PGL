@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import '../styles/styles.css'
+import '../../styles/styles.css';
 import { useNavigate } from 'react-router-dom';
-import Pelicula from '../models/Pelicula';
+import Pelicula from '../../models/Pelicula';
 import axios from 'axios';
 
 type Props = {
@@ -52,6 +52,7 @@ const CrearPelicula = (props: Props) => {
         let argumento = formulario.argumento.value;
         let categoria = formulario.categoria.value;
         let imagen = formulario.cartelera.value;
+        let trailer = formulario.trailer.value;
 
         if(titulo == null || director == null || actores == null || argumento == null || categoria == null){
             alert("Rellene todos los campos");
@@ -65,11 +66,16 @@ const CrearPelicula = (props: Props) => {
             actores,
             argumento,
             imagen: '',
-            categoria
+            categoria,
+            trailer:''
         }
 
         if(imagen != ""){
             peliculaCrear.imagen = imagen;
+        }
+
+        if(trailer != ""){
+            peliculaCrear.trailer = trailer;
         }
 
         try {
@@ -125,7 +131,11 @@ const CrearPelicula = (props: Props) => {
                             </select>
                         </div>
                     </div>
-                    <button type="submit" className="btn btn-primary my-2">Crear</button>
+                    <div className="form-group">
+                        <label htmlFor="trailer">Trailer</label>
+                        <input type="text" className="form-control my-2" id="trailer" placeholder="Trailer"/>
+                    </div>
+                    <button type="submit" className="btn btn-success my-2">Crear</button>
                 </form>
             </div>
         </div>
