@@ -28,15 +28,17 @@ const DiarioPr19 = (props: Props) => {
             <View >
                 <TextInput onChangeText={(text)=>settextoActual(text)} placeholder='escriba su entrada' defaultValue={textoActual}/>
             </View>
-            <View >
-                <TouchableOpacity onPress={()=>addIcon('happy')}>
-                    <Icon name='happy-outline' size={50}/>
-                </TouchableOpacity>
-            </View>
-            <View >
-                <TouchableOpacity onPress={()=>addIcon('sad')}>
-                    <Icon name='sad-outline' size={50}/>
-                </TouchableOpacity>
+            <View style={{flexDirection: 'row'}}>
+                <View style={styles.boton}>
+                    <TouchableOpacity onPress={()=>addIcon('happy')}>
+                        <Icon name='happy-outline' size={50}/>
+                    </TouchableOpacity>
+                </View>
+                <View style={styles.boton}>
+                    <TouchableOpacity onPress={()=>addIcon('sad')}>
+                        <Icon name='sad-outline' size={50}/>
+                    </TouchableOpacity>
+                </View>
             </View>
         </View>
     )
@@ -44,4 +46,11 @@ const DiarioPr19 = (props: Props) => {
 
 export default DiarioPr19
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+    boton: {    
+        width: 60,
+        borderBlockColor: 'black',
+        borderWidth: 1,
+        
+    }
+})

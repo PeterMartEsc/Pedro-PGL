@@ -31,7 +31,7 @@ const InicioScreenPr09 = (props: Props) => {
         <View style={styles.screen}>
 
             <View style={{flex:1, height: 200}}>
-                <TextInput placeholder='space-arround' style={styles.input} onChangeText={(text) => saveInput(text)} />
+                <TextInput placeholder='space-arround' style={styles.input} /*onChangeText={(text) => saveInput(text)}*/ />
 
                 <View style={{flexDirection: 'row', flexWrap: "wrap", justifyContent: "center"}}>
                     <TouchableOpacity onPress={()=> setalign("stretch")}>
