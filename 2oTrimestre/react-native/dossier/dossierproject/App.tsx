@@ -19,6 +19,8 @@ import InicioScreenPr15 from './practicas/pr15/screens/InicioScreenPr15';
 import InicioScreenPr16 from './practicas/pr16/screens/InicioScreenPr16';
 import InicioScreenPr17 from './practicas/pr17/screens/InicioScreenPr17';
 import ScreenTresEnRalla from './tareas-clase/tresenralla/screens/ScreenTresEnRalla';
+import InicioScreenPr18 from './practicas/pr18/screens/InicioScreenPr18';
+import InicioScreenPr19 from './practicas/pr19/screens/InicioScreenPr19';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -58,8 +60,12 @@ function App(): React.JSX.Element {
     //<InicioScreenPr16/>
     //Pr17
     //<InicioScreenPr17/>
+    //Pr18
+    //<InicioScreenPr18/>
+    //Pr19
+    <InicioScreenPr19/>
     //TresEnRalla
-    <ScreenTresEnRalla/>
+    //<ScreenTresEnRalla/>
     );
 }
 
