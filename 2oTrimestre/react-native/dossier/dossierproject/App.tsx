@@ -24,6 +24,7 @@ import InicioScreenPr19 from './practicas/1-introduccion/pr19/screens/InicioScre
 import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PrincipalStack from './practicas/2-navigation/pr20/PrincipalStack';
+import PrincipalScreenPr23 from './practicas/2-navigation/pr23/navigation/PrincipalScreenPr23';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -69,8 +70,13 @@ function App(): React.JSX.Element {
     //<InicioScreenPr19/>
     //TresEnRalla
     //<ScreenTresEnRalla/>
-    <NavigationContainer>
+    //Pr20
+    /*<NavigationContainer>
       <PrincipalStack/>
+    </NavigationContainer>*/
+    //Pr23
+    <NavigationContainer>
+      <PrincipalScreenPr23/>
     </NavigationContainer>
     );
 }

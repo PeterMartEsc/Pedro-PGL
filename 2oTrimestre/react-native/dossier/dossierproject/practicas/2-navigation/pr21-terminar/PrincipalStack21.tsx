@@ -13,7 +13,7 @@ type PrincipalStackParamList = {
 
 const Stack = createNativeStackNavigator<PrincipalStackParamList>();
 
-const PrincipalStack = (props: Props) => {
+const PrincipalStackPr21 = (props: Props) => {
     return (
         <Stack.Navigator screenOptions={{/*headerShown:false*/}}>
             <Stack.Screen name="Home" component={HomeScreen}/>
@@ -23,7 +23,7 @@ const PrincipalStack = (props: Props) => {
     )
 }
 
-export default PrincipalStack
+export default PrincipalStackPr21
 
 type PropsProfile = NativeStackScreenProps<PrincipalStackParamList, 'Profile'>
 
