@@ -1,22 +1,30 @@
+import Actor from "./Actor";
+import Categoria from "./Categoria";
+import Director from "./Director";
+
 export default class Pelicula {
     public id : string;
     public titulo : string;
-    public direccion : string;
-    public actores : string;
-    public argumento : string;
-    public imagen : string;
-    public categoria : string;
+    public year : number;
+    public categorias : Array<Categoria>;
+    public direccion : Array<Director>;
+    public actores : Array<Actor>;
+    public descripcion : string;
+    public caratula : string;
     public trailer : string;
 
 
-    constructor(id : string, titulo : string, direccion : string, actores : string, argumento : string, imagen : string, categoria : string, trailer : string){
+    constructor(id : string, titulo : string, year : number, categorias : Array<Categoria>, direccion : Array<Director>, 
+                actores : Array<Actor>, descripcion : string, caratula : string, trailer : string){
+
         this.id = id;
         this.titulo = titulo;
+        this.year = year;
+        this.categorias = categorias;
         this.direccion = direccion;
         this.actores = actores;
-        this.argumento = argumento;
-        this.imagen = imagen;
-        this.categoria = categoria;
+        this.descripcion = descripcion;
+        this.caratula = caratula;
         this.trailer = trailer;
     }
 

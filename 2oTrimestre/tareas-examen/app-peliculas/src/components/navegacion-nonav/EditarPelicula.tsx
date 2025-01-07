@@ -12,7 +12,7 @@ type Props = {
 const EditarPelicula = (props: Props) => {
     
     const [peliculas, setPeliculas] = useState<Pelicula[]>([]);
-    const uri : string  = "http://localhost:3000/peliculas/";
+    const uri : string  = "http://localhost:8000/api/peliculas/";
     const { id } = useParams<{ id: string }>();
     const [peliculaCargada, setpeliculaCargada] = useState <Pelicula | null>(null);
     const navigate = useNavigate()
@@ -20,7 +20,7 @@ const EditarPelicula = (props: Props) => {
     useEffect(() => {
         async function getPeliculas(direccion : string){
             const response = await axios.get(direccion);
-            let listaPeliculas = response.data as Pelicula[];
+            let listaPeliculas = response.data.data as Pelicula[];
             setPeliculas(listaPeliculas);
         }
 
@@ -100,28 +100,28 @@ const EditarPelicula = (props: Props) => {
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="director">Dirección</label>
-                            <input type="text" className="form-control my-2" id="director" placeholder="Dirección" defaultValue={peliculaCargada?.direccion}/>
+                            <input type="text" className="form-control my-2" id="director" placeholder="Dirección" defaultValue={peliculaCargada?.direccion.map(director => director.nombre).join(', ')}/>
                         </div>
                     </div>
                     <div className="form-group">
                         <label htmlFor="actores" className="form-label">Actores</label>
-                        <textarea className="form-control mb-2"  id="actores" rows={2} placeholder='John Doe, Anonimo, Jane Doe, ...' defaultValue={peliculaCargada?.actores}></textarea>
+                        <textarea className="form-control mb-2"  id="actores" rows={2} placeholder='John Doe, Anonimo, Jane Doe, ...' defaultValue={peliculaCargada?.actores.map(actor => actor.nombre).join(', ')}></textarea>
                     </div>
                     <div className="">
                         <label htmlFor="argumento" className="form-label">Argumento</label>
-                        <textarea className="form-control mb-2" id="argumento" rows={3} placeholder='En un lugar de la mancha...' defaultValue={peliculaCargada?.argumento}></textarea>
+                        <textarea className="form-control mb-2" id="argumento" rows={3} placeholder='En un lugar de la mancha...' defaultValue={peliculaCargada?.descripcion}></textarea>
                     </div>
                     <div className="row">
                         <div className="form-group col-md-6">
                                 <label htmlFor="categoria" className="form-label">Categoria</label>
-                                <input type="text" className="form-control my-2" id="categoria" placeholder="Categoria" defaultValue={peliculaCargada?.categoria}/>
+                                <input type="text" className="form-control my-2" id="categoria" placeholder="Categoria" defaultValue={peliculaCargada?.categorias.map(categorias => categorias.nombre).join(', ')}/>
                         </div>
                         <div className="form-group col-md-6">
                             <label htmlFor="cartelera" className="form-label">Cartelera</label>
                             <select className="form-select" id="cartelera" >
                                 {
                                     peliculas.map((pelicula, index) => (
-                                        <option key={index} value={pelicula.imagen} selected={pelicula.id == id}>{pelicula.imagen}</option>
+                                        <option key={index} value={pelicula.caratula} selected={pelicula.id == id}>{pelicula.caratula}</option>
                                     ))
                                 }
                             </select>

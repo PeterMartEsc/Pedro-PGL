@@ -20,13 +20,14 @@ const ListPeliculas = (props: Props) => {
     const [arrayMostrar, setArrayMostrar] = useState<Pelicula[]>([]);
     const [busqueda, setbusqueda] = useState("");
 
-    const uri : string  = "http://localhost:3000/peliculas";
+    const uri : string  = "http://localhost:8000/api/peliculas/";
 
     useEffect(() => {
 
         async function getPelicula(direccion : string){
             const response = await axios.get(direccion);
-            let listaPeliculas = response.data as Pelicula[];
+            let listaPeliculas = response.data.data as Pelicula[];
+            console.log(listaPeliculas);
             setPeliculas(listaPeliculas);
             setArrayMostrar(listaPeliculas);
         }
@@ -73,7 +74,7 @@ const ListPeliculas = (props: Props) => {
                     arrayMostrar.map((pelicula, index) => (
                         <div key={index} >
                             <Link to={`/peliculas/${pelicula.id}`} >
-                                <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} className='cartelera'/>
+                                <img src={`http://localhost:8000/api/peliculas${pelicula.caratula}`} alt={pelicula.titulo} className='cartelera'/>
                             </Link>
                         </div>
                     ))

@@ -16,7 +16,7 @@ function ViewPelicula(props: Props) {
     const [peliculas, setPeliculas] = useState<Pelicula[]>([]);
     const [peliculaCargada, setpeliculaCargada] = useState <Pelicula | null>(null);
     const { id } = useParams<{ id: string }>();
-    const uri : string  = "http://localhost:3000/peliculas/";
+    const uri : string  = "http://localhost:8000/api/peliculas/";
     const navigate = useNavigate();
     const { peliculasDestacadas } = useContext(AppContext);
     const {setPeliculasDestacadas} = useContext(AppContext);
@@ -26,7 +26,7 @@ function ViewPelicula(props: Props) {
     useEffect(() => {
         async function getPelicula(direccion : string){
             const response = await axios.get(direccion);
-            let listaPeliculas = response.data as Pelicula[];
+            let listaPeliculas = response.data.data as Pelicula[];
             setPeliculas(listaPeliculas);
         }
 
@@ -78,15 +78,35 @@ function ViewPelicula(props: Props) {
     return (
         <div className={`contenedorEstandar bg-container-${props.bgtheme} p-4`}>
             <div className="peliculaView d-flex mx-auto align-items-center">
-                    <img src={`http://localhost:3000/${peliculaCargada?.imagen}`} alt={peliculaCargada?.titulo} />
+                    <img src={`${peliculaCargada?.caratula}`} alt={peliculaCargada?.titulo} />
                     <div className="ms-3">
-                        <h3><u>{peliculaCargada?.titulo}</u></h3>
+                    <h3><u>{peliculaCargada?.titulo}</u></h3>
                         <br />
-                        <h5>{peliculaCargada?.direccion}</h5>
-                        <h5>{peliculaCargada?.actores}</h5>
-                        <h5>{peliculaCargada?.categoria}</h5>
+                        <h5>
+                            {
+                                peliculaCargada?.direccion.map((direccion, index) => (
+                                    <p key={index}>{direccion.nombre +" " + direccion.apellidos}{index < peliculaCargada.direccion.length - 1 ? ', ' : ''}</p>
+                                ))
+                            }
+
+                        </h5>
+                        <h5>
+                            {
+                                peliculaCargada?.actores.map((actores, index) => (
+                                    <p key={index}>{actores.nombre +" " + actores.apellidos}{index < peliculaCargada.actores.length - 1 ? ', ' : ''}</p>
+                                ))
+                            }
+
+                        </h5>
+                        <h5>
+                            {
+                                peliculaCargada?.categorias.map((categorias, index) => (
+                                    <p key={index}>{categorias.nombre}{index < peliculaCargada.actores.length - 1 ? ', ' : ''}</p>
+                                ))
+                            }
+                            </h5>
                         <br />
-                        <p>{peliculaCargada?.argumento}</p>
+                        <p>{peliculaCargada?.descripcion}</p>
                         <div className=''>
                             <ReactPlayer
                                 url={peliculaCargada?.trailer}

@@ -19,7 +19,7 @@ const Favoritos = (props: Props) => {
                     peliculasDestacadas.map((pelicula, index) => (
                         <div key={index} >
                             <Link to={`/peliculas/${pelicula.id}`} >
-                                <img src={`http://localhost:3000/${pelicula.imagen}`} alt={pelicula.titulo} className='cartelera'/>
+                                <img src={`${pelicula.caratula}`} alt={pelicula.titulo} className='cartelera'/>
                             </Link>
                         </div>
                     ))

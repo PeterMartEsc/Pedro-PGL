@@ -13,13 +13,13 @@ const CrearPelicula = (props: Props) => {
 
     const [peliculas, setPeliculas] = useState<Pelicula[]>([]);
     const [ultimoId, setultimoId] = useState('');
-    const uri : string  = "http://localhost:3000/peliculas/";
+    const uri : string  = "http://localhost:8000/api/peliculas/";
     const navigate = useNavigate();
 
     useEffect(() => {
         async function getPeliculas(direccion : string){
             const response = await axios.get(direccion);
-            let listaPeliculas = response.data as Pelicula[];
+            let listaPeliculas = response.data.data as Pelicula[];
             setPeliculas(listaPeliculas);
         }
 
@@ -125,7 +125,7 @@ const CrearPelicula = (props: Props) => {
                             <select className="form-select mb-2" id="cartelera" >
                                 {
                                     peliculas.map((pelicula, index) => (
-                                        <option key={index} value={pelicula.imagen} selected={pelicula.imagen == "def.jpeg"}>{pelicula.imagen}</option>
+                                        <option key={index} value={pelicula.caratula} selected={pelicula.caratula == "def.jpeg"}>{pelicula.caratula}</option>
                                     ))
                                 }
                             </select>
