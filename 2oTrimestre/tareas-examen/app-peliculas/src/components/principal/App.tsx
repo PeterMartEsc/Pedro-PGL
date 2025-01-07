@@ -11,6 +11,8 @@ import Inicio from '../navegacion/Inicio'
 import ViewPelicula from '../navegacion-nonav/ViewPelicula'
 import { AppContextProvider } from './AppContextProvider'
 import Favoritos from '../navegacion/Favoritos'
+import Login from '../navegacion/LogIn'
+import Register from '../navegacion/Register'
 
 type Props = {}
 
@@ -44,6 +46,8 @@ const App = (props: Props) => {
                     <Route path="/peliculas/edit/:id" element={<EditarPelicula bgtheme={bgtheme} texttheme={texttheme}/>}/>
                     <Route path="/categorias" element={<ListCategorias bgtheme={bgtheme} texttheme={texttheme}/>}/>
                     <Route path="/favoritos" element={<Favoritos bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/login" element={<Login bgtheme={bgtheme} texttheme={texttheme}/>}/>
+                    <Route path="/register" element={<Register bgtheme={bgtheme} texttheme={texttheme}/>}/>
                 </Routes>
             </AppContextProvider>
         </BrowserRouter>
@@ -74,6 +78,7 @@ const Navbar = (props: IProps) => {
                     <Link className="nav-link" to="/buscar-pelicula">Buscar Pelicula</Link>
                     <Link className="nav-link" to="/categorias">Categorias</Link>
                     <Link className="nav-link" to="/favoritos">Favoritos</Link>
+                    <Link className="nav-link" to="/login">LogIn</Link>
                     <div className='d-flex'>
                         <span className='mx-2 '>
                             {bgtheme=="dark" ? <i className="bi bi-brightness-high"></i> : <i className="bi bi-moon"/>}
