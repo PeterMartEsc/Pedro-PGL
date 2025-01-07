@@ -16,7 +16,7 @@ function ViewPelicula(props: Props) {
     const [peliculas, setPeliculas] = useState<Pelicula[]>([]);
     const [peliculaCargada, setpeliculaCargada] = useState <Pelicula | null>(null);
     const { id } = useParams<{ id: string }>();
-    const uri : string  = "http://localhost:8000/api/peliculas/";
+    const uri : string  = "http://localhost:8000/api/peliculas/"+id;
     const navigate = useNavigate();
     const { peliculasDestacadas } = useContext(AppContext);
     const {setPeliculasDestacadas} = useContext(AppContext);
@@ -26,8 +26,8 @@ function ViewPelicula(props: Props) {
     useEffect(() => {
         async function getPelicula(direccion : string){
             const response = await axios.get(direccion);
-            let listaPeliculas = response.data.data as Pelicula[];
-            setPeliculas(listaPeliculas);
+            let pelicula = response.data.data as Pelicula;
+            setpeliculaCargada(pelicula);
         }
 
         getPelicula(uri);
@@ -40,7 +40,6 @@ function ViewPelicula(props: Props) {
         if (peliculaEncontrada) {
             setpeliculaCargada(peliculaEncontrada);
         }
-        //console.log(id);
 
     }, [peliculas])
 
@@ -112,8 +111,8 @@ function ViewPelicula(props: Props) {
                                 url={peliculaCargada?.trailer}
                                 
                                 controls
-                                width="400px"
-                                height="300px"
+                                width="500px"
+                                height="250px"
                             />
                         </div>
                     </div>
