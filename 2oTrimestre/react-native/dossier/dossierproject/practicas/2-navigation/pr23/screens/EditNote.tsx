@@ -1,5 +1,5 @@
 import { FlatList, StyleSheet, Switch, Text, TextInput, View } from 'react-native'
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { AppContext } from '../components/AppContextProvider'
 import Nota from '../models/Nota'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
@@ -16,9 +16,16 @@ function EditNote ({navigation, route}: PropsEditNote) {
 
     const {listaNotas, setListaNotas} = useContext(AppContext);
 
+    const {idNota} = route.params;
+
+    useEffect(() => {
+        navigation.setOptions({ title: 'Tarea' + idNota });
+    }, [])
+    
+
     function fillFormData(value : string, field: keyof Nota){
 
-        let id = route.params.idNota;
+        let id = idNota;
 
         switch(field){
             case 'nombre':
@@ -33,20 +40,20 @@ function EditNote ({navigation, route}: PropsEditNote) {
     }
 
     function alternarAcabada(){
-        let id = route.params.idNota;
+        let id = idNota;
         listaNotas[id].acabada =! listaNotas[id].acabada;
         setListaNotas([...listaNotas]);
     }
 
     return (
         <View>
-            <TextInput placeholder='nombre' onChangeText={(texto) => fillFormData(texto, "nombre")} defaultValue={listaNotas[route.params.idNota].nombre}/>
-            <TextInput placeholder='contenido' onChangeText={(texto) => fillFormData(texto, "contenido")} defaultValue={listaNotas[route.params.idNota].contenido}/>
+            <TextInput placeholder='nombre' onChangeText={(texto) => fillFormData(texto, "nombre")} defaultValue={listaNotas[idNota].nombre}/>
+            <TextInput placeholder='contenido' onChangeText={(texto) => fillFormData(texto, "contenido")} defaultValue={listaNotas[idNota].contenido}/>
             <Switch
                 trackColor={{false: '#66d1c9', true: '#d16672'}}
-                thumbColor={listaNotas[route.params.idNota].acabada ? '#66d1c9' : '#d16672'}
+                thumbColor={listaNotas[idNota].acabada ? '#66d1c9' : '#d16672'}
                 onValueChange={alternarAcabada}
-                value={listaNotas[route.params.idNota].acabada}
+                value={listaNotas[idNota].acabada}
             />
         </View>
     )

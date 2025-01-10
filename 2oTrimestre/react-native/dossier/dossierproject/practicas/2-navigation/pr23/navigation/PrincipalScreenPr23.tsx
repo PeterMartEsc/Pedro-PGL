@@ -65,11 +65,13 @@ function Home({navigation, route}:PropsHome){
                 data={listaNotas}
                 renderItem={({item, index}) => {
                     return(
-                        <View /*style={index%2 == 0 ? styles.pares : styles.impares}*/>
-                            <Text style={{justifyContent: 'center'}}>
+                        <View style={styles.notaList}>
+                            <Text>
                                 <Icon size={30} onPress={()=>{item.acabada=!item.acabada; setListaNotas([...listaNotas])}} name={item.acabada ? 'checkbox-outline' : 'square-outline' }/>
-                                {item.nombre}
-                                <Icon size={30} onPress={()=>navigation.navigate('EditNote', {idNota:item.id, title: 'Detail Page'})} name='pencil-outline'/>
+                                <View style={styles.textoNota}>
+                                    <Text>{item.nombre}</Text>
+                                </View>
+                                <Icon size={30} onPress={()=>navigation.navigate('EditNote', {idNota:item.id})} name='pencil-outline'/>
                                 <Icon size={30} onPress={()=>deleteNote(index)} name='trash'/>
                             </Text>
                         </View>
@@ -77,7 +79,7 @@ function Home({navigation, route}:PropsHome){
                 }}
                 keyExtractor={(item, index) => item.nombre + index}
                 ListHeaderComponent={()=> <Text></Text>}
-                ItemSeparatorComponent={()=> <Text>**************************************</Text>}
+                ItemSeparatorComponent={()=> <Text></Text>}
             />
             <View style={{backgroundColor: 'blue', height: 30, width: 200, justifyContent: 'center', margin: 'auto', borderRadius: 5}}>
                 <TouchableOpacity onPress={addItem}>
@@ -89,4 +91,22 @@ function Home({navigation, route}:PropsHome){
 }
 
 const styles = StyleSheet.create({
+    notaList: {
+
+        flexDirection: 'row',
+        borderBlockColor: 'black',
+        borderWidth: 1,
+
+        paddingVertical: 10,  // Opcional: para dar un poco de espacio vertical
+
+        justifyContent: 'space-between',
+        alignItems: 'center',
+        width: '100%',
+    },
+    textoNota: {
+        justifyContent: 'center', 
+        //alignItems: 'center',
+        borderBlockColor: 'black',
+        borderWidth: 1
+    }
 })
