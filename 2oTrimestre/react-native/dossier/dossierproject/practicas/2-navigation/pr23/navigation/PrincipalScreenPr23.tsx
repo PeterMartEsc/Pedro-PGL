@@ -47,6 +47,7 @@ function Home({navigation, route}:PropsHome){
         let aux = new Nota(id, "New Note", "", false);
         setListaNotas([...listaNotas, aux]);
         setcontadorIds(id+1);
+        navigation.navigate('EditNote', {idNota:id})
     }
 
     function deleteNote(index : number){
@@ -57,6 +58,7 @@ function Home({navigation, route}:PropsHome){
             }
         }
         setListaNotas(aux);
+        
     }
 
     return (
