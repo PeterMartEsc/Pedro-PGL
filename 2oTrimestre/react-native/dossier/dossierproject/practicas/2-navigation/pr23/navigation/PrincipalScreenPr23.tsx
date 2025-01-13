@@ -47,7 +47,7 @@ function Home({navigation, route}:PropsHome){
         let aux = new Nota(id, "New Note", "", false);
         setListaNotas([...listaNotas, aux]);
         setcontadorIds(id+1);
-        navigation.navigate('EditNote', {idNota:id})
+        //navigation.navigate('EditNote', {idNota:id})
     }
 
     function deleteNote(index : number){
@@ -58,7 +58,6 @@ function Home({navigation, route}:PropsHome){
             }
         }
         setListaNotas(aux);
-        
     }
 
     return (
@@ -84,7 +83,7 @@ function Home({navigation, route}:PropsHome){
                 ItemSeparatorComponent={()=> <Text></Text>}
             />
             <View style={{backgroundColor: 'blue', height: 30, width: 200, justifyContent: 'center', margin: 'auto', borderRadius: 5}}>
-                <TouchableOpacity onPress={addItem}>
+                <TouchableOpacity onPress={()=>{addItem()}}>
                     <Text>+</Text>
                 </TouchableOpacity>
             </View>
@@ -106,9 +105,9 @@ const styles = StyleSheet.create({
         width: '100%',
     },
     textoNota: {
-        justifyContent: 'center', 
+        //justifyContent: 'center', 
         //alignItems: 'center',
-        borderBlockColor: 'black',
-        borderWidth: 1
+        //borderBlockColor: 'black',
+        //borderWidth: 1
     }
 })

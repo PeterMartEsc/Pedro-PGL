@@ -25,6 +25,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PrincipalStack from './practicas/2-navigation/pr20/PrincipalStack';
 import PrincipalScreenPr23 from './practicas/2-navigation/pr23/navigation/PrincipalScreenPr23';
+import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27/screens/TabPrincipalScreenPr27';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -75,13 +76,17 @@ function App(): React.JSX.Element {
       <PrincipalStack/>
     </NavigationContainer>*/
     //Pr23
-    <NavigationContainer>
-      <PrincipalScreenPr23/>
-    </NavigationContainer>
+    //<NavigationContainer>
+      //<PrincipalScreenPr23/>
+    //</NavigationContainer>
     //Pr24
     //<NavigationContainer>
       //<PrincipalScreenPr23/>
     //</NavigationContainer>
+    //Pr27
+    <NavigationContainer>
+      <TabPrincipalScreenPr27/>
+    </NavigationContainer>
     );
 }
 

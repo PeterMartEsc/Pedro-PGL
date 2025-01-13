@@ -20,6 +20,8 @@ function EditNote ({navigation, route}: PropsEditNote) {
 
     useEffect(() => {
         navigation.setOptions({ title: 'Tarea' + idNota });
+        const nota = listaNotas.find((nota) => nota.id === idNota);
+
     }, [])
     
 
