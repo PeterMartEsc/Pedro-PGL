@@ -77,17 +77,17 @@ function App(): React.JSX.Element {
       <PrincipalStack/>
     </NavigationContainer>*/
     //Pr23
-    //<NavigationContainer>
-      //<PrincipalScreenPr23/>
-    //</NavigationContainer>
+    <NavigationContainer>
+      <PrincipalScreenPr23/>
+    </NavigationContainer>
     //Pr24
     //<NavigationContainer>
       //<PrincipalScreenPr23/>
     //</NavigationContainer>
     //Pr25
-    <NavigationContainer>
-      <DrawerPersonalizadoPr25/>
-    </NavigationContainer>
+    //<NavigationContainer>
+      //DrawerPersonalizadoPr25/>
+    //</NavigationContainer>
     //Pr27
     //<NavigationContainer>
       //<TabPrincipalScreenPr27/>
