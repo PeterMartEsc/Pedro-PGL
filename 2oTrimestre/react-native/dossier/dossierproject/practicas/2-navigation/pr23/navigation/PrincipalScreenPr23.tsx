@@ -25,7 +25,7 @@ const PrincipalScreenPr23 = (props: Props) => {
                 headerStyle: {backgroundColor: '#0374ba'},
                 headerTitleAlign: 'center',
                 title: title
-                }}>
+            }}>
                 <Stack.Screen name="Home" component={Home}/>
                 <Stack.Screen name="EditNote" component={EditNote}/>
             </Stack.Navigator>

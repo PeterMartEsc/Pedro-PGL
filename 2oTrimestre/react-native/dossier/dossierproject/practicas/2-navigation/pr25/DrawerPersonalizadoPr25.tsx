@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 import React from 'react'
 import { createDrawerNavigator, DrawerContentComponentProps, DrawerContentScrollView, DrawerItem } from '@react-navigation/drawer'
 import Pantalla1Screen from './screens/Pantalla1Screen';
@@ -11,6 +11,9 @@ type Props = {}
 const Drawer = createDrawerNavigator();
 
 const PrincilaScreenNavigator = (props: Props) => {
+
+    const dimensions = useWindowDimensions();
+
     return (
         <Drawer.Navigator
             screenOptions={{
@@ -35,7 +38,7 @@ export default PrincilaScreenNavigator
 function drawerPersonalizadoPr25 (props: DrawerContentComponentProps) {
     return (
         <DrawerContentScrollView>
-            <View> {/* en este view ponemos libremente*/}
+            <View>{/* en este view ponemos libremente*/}
                 <Text>Mascotas</Text>
             </View>
             <DrawerItem
