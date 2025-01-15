@@ -1,21 +1,27 @@
-import { FlatList, Image, StyleSheet, Text, View } from 'react-native'
+import { FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
-import Pokemon from '../models/Pokemon'
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
 
 type Props = {}
 
-/*
 interface Pokemon {
   name: string;
-  sprites: Images[];
+  //sprites: Images[];
 }
-
+/*
 interface Images {
   front_default: string;
+}*/
+
+type PrincipalStackParamList = {
+  PokemonList: undefined,
+  PokemonSearch: undefined,
 }
-*/
-const PokemonList = (props: Props) => {
+
+type PropsHome = NativeStackScreenProps<PrincipalStackParamList, 'PokemonList'>
+
+function PokemonList({navigation, route} : PropsHome){
 
   const [pokemonLista, setpokemonLista] = useState<Pokemon[]>([])
 
@@ -25,16 +31,9 @@ const PokemonList = (props: Props) => {
     async function getPokemonCard(direccion : string){
         let aux = pokemonLista;
 
-        for(let i = 1; i< 131; i++){
+        for(let i = 1; i< 10; i++){
           const response = await axios.get(direccion+i);
-          let nombre = response.data.name as string;
-          let image = response.data.sprites[i].front_default as string;
-          const pokemon = {
-            id: i,
-            nombre: nombre,
-            image: image,
-          }
-
+          let pokemon = response.data as Pokemon
           aux.push(pokemon);
         }
 
@@ -42,7 +41,7 @@ const PokemonList = (props: Props) => {
     }
 
     getPokemonCard(uri);
-}, [])
+  }, [])
 
   return (
     <View>
@@ -50,17 +49,24 @@ const PokemonList = (props: Props) => {
         data={pokemonLista}
         renderItem={({item, index}) => {
           return(
-            <View>
-                {/*<Image source={require(item.sprites[index].front_default)}/>*/}
-                <Text>
-                    {item.name}
-                </Text>
-            </View>
+            <TouchableOpacity onPress={()=> navigation.navigate('PokemonSearch')}>
+              <View>
+                <Image 
+                  source={{uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+1}.png`}}
+                  style={{width: 100, height: 100}}
+                />
+                <View>
+                  <Text>
+                      {item.name}
+                  </Text>
+                </View>
+              </View>
+            </TouchableOpacity>
           )
         }}
-        keyExtractor={(item, index) => item.name + index}
-        ListHeaderComponent={()=> <Text></Text>}
-        ItemSeparatorComponent={()=> <Text></Text>}
+        keyExtractor={(item, index) => item.name+'-'+index}
+        //ListHeaderComponent={()=> <Text></Text>}
+        //ItemSeparatorComponent={()=> <Text></Text>}
       />
     </View>
   )
