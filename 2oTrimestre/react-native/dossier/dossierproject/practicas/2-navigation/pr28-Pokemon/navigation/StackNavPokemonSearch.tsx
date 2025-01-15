@@ -16,14 +16,16 @@ const Stack = createNativeStackNavigator<PrincipalStackParamList>();
 type PropsHome = NativeStackScreenProps<PrincipalStackParamList>
 
 function StackNavPokemonSearch(props : Props){
-    <Stack.Navigator screenOptions={{
-        headerStyle: {backgroundColor: '#0374ba'},
-        headerTitleAlign: 'center',
-        //title: title
-    }}>
-        <Stack.Screen name="PokemonSearch" component={PokemonSearch}/>
-        <Stack.Screen name="PokemonShow" component={PokemonShow}/>
-    </Stack.Navigator>
+    return(
+        <Stack.Navigator screenOptions={{
+            headerStyle: {backgroundColor: '#0374ba'},
+            headerTitleAlign: 'center',
+            //title: title
+        }}>
+            <Stack.Screen name="PokemonSearch" component={PokemonSearch}/>
+            <Stack.Screen name="PokemonShow" component={PokemonShow}/>
+        </Stack.Navigator>
+    )
 }
 
 export default StackNavPokemonSearch
