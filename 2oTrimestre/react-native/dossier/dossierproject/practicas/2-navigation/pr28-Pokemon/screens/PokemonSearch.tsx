@@ -1,20 +1,35 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
 import axios from 'axios';
 import { FlatList, TextInput } from 'react-native-gesture-handler';
-import { Image } from 'react-native-reanimated/lib/typescript/Animated';
 
 type Props = {}
 
 interface Pokemon {
+  id: number;
   name: string;
-  //sprites: Images[];
+  sprites: {
+    front_default: string;
+    front_female?: string;
+    front_shiny?: string;
+    front_shiny_female?: string;
+    
+    back_default: string;
+    back_female?: string;
+    back_shiny?: string;
+    back_shiny_female?: string;
+    other: {
+      official_artwork: {
+        front_default: string;
+      }
+    }
+  }
 }
 
 type PrincipalStackParamList = {
-  PokemonList: undefined,
   PokemonSearch: undefined,
+  PokemonShow: {idPokemon: number},
 }
 
 type PropsHome = NativeStackScreenProps<PrincipalStackParamList, 'PokemonSearch'>
@@ -27,13 +42,14 @@ function PokemonSearch({navigation, route} : PropsHome){
 
   useEffect(() => {
     async function getPokemonCard(direccion : string){
-        let aux = pokemonLista;
+        let aux = [];
 
-        for(let i = 1; i< 10; i++){
+        for(let i = 387; i< 494; i++){
           const response = await axios.get(direccion+i);
           let pokemon = response.data as Pokemon
           aux.push(pokemon);
         }
+        console.log(aux.length);
 
         setpokemonLista([...aux]);
     }
@@ -42,26 +58,36 @@ function PokemonSearch({navigation, route} : PropsHome){
   }, [])
 
   function buscarPokemon(texto : string){
-    let aux = pokemonLista.filter(pokemon => pokemon.name.toLowerCase().includes(texto.toLowerCase()))
+    let aux = [];
+
+    for(let i = 0; i < pokemonLista.length; i++) {
+        if((pokemonLista[i].name.toLowerCase()).includes(texto.toLowerCase())){
+            aux.push(pokemonLista[i]);
+        }
+    }
+
     setbusqueda([...aux]);
   }
 
   return (
-    <View>
+    <View style={{flex: 1, padding: 10}}>
       <View>
         <TextInput placeholder='Buscar pokemon' onChangeText={(texto)=>buscarPokemon(texto)}/>
       </View>
       <View>
         <FlatList
-          data={pokemonLista}
+          data={busqueda.length == 0 ? [] : busqueda}
           renderItem={({item, index}) => {
             return(
-              <TouchableOpacity onPress={()=> navigation.navigate('PokemonSearch')}>
-                <View>
-                  <Image 
-                    source={{uri: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${index+1}.png`}}
-                    style={{width: 100, height: 100}}
-                  />
+              <TouchableOpacity onPress={()=> navigation.navigate('PokemonShow', {idPokemon: item.id})}>
+                <View style={styles.elementList}>
+                  <View>
+                    <Image 
+                      source={{uri: item.sprites.front_default}} 
+                      style={{width: 100, height: 100}}
+                    />
+                  </View>
+
                   <View>
                     <Text>
                         {item.name}
@@ -71,7 +97,7 @@ function PokemonSearch({navigation, route} : PropsHome){
               </TouchableOpacity>
             )
           }}
-          keyExtractor={(item, index) => item.name+'-'+index}
+          keyExtractor={(item, index) => item.name+index}
         />
       </View>
     </View>
@@ -80,4 +106,25 @@ function PokemonSearch({navigation, route} : PropsHome){
 
 export default PokemonSearch
 
-const styles = StyleSheet.create({})
+const styles = StyleSheet.create({
+  elementList:{
+    borderColor: '#a8adaa',
+    borderWidth: 1,
+    borderRadius: 10,
+    backgroundColor: '#a8adaa',
+
+    alignSelf: 'center',
+    alignItems: 'center',
+
+    width: 250,
+    height: 120,
+
+    marginBottom: 10,
+  },
+  nameList:{
+
+  },
+  imageList:{
+
+  }
+})
