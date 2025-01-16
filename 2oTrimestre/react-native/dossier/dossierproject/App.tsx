@@ -1,4 +1,4 @@
-
+import 'react-native-gesture-handler';
 import React from 'react';
 import type {PropsWithChildren} from 'react';
 
@@ -28,6 +28,7 @@ import PrincipalScreenPr23 from './practicas/2-navigation/pr23/navigation/Princi
 import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27/screens/TabPrincipalScreenPr27';
 import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25/DrawerPersonalizadoPr25';
 import TabNavPokemon from './practicas/2-navigation/pr28-Pokemon/navigation/TabNavPokemon';
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -94,9 +95,11 @@ function App(): React.JSX.Element {
       //<TabPrincipalScreenPr27/>
     //</NavigationContainer>
     //Pr28
-    <NavigationContainer>
-      <TabNavPokemon/>
-    </NavigationContainer>
+    <GestureHandlerRootView>
+      <NavigationContainer>
+        <TabNavPokemon/>
+      </NavigationContainer>
+    </GestureHandlerRootView>
     );
 }
 

@@ -76,7 +76,7 @@ function PokemonSearch({navigation, route} : PropsHome){
       </View>
       <View>
         <FlatList
-          data={busqueda.length == 0 ? [] : busqueda}
+          data={busqueda.length == 0 ? pokemonLista : busqueda}
           renderItem={({item, index}) => {
             return(
               <TouchableOpacity onPress={()=> navigation.navigate('PokemonShow', {idPokemon: item.id})}>

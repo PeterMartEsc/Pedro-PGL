@@ -96,7 +96,7 @@ const styles = StyleSheet.create({
   principalImage:{
     borderColor: '#2fbd89',
     borderWidth: 3,
-    borderRadius: 100,
+    borderRadius: 200,
 
     alignSelf: 'center',
     padding: 5,
