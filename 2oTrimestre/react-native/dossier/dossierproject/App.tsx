@@ -29,6 +29,7 @@ import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27/screens/TabPri
 import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25/DrawerPersonalizadoPr25';
 import TabNavPokemon from './practicas/2-navigation/pr28-Pokemon/navigation/TabNavPokemon';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
+import ViajesScreen from './practicas/2-navigation/pr29/ViajesScreen';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -92,15 +93,19 @@ function App(): React.JSX.Element {
     //</NavigationContainer>
     //Pr27
     //<NavigationContainer>
-      //<TabPrincipalScreenPr27/>
+    //  <TabPrincipalScreenPr27/>
     //</NavigationContainer>
     //Pr28
-    <GestureHandlerRootView>
-      <NavigationContainer>
-        <TabNavPokemon/>
-      </NavigationContainer>
-    </GestureHandlerRootView>
-    );
+    //<GestureHandlerRootView>
+    //  <NavigationContainer>
+    //    <TabNavPokemon/>
+    //  </NavigationContainer>
+    //</GestureHandlerRootView>
+    //Pr29
+    <NavigationContainer>
+      <ViajesScreen/>
+    </NavigationContainer>    
+);
 }
 
 

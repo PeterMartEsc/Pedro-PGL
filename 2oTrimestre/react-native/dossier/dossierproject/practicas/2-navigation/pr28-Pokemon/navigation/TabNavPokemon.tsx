@@ -16,14 +16,21 @@ const TabNavPokemon = (props: Props) => {
     return(
         <AppContextProvider>
             <Tab.Navigator screenOptions={{
-                headerShown: false,
-            }}
-                >
+                    headerShown: false,
+                }}
+            >
                 <Tab.Screen name="StackNavPokemonList" component={StackNavPokemonList}
-                    options={{tabBarIcon: ({focused}) => <Icon name={(focused) ? 'apps' : 'apps-outline'} size={30}/>}}
+                    options={{
+                        tabBarIcon: ({focused}) => <Icon name={(focused) ? 'apps' : 'apps-outline'} size={30}/>,
+                        tabBarLabel: 'Pokedex'
+
+                    }}
                 />
                 <Tab.Screen name="StackNavPokemonSearch" component={StackNavPokemonSearch}
-                    options={{tabBarIcon: ({focused}) => <Icon name={(focused) ? 'search' : 'search-outline'} size={30}/>}}
+                    options={{
+                        tabBarIcon: ({focused}) => <Icon name={(focused) ? 'search' : 'search-outline'} size={30}/>,
+                        tabBarLabel: 'Search',
+                    }}
                 />
             </Tab.Navigator>
         </AppContextProvider>
