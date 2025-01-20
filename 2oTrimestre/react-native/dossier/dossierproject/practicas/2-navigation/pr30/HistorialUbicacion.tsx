@@ -1,12 +1,26 @@
 import { PERMISSIONS, PermissionStatus, check, request } from 'react-native-permissions'
-import Geolocation from 'react-native-geolocation-service'  
+import Geolocation, { GeoPosition } from 'react-native-geolocation-service'  
 import { Button, Linking, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
+import AsyncStorage from '@react-native-async-storage/async-storage'
 
 type Props = {}
 
+interface Coords {
+    latitude: number;
+    longitude: number;
+    altitude: number;
+    accuracy: number;
+    heading: number;
+    speed: number;
+}
 
-const ViajesScreen = (props: Props) => {
+interface LocationData {
+    coords: Coords;
+    timestamp: number;
+}
+
+const HistorialUbicacion = (props: Props) => {
     const [mensaje, setmensaje] = useState("")
     
     async function verPosicion() {
@@ -18,7 +32,7 @@ const ViajesScreen = (props: Props) => {
         //console.log(ps.toString);
 
         if (ps != 'granted') {
-            setmensaje(mensaje+"No hay permisos, vamos a solicitar");
+            //setmensaje(mensaje+"No hay permisos, vamos a solicitar");
             ps = await request(PERMISSIONS.ANDROID.ACCESS_FINE_LOCATION);
             console.log(ps);
         }
@@ -32,8 +46,9 @@ const ViajesScreen = (props: Props) => {
         }*/
         
         if(ps == 'granted') {
-            setmensaje(mensaje+"Se han solicitado y garantizado permisos");
-            Geolocation.getCurrentPosition(info => console.log(info));
+            //setmensaje(mensaje+"Se han solicitado y garantizado permisos");
+            //let datosUbicacion = null;
+            Geolocation.getCurrentPosition(info => guardarPosicion(info));
 
         } else {
             setmensaje(mensaje+"No hay permisos");
@@ -41,15 +56,25 @@ const ViajesScreen = (props: Props) => {
         }
     }
 
+    async function guardarPosicion (datosUbicacion : GeoPosition){
+        try {
+            const jsonValue = JSON.stringify(datosUbicacion);
+            await AsyncStorage.setItem('my-key', jsonValue);
+        } catch (e) {
+          // saving error
+        }
+    };
+
     return (
         <View style={{flex: 1}}>
             <Text>ViajesScreen</Text>
-            <Text>{mensaje}</Text>
+            
+            <Text></Text>
             <Button title="permiso gps" onPress={verPosicion}></Button>
         </View>
     )
 }
 
-export default ViajesScreen
+export default HistorialUbicacion
 
 const styles = StyleSheet.create({})
