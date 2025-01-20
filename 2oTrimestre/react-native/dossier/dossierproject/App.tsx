@@ -1,5 +1,5 @@
 import 'react-native-gesture-handler';
-import React from 'react';
+import React, { useEffect } from 'react';
 import type {PropsWithChildren} from 'react';
 
 import Practica01 from './practicas/1-introduccion/pr01/components/Practica01';
@@ -25,17 +25,26 @@ import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PrincipalStack from './practicas/2-navigation/pr20/PrincipalStack';
 import PrincipalScreenPr23 from './practicas/2-navigation/pr23/navigation/PrincipalScreenPr23';
-import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27/screens/TabPrincipalScreenPr27';
-import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25/DrawerPersonalizadoPr25';
+import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27-terminar/screens/TabPrincipalScreenPr27';
+import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25-terminar/DrawerPersonalizadoPr25';
 import TabNavPokemon from './practicas/2-navigation/pr28-Pokemon/navigation/TabNavPokemon';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import ViajesScreen from './practicas/2-navigation/pr29/ViajesScreen';
+import { dataSourcePr32 } from './practicas/2-navigation/pr32/src/data/Database';
 
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 function App(): React.JSX.Element {
+  //Pr32
+  useEffect(() => {
+    async function iniciarDDBB(){
+      await dataSourcePr32.initialize();
+    }
+    iniciarDDBB();
+  }, [])
+  
 
   return (
     //<Practica01/>

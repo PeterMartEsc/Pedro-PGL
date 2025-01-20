@@ -27,10 +27,14 @@
     "react-native-rss-parser": "^1.5.1",
     "react-native-safe-area-context": "^5.1.0",
     "react-native-screens": "^4.5.0",
-    "react-native-webview": "^13.13.1"
+    "react-native-sqlite-storage": "^6.0.1",
+    "react-native-webview": "^13.13.1",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
+    "@babel/plugin-proposal-decorators": "^7.25.9",
     "@babel/preset-env": "^7.25.3",
     "@babel/runtime": "^7.25.0",
     "@react-native-community/cli": "15.0.1",
@@ -40,6 +44,7 @@
     "@react-native/eslint-config": "0.76.3",
     "@react-native/metro-config": "0.76.3",
     "@react-native/typescript-config": "0.76.3",
+    "@types/node": "^22.10.7",
     "@types/react": "^18.2.6",
     "@types/react-native-rss-parser": "^1.4.3",
     "@types/react-test-renderer": "^18.0.0",
