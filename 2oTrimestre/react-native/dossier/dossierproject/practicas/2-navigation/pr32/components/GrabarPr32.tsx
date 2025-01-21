@@ -1,11 +1,11 @@
 import { Button, FlatList, StyleSheet, Text, View } from 'react-native'
 import React, { useState } from 'react'
-import Persona from '../src/entity/Persona'
+import {Persona} from '../src/entity/Persona'
 import { PersonaRepository } from '../src/data/Database'
 
 type Props = {}
 
-const GrabarPr32 = (props: Props) => {
+const grabarPr32 = (props: Props) => {
     const [personas, setpersonas] = useState<Persona[]>([])
 
     async function grabar() {
@@ -40,6 +40,6 @@ const GrabarPr32 = (props: Props) => {
     )
 }
 
-export default GrabarPr32
+export default grabarPr32
 
 const styles = StyleSheet.create({})

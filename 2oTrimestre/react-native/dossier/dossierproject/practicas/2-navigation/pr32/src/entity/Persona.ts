@@ -1,7 +1,7 @@
-import { Column, Entity, PrimaryGeneratedColumn } from "typeorm";
+import { BaseEntity, Column, Entity, PrimaryGeneratedColumn } from "typeorm";
 
 @Entity('persona')
-export default class Persona {
+export class Persona extends BaseEntity {
     //Si no queremos autogenerado: @PrimaryColumn
     @PrimaryGeneratedColumn() id :  number;
     @Column('text') nombre : string;

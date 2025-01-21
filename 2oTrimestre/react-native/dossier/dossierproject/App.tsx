@@ -31,6 +31,7 @@ import TabNavPokemon from './practicas/2-navigation/pr28-Pokemon/navigation/TabN
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import ViajesScreen from './practicas/2-navigation/pr29/ViajesScreen';
 import { dataSourcePr32 } from './practicas/2-navigation/pr32/src/data/Database';
+import GrabarPr32 from './practicas/2-navigation/pr32/components/GrabarPr32';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -111,9 +112,12 @@ function App(): React.JSX.Element {
     //  </NavigationContainer>
     //</GestureHandlerRootView>
     //Pr29
-    <NavigationContainer>
-      <ViajesScreen/>
-    </NavigationContainer>    
+    //<NavigationContainer>
+      //<ViajesScreen/>
+    //</NavigationContainer>
+    //Pr30
+    //Pr32
+    <GrabarPr32/>
 );
 }
 
