@@ -34,6 +34,7 @@ import { dataSourcePr32 } from './practicas/2-navigation/pr32/src/data/Database'
 import GrabarPr32 from './practicas/2-navigation/pr32/components/GrabarPr32';
 import { dataSourcePr33 } from './practicas/2-navigation/pr33/src/data/DatabasePr33';
 import TabNavProductosPr34 from './practicas/2-navigation/pr34/navigation/TabNavProductosPr34';
+import { dataSourcePr34 } from './practicas/2-navigation/pr34/src/data/Database';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -54,6 +55,13 @@ function App(): React.JSX.Element {
     }
     iniciarDDB();
   }, [])*/
+  //Pr34
+  useEffect(() => {
+    async function iniciarDDB(){
+      await dataSourcePr34.initialize();
+    }
+    iniciarDDB();
+  }, [])
 
   return (
     //<Practica01/>

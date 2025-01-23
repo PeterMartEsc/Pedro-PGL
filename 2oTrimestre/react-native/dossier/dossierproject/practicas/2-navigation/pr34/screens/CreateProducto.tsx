@@ -1,6 +1,6 @@
-import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Alert, StyleSheet, Switch, Text, TextInput, TouchableOpacity, View } from 'react-native'
 import React, { useContext, useEffect, useState } from 'react'
-import { Switch, TextInput } from 'react-native-gesture-handler'
+
 import { AppContext } from '../components/AppContextProvider'
 import { Producto } from '../src/entity/Producto'
 import { ProductoRepository } from '../src/data/Database'
@@ -8,52 +8,40 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 type Props = {}
 
-type PrincipalStackParamList = {
-  CreateProducto: undefined,
-  FilterProductos: undefined,
-}
 
-type PropsCreateProducto = NativeStackScreenProps<PrincipalStackParamList, 'CreateProducto'>
+const CreateProducto = (props: Props) => {
 
-const CreateProducto = ({navigation, route}: PropsCreateProducto) => {
-
-  const {listaProductos, setListaProductos} = useContext(AppContext);
-  const [contadorIds, setcontadorIds] = useState(0);
-  const [productoActual, setproductoActual] = useState<Producto>();
+  const [productoActual, setproductoActual] = useState<Producto>( { nombre: "", precio: 0, stock: 0, descontinuado: false} as Producto);
+  const [clear, setClear] = useState(false);
 
   useEffect(() => {
     async function inicialiceProduct(){
-      let newId : number = contadorIds+1;
+      //let newId : number = contadorIds+1;
       let aux = [];
 
       const producto = {
-          id: newId,
-          nombre: "",
-          precio: 0,
-          stock: 0,
-          descontinuado: false
+        nombre: "",
+        precio: 0,
+        stock: 0,
+        descontinuado: false
       }
     
       aux.push(producto);
       await ProductoRepository.save(aux);
 
       const updatedProductos = await ProductoRepository.find();
-
-      setListaProductos([...updatedProductos]);
-      setcontadorIds(newId);
-
-      //Establece el producto actual
       const newProductoActual = updatedProductos.find((element) => element.id === newId);  
       setproductoActual(newProductoActual);
     }
 
     inicialiceProduct();
-  }, [])
+  }, [clear])
 
 
   function fillFormData(value: string | number, field: keyof Producto){
 
     const updatedProductos = listaProductos.map( (producto) => {
+
       if (producto.id === productoActual.id) {
         const updatedProducto = Producto.create({ ...producto, [field]: value }); 
         // Guarda cambios en la base de datos
@@ -62,12 +50,19 @@ const CreateProducto = ({navigation, route}: PropsCreateProducto) => {
       }
       return producto;
     })
-
+    //console.log(listaProductos)
     setListaProductos(updatedProductos);
   }
 
   function addItem(){
-    navigation.navigate('FilterProductos');
+    Alert.alert('Producto creado', 'My Alert Msg', [
+      {
+        text: 'Ok',
+        onPress: ()=>setClear(!clear),
+        //style: 'cancel',
+      },
+      //{text: 'OK', onPress: () => console.log('OK Pressed')},
+    ]);
   }
 
   return (
