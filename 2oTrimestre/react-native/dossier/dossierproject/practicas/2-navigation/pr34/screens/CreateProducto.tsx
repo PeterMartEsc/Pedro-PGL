@@ -13,7 +13,7 @@ type PrincipalStackParamList = {
   FilterProductos: undefined,
 }
 
-//type PropsCreateProducto = NativeStackScreenProps<PrincipalStackParamList, 'EditNote'>
+type PropsCreateProducto = NativeStackScreenProps<PrincipalStackParamList, 'CreateProducto'>
 
 const CreateProducto = ({navigation, route}: PropsCreateProducto) => {
 
@@ -67,7 +67,7 @@ const CreateProducto = ({navigation, route}: PropsCreateProducto) => {
   }
 
   function addItem(){
-    navigation.navigate();
+    navigation.navigate('FilterProductos');
   }
 
   return (
