@@ -19,7 +19,7 @@ const TabNavProductosPr34 = (props: Props) => {
 
     return (
         <AppContextProvider>
-            <Tab.Navigator screenOptions={{
+            <Tab.Navigator id={undefined} screenOptions={{
                         headerShown: false,
                     }}>
                 <Tab.Screen name="CreateProducto" component={CreateProducto}
