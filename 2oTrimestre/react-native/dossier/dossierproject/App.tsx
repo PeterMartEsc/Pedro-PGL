@@ -56,12 +56,7 @@ function App(): React.JSX.Element {
     iniciarDDB();
   }, [])*/
   //Pr34
-  useEffect(() => {
-    async function iniciarDDB(){
-      await dataSourcePr34.initialize();
-    }
-    iniciarDDB();
-  }, [])
+  
 
   return (
     //<Practica01/>
