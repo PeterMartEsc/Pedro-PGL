@@ -32,6 +32,8 @@ import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import ViajesScreen from './practicas/2-navigation/pr29/ViajesScreen';
 import { dataSourcePr32 } from './practicas/2-navigation/pr32/src/data/Database';
 import GrabarPr32 from './practicas/2-navigation/pr32/components/GrabarPr32';
+import { dataSourcePr33 } from './practicas/2-navigation/pr33/src/data/DatabasePr33';
+import TabNavProductosPr34 from './practicas/2-navigation/pr34/navigation/TabNavProductosPr34';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -39,13 +41,19 @@ type SectionProps = PropsWithChildren<{
 
 function App(): React.JSX.Element {
   //Pr32
-  useEffect(() => {
+  /*useEffect(() => {
     async function iniciarDDBB(){
       await dataSourcePr32.initialize();
     }
     iniciarDDBB();
-  }, [])
-  
+  }, [])*/
+  //Pr33
+  /*useEffect(() => {
+    async function iniciarDDB(){
+      await dataSourcePr33.initialize();
+    }
+    iniciarDDB();
+  }, [])*/
 
   return (
     //<Practica01/>
@@ -117,7 +125,16 @@ function App(): React.JSX.Element {
     //</NavigationContainer>
     //Pr30
     //Pr32
-    <GrabarPr32/>
+    //<GrabarPr32/>
+    //Pr33
+    //<NavigationContainer>
+      //<PrincipalScreenPr23/>
+    //</NavigationContainer>
+    //Pr34
+    <NavigationContainer>
+      <TabNavProductosPr34/>
+    </NavigationContainer>
+
 );
 }
 

@@ -1,5 +1,5 @@
 import { DataSource } from "typeorm";
-import Persona from "../entity/Persona";
+import { Persona } from "../entity/Persona";
 
 export const dataSourcePr32 = new DataSource ({
     database: 'personasdb.db',
