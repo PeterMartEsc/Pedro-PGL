@@ -1,5 +1,5 @@
-import { Button, StyleSheet, Text, View } from 'react-native'
-import React from 'react'
+import { Button, StyleSheet, Text, TextInput, View } from 'react-native'
+import React, { useState } from 'react'
 import { NativeStackScreenProps, createNativeStackNavigator } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 
@@ -15,7 +15,7 @@ const Stack = createNativeStackNavigator<PrincipalStackParamList>();
 
 const PrincipalStackPr21 = (props: Props) => {
     return (
-        <Stack.Navigator screenOptions={{/*headerShown:false*/}}>
+        <Stack.Navigator id={undefined} screenOptions={{/*headerShown:false*/}}>
             <Stack.Screen name="Home" component={HomeScreen}/>
             <Stack.Screen name="Profile" component={ProfileScreen}/>
             <Stack.Screen name="Settings" component={SettingsScreen}/>
@@ -24,6 +24,25 @@ const PrincipalStackPr21 = (props: Props) => {
 }
 
 export default PrincipalStackPr21
+
+type PropsHome = NativeStackScreenProps<PrincipalStackParamList, 'Home'>
+
+function HomeScreen({navigation, route}:PropsHome){
+
+    const [nombre, setnombre] = useState<string>("")
+
+    return (
+        <View style={{flex: 1, justifyContent: 'center', alignItems:'center'}}>
+            <Text>Home Screen</Text>
+            <View style={{}}>
+                <TextInput onChangeText={(texto)=> setnombre(texto)} />
+            </View> 
+            <Button title='Ir a Profile' onPress={()=>navigation.navigate('Profile', {userName:nombre})}/>
+            <Button title='Settings' onPress={()=>navigation.navigate('Settings')}/>
+            <Icon name='car-outline' size={50} color={'blue'}/>
+        </View>
+    )
+}
 
 type PropsProfile = NativeStackScreenProps<PrincipalStackParamList, 'Profile'>
 
@@ -38,18 +57,6 @@ function ProfileScreen({navigation, route}:PropsProfile){
     )
 }
 
-type PropsHome = NativeStackScreenProps<PrincipalStackParamList, 'Home'>
-
-function HomeScreen({navigation, route}:PropsHome){
-    return (
-        <View style={{flex: 1, justifyContent: 'center', alignItems:'center'}}>
-            <Text>Home Screen</Text>
-            <Button title='Ir a Profile' onPress={()=>navigation.navigate('Profile', {userName:"Pedro"})}/>
-            <Button title='Settings' onPress={()=>navigation.navigate('Settings')}/>
-            <Icon name='car-outline' size={50} color={'blue'}/>
-        </View>
-    )
-}
 
 type PropsSettings = NativeStackScreenProps<PrincipalStackParamList, 'Settings'>
 

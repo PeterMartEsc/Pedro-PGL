@@ -16,6 +16,7 @@ const PrincilaScreenNavigator = (props: Props) => {
 
     return (
         <Drawer.Navigator
+            id={undefined}
             screenOptions={{
                 drawerStyle: {
                     //backgorundColor: '',
@@ -23,7 +24,7 @@ const PrincilaScreenNavigator = (props: Props) => {
                 },
                 drawerType: dimensions.width >= 768 ? 'permanent' : 'front',
             }}
-            drawerContent={(props) => drawerPersonalizadoPr25(props)}
+            //drawerContent={(props) => drawerPersonalizadoPr25(props)}
         >
             <Drawer.Screen name="Pantalla 1" options={{title: "Hola Mundo"}} component={Pantalla1Screen}/>
             <Drawer.Screen name="Pantalla 2" options={{title: "Segunda Pantalla"}} component={Pantalla2Screen}/>
@@ -41,6 +42,11 @@ function drawerPersonalizadoPr25 (props: DrawerContentComponentProps) {
             <View>{/* en este view ponemos libremente*/}
                 <Text>Mascotas</Text>
             </View>
+            <DrawerItem
+            // icon = {<Icon name='miIcono'>}
+            label="Pantalla 1"
+            onPress={()=> props.navigation.navigate('Pantalla 1')}
+            />
             <DrawerItem
             // icon = {<Icon name='miIcono'>}
             label="Help"

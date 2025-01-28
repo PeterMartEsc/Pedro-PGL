@@ -2,7 +2,9 @@
 
 # Dossier - ReactNative
 
-En este dossier realizaremos las practicas del pdf aportado por el profesor, para aprender a trabajar con ReactNative.
+En este dossier realizaré las practicas del pdf aportado por el profesor para aprender a trabajar con ReactNative, en las que se especifique alguna __pregunta__ o pida __capturas__ de demostración de funcionamiento. 
+
+Todas las prácticas realizadas, serán adjuntadas en un zip del proyecto, junto con este pdf.
 
 Para lanzar el proyecto:
 
@@ -12,15 +14,11 @@ Para lanzar el proyecto:
 
 > Luego deberemos escoger la `a` para lanzarlo en Android
 
-Todas las practicas estan comentadas en App, solo hay que descomentar la que se quiera visualizar.
-
-## Indice:
-
-- 
+Todas las practicas estan comentadas en `App.tsx`, solo hay que descomentar la que se quiera visualizar.
 
 ### Practica 1
 
-Crearemos un: “hola mundo!. Soy nombrealumno”
+> Crearemos un: “hola mundo!. Soy nombrealumno”
 Para ello vamos a App.tsx. Dejaremos únicamente un componente View ( que es el
 contenedor habitual en react native ) y pondremos dentro un componente Text ( que es
 donde escribiremos ) Practica con tus conocimientos de CSS
@@ -61,6 +59,15 @@ StyleSheet.create()
 
 <img src="../markdown/capturas/pr03.png">
 
+### Práctica 11
+
+_Nota:_ se encuentra dentro de la carpeta de la Pr10
+
+### Práctica 25
+
+Reproducir el ejemplo anterior. Girar la pantalla ¿ quéda el menú visible ? Cambiar el color de fondo del menú lateral y poner que tenga un ancho de 200. Prueba a comentar   y   descomentar   la   línea   del   drawerContent   ¿   Cuándo   lo   activas   siguen mostrándose los enlaces a las pantallas ? Vamos a personalizar el menú. 
+
+Si, queda el menú visible, a mitad de la pantalla. Si comento la linea del drawer content, se muestra cada componente como un elemento del drawer content por defecto.
 
 
 </div>
