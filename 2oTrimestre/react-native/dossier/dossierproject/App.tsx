@@ -129,7 +129,7 @@ function App(): React.JSX.Element {
       //<ViajesScreen/>
     //</NavigationContainer>
     //Pr30
-    <HistorialUbicacion/>
+    //<HistorialUbicacion/>
     //Pr32
     //<GrabarPr32/>
     //Pr33
@@ -141,9 +141,9 @@ function App(): React.JSX.Element {
       //<TabNavProductosPr34/>
     //</NavigationContainer>
     //Instituto Sec
-    //<NavigationContainer>
-    //  <DrawerNavPrincipal/>
-    //</NavigationContainer>
+    <NavigationContainer>
+      <DrawerNavPrincipal/>
+    </NavigationContainer>
 );
 }
 
