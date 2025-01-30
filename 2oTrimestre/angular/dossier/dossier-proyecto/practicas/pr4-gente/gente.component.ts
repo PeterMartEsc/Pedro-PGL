@@ -1,8 +1,11 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-gente',
-  imports: [],
+  imports: [
+    CommonModule
+  ],
   templateUrl: './gente.component.html',
   styleUrl: './gente.component.css'
 })

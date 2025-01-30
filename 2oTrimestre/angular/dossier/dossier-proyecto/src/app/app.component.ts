@@ -2,11 +2,13 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { PruebaComponent } from '../../practicas/pr3-prueba/prueba.component';
 import { GenteComponent } from '../../practicas/pr4-gente/gente.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   //standalone: true,
   imports: [
+    CommonModule,
     RouterOutlet,
     PruebaComponent,
     GenteComponent,
