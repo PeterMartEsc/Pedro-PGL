@@ -25,7 +25,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import PrincipalStack from './practicas/2-navigation/pr20/PrincipalStack';
 import PrincipalScreenPr23 from './practicas/2-navigation/pr23/navigation/PrincipalScreenPr23';
-import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27-terminar/screens/TabPrincipalScreenPr27';
+import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27-terminar/navigation/TabPrincipalScreenPr27';
 import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25/DrawerPersonalizadoPr25';
 import TabNavPokemon from './practicas/2-navigation/pr28-Pokemon/navigation/TabNavPokemon';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
