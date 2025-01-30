@@ -2,14 +2,13 @@
 
 # Dossier - ReactNative
 
-En este dossier realizaré las practicas del pdf aportado por el profesor para aprender a trabajar con ReactNative, en las que se especifique alguna __pregunta__ o pida __capturas__ de demostración de funcionamiento. 
-
+En este dossier realizaré las practicas del pdf aportado por el profesor para aprender a trabajar con ReactNative.
 Todas las prácticas realizadas, serán adjuntadas en un zip del proyecto, junto con este pdf.
 
 Para lanzar el proyecto:
 
 ```bash
-    npm start
+    npm run start
 ```
 
 > Luego deberemos escoger la `a` para lanzarlo en Android

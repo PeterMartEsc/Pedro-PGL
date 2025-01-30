@@ -1,17 +1,23 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { PruebaComponent } from '../../practicas/pr3-prueba/prueba.component';
+import { GenteComponent } from '../../practicas/pr4-gente/gente.component';
 
 @Component({
   selector: 'app-root',
   //standalone: true,
-  imports: [RouterOutlet],
+  imports: [
+    RouterOutlet,
+    PruebaComponent,
+    GenteComponent,
+  ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+  title = 'dossier-proyecto';
   nombre : string = "Pedro";
   apellidos : string = "Martín Escuela";
-  title = 'dossier-proyecto';
 
   //tablaMultiplicar = "";
   tabla : string[] = [];
