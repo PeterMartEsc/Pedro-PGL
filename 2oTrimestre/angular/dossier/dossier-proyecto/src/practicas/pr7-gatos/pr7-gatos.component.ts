@@ -18,7 +18,7 @@ export class Pr7GatosComponent {
     nombre: new FormControl(''),
     peso: new FormControl(''),
     edad: new FormControl(''),
-    equivalenciahumano: new FormControl(''),
+    equivalenciaHumano: new FormControl(''),
   });
 
   guardarPersona() {
@@ -26,7 +26,8 @@ export class Pr7GatosComponent {
     gato.nombre = this.gatosFormData.value.nombre??"";
     gato.peso = parseInt(this.gatosFormData.value.peso ?? '0');
     gato.edad = parseInt(this.gatosFormData.value.edad ?? '0');
-    gato.equivalenciahumano = parseInt(this.gatosFormData.value.equivalenciahumano ?? '0');
+    gato.equivalenciaHumano = parseInt(this.gatosFormData.value.equivalenciaHumano ?? '0');
+    console.log(this.gatosFormData.value.equivalenciaHumano);
     this.gatos.push(gato);
   }
   gatos: Gato[] = [];

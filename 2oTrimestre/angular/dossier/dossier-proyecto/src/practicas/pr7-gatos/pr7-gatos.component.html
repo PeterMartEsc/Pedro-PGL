@@ -8,7 +8,18 @@
     <br>
     <button type="submit" >Guardar</button>
   </form>
-  <ul>
-    <li *ngFor="let gato of gatos">{{gato.nombre}}</li>
-  </ul>
+  <table>
+    <tr>
+      <th>Nombre</th>
+      <th>Peso</th>
+      <th>Edad</th>
+      <th>Equiv Hum</th>
+    </tr>
+    <tr *ngFor="let gato of gatos">
+      <td>{{gato.nombre}}</td>
+      <td>{{gato.peso}}</td>
+      <td>{{gato.edad}}</td>
+      <td>{{gato.equivalenciaHumano}}</td>
+    </tr>
+  </table>
 </main>
