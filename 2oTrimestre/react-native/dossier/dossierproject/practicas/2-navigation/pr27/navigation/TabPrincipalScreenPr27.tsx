@@ -14,11 +14,14 @@ const TabPrincipalScreenPr27 = (props: Props) => {
         <Tab.Navigator id={undefined} screenOptions={{headerShown: false}}>
             <Tab.Screen name="Viajes" component={InicioScreenPr10}
             options={{
-                tabBarIcon: ({focused}) => <Icon name={(focused) ? 'apps' : 'apps-outline'} size={30}/>,
+                tabBarIcon: ({focused}) => <Icon name={(focused) ? 'calculator' : 'calculator-outline'} size={30}/>,
                 tabBarLabel: 'Calculadora'
             
             }}/>
-            <Tab.Screen name="Viajes" component={About}/>
+            <Tab.Screen name="About" component={About}options={{
+                tabBarIcon: ({focused}) => <Icon name={(focused) ? 'information-circle' : 'information-circle-outline'} size={30}/>,
+                tabBarLabel: 'Calculadora'
+            }}/>
         </Tab.Navigator>
     )
 }
