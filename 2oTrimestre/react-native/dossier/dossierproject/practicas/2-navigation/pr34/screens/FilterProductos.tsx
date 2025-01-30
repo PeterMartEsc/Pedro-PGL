@@ -20,10 +20,10 @@ const FilterProductos = (props: Props) => {
   }, [])
 
   async function filtrer(){
-    const listaNombre = listaProductos.find(where{nombre: busqueda} && elemento.precio <= menorQue && elemento.precio >= mayorQue)
+    //const listaNombre = listaProductos.find(where{nombre: busqueda} && elemento.precio <= menorQue && elemento.precio >= mayorQue)
     
     
-    setlistaProductos([listaNombre]);
+    //setlistaProductos([listaNombre]);
   }
 
   return (

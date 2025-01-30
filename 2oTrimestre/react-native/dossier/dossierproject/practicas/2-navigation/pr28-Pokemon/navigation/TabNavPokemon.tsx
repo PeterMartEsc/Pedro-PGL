@@ -15,7 +15,9 @@ const TabNavPokemon = (props: Props) => {
     
     return(
         <AppContextProvider>
-            <Tab.Navigator screenOptions={{
+            <Tab.Navigator 
+                    id={undefined}
+                    screenOptions={{
                     headerShown: false,
                 }}
             >

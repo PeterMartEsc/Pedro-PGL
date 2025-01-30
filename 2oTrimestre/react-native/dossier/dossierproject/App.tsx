@@ -26,7 +26,7 @@ import { SafeAreaView } from 'react-native-safe-area-context';
 import PrincipalStack from './practicas/2-navigation/pr20/PrincipalStack';
 import PrincipalScreenPr23 from './practicas/2-navigation/pr23/navigation/PrincipalScreenPr23';
 import TabPrincipalScreenPr27 from './practicas/2-navigation/pr27-terminar/screens/TabPrincipalScreenPr27';
-import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25-terminar/DrawerPersonalizadoPr25';
+import DrawerPersonalizadoPr25 from './practicas/2-navigation/pr25/DrawerPersonalizadoPr25';
 import TabNavPokemon from './practicas/2-navigation/pr28-Pokemon/navigation/TabNavPokemon';
 import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import ViajesScreen from './practicas/2-navigation/pr29/ViajesScreen';
@@ -34,7 +34,9 @@ import { dataSourcePr32 } from './practicas/2-navigation/pr32/src/data/Database'
 import GrabarPr32 from './practicas/2-navigation/pr32/components/GrabarPr32';
 import { dataSourcePr33 } from './practicas/2-navigation/pr33/src/data/DatabasePr33';
 import TabNavProductosPr34 from './practicas/2-navigation/pr34/navigation/TabNavProductosPr34';
-import { dataSourcePr34 } from './practicas/2-navigation/pr34/src/data/Database';
+import DrawerNavPrincipal from './tareas-clase/institutoSec/navigation/drawer/DrawerNavPrincipal';
+import PrincipalStackPr21 from './practicas/2-navigation/pr21/PrincipalStack21';
+import HistorialUbicacion from './practicas/2-navigation/pr30/HistorialUbicacion';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -55,8 +57,6 @@ function App(): React.JSX.Element {
     }
     iniciarDDB();
   }, [])*/
-  //Pr34
-  
 
   return (
     //<Practica01/>
@@ -100,18 +100,20 @@ function App(): React.JSX.Element {
     /*<NavigationContainer>
       <PrincipalStack/>
     </NavigationContainer>*/
+    //Pr21
+    //<NavigationContainer>
+    //  <PrincipalStackPr21/>
+    //</NavigationContainer>
     //Pr23
     //<NavigationContainer>
       //<PrincipalScreenPr23/>
     //</NavigationContainer>
     //Pr24
-    //<NavigationContainer>
-      //<PrincipalScreenPr23/>
-    //</NavigationContainer>
     //Pr25
     //<NavigationContainer>
-      //DrawerPersonalizadoPr25/>
+    //  <DrawerPersonalizadoPr25/>
     //</NavigationContainer>
+    //Pr26
     //Pr27
     //<NavigationContainer>
     //  <TabPrincipalScreenPr27/>
@@ -127,6 +129,7 @@ function App(): React.JSX.Element {
       //<ViajesScreen/>
     //</NavigationContainer>
     //Pr30
+    <HistorialUbicacion/>
     //Pr32
     //<GrabarPr32/>
     //Pr33
@@ -134,10 +137,13 @@ function App(): React.JSX.Element {
       //<PrincipalScreenPr23/>
     //</NavigationContainer>
     //Pr34
-    <NavigationContainer>
-      <TabNavProductosPr34/>
-    </NavigationContainer>
-
+    //<NavigationContainer>
+      //<TabNavProductosPr34/>
+    //</NavigationContainer>
+    //Instituto Sec
+    //<NavigationContainer>
+    //  <DrawerNavPrincipal/>
+    //</NavigationContainer>
 );
 }
 
