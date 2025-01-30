@@ -86,7 +86,7 @@ propiedad flex, y un objeto TouchableOpacity para el botón: flex-1  que
 decremente la propiedad flex
 Personalizar los estilos de esos dos objetos
 
-<img src="../markdown/capturas/pr06.png">
+<img src="../markdown/capturas/pr06.jpg">
 
 ### Practica 7 
 
@@ -108,7 +108,9 @@ column/row. El renderizado que se muestra tiene: flexDirection: ‘row’, flexW
 Observar que dos de los botones tienen estilos, así que no usaremos  Button con ellos. Se
 propone TouchableOpacity
 
-<img src="../markdown/capturas/pr08.png">
+<img src="../markdown/capturas/pr08.1.jpg">
+<img src="../markdown/capturas/pr08.2.jpg">
+
 
 ### Practica 9  
 
@@ -120,14 +122,15 @@ Cuidado! NO poner wrap. Debemos establecer nowrap, o al hacer aignItems se ubica
 según  el   tamaño   del   objeto   más   grande   de   la   columna,   en  lugar   de  respecto   a  su
 contenedor
 
-<img src="../markdown/capturas/pr09.png">
+<img src="../markdown/capturas/pr09.jpg">
 
 ### Practica 10 
 
 Hacer la calculadora descrita
 
-<img src="../markdown/capturas/pr10.png">
-
+<img src="../markdown/capturas/pr10.1.jpg">
+<img src="../markdown/capturas/pr10.2.jpg">
+<img src="../markdown/capturas/pr10.3.jpg">
 
 ### Práctica 11
 
@@ -149,7 +152,8 @@ color aleatorio a mostrar ( puede ser de un array previamente generado de colore
 a poner de background de la pantalla. Si pulsa ok se cambia el fondo, si pulsa cancel se
 mantiene el previo 
 
-<img src="../markdown/capturas/pr12.png">
+<img src="../markdown/capturas/pr12.1.jpg">
+<img src="../markdown/capturas/pr12.2.jpg">
 
 ### Practica 13 
 
@@ -168,14 +172,16 @@ colores si falso: brown, si verdadero: orange       No aplicar los otros dos col
 ejemplo El switch debe valer para poner un borde a toda la pantalla de color rojo o
 quitarle el borde
 
-<img src="../markdown/capturas/pr14.png">
+<img src="../markdown/capturas/pr14.1.jpg">
+<img src="../markdown/capturas/pr14.2.jpg">
+
 
 ### Practica 15 
 
 Reproducir el ejemplo anterior, completando lo que falta (poniendo el switch 
 de: casado )
 
-<img src="../markdown/capturas/pr15.png">
+<img src="../markdown/capturas/pr15.jpg">
 
 ### Practica 16  
 
@@ -186,7 +192,7 @@ viene un atributo index ) y muestra un color de fondo para los items impares y o
 distinto   para   los   pares.   Pon   centrado   y   más   grande   la   cabecera   y   que   diga:   Lista
 Productos
 
-<img src="../markdown/capturas/pr16.png">
+<img src="../markdown/capturas/pr16.jpg">
 
 ### Practica 17 
 
@@ -200,7 +206,7 @@ al pulsar el botón y además genera el id que se pasa por props). Así que modi
 de la card no tiene por qué modificar el state de la lista de cards. Otra cosa es el botón
 eliminar, que sí debe afectar al state del apadre.
 
-<img src="../markdown/capturas/pr17.png"
+<img src="../markdown/capturas/pr17.jpg"
 
 
 ### Practica 18  
@@ -215,7 +221,7 @@ mismo pero triste
 
 _Nota: da error_
 
-<img src="../markdown/capturas/pr18.png">
+<img src="../markdown/capturas/pr18.jpg">
 
 ### Practica 19 
 
@@ -225,13 +231,14 @@ escribiendo en un TextInput un texto y quiere agregar en formato texto el smile.
 no tenga que conocerlo, basta que en ese momento pulse en el icono correspondiente y le
 aparecerá agregado al final de su texto, el texto smile correspondiente
 
-<img src="../markdown/capturas/pr19.png">
+<img src="../markdown/capturas/pr19.jpg">
 
 ### Practica 20  
 
 Reproducir el anterior ejemplo de Stack.Navigator con HomeScreen
 
-<img src="../markdown/capturas/pr20.png">
+<img src="../markdown/capturas/pr20.1.jpg">
+<img src="../markdown/capturas/pr20.2.jpg">
 
 ### Practica 21  
 
@@ -243,8 +250,8 @@ Como sabemos, intentamos dejar nuestro componente App.tsx bastante limpio. Crear
 nuevo componente: src/navigation/StackNavigation.tsx  y trasladar todo el código de la
 navegación.  
 
-<img src="../markdown/capturas/pr21.png">
-
+<img src="../markdown/capturas/pr21.1.jpg">
+<img src="../markdown/capturas/pr21.2.jpg">
 
 ### Practica 22 
 
@@ -254,17 +261,21 @@ no se muestre el headerBack  ( establecerlo a false.Nota: según el emulador se 
 regresar   arrastrando   desde   el   extremo   de   la     derecha   hacia   la   izquierda.   En   otros
 emuladores quizás no se pueda regresar). Alinear el título en el centro y pon tu nombre en el título
 
-<img src="../markdown/capturas/pr22.png">
+_No está_
+
+<img src="../markdown/capturas/pr22.jpg">
 
 ### Practica 23  
 
 Vamos a hacer el clásico: todo list Aparecerán   2   pantallas,   una con la lista de tareas. En cada fila del flatlist se puede pulsar sobre   el   check   y   que   quede marcada como realizada o no ( observar que si está finalizada el   texto   queda   tachado   y cambia el icono ) al hacer click sobre   el   icono   de   editar   nos lleva  a  la  segunda  pantalla  y modificamos el asunto y si está o   no   realizada.   Si   se   pulsa sobre   el   icono   de   papelera borra la tarea. El botón más: “+”   nos   lleva   a   la   segunda pantalla para crear una nuevatarea   (   los   ids   se   generanautomáticamente   y   el   usuariono los puede editar ) Buscar por: “options” en Statck.Screen allí podemos poner opciones muy similar a:screenoptions de Stack.Navigator, pero adicionalmente puede tratar con parámetros de laruta y así mostrar el id de la tarea en el títuloSe debe generar un contexto donde se guardará el state de la lista de ToDos y sucorrespondiente setter.
 
-<img src="../markdown/capturas/pr23.png">
+<img src="../markdown/capturas/pr23.1.jpg">
+<img src="../markdown/capturas/pr23.2.jpg">
+
 
 ### Practica 24
 
-rear   una   navegación   Drawer.   La   primera   Drawer.screen   será:
+Crear   una   navegación   Drawer.   La   primera   Drawer.screen   será:
 StackNavigation.tsx (así se cargará por defecto el Stack   ) y la otra: AboutScreen.tsx.
 Poner   en   AboutScreen.tsx   información   tuya   (   tú   nombre,   curso,   etc   )   En StackNavigation.tsx tendremos un Stack Navigator  que apunte al menos a dos pantallas, una será una pantalla de enlaces a otras actividades del Stack, La segunda pantalla será la tarea de la calculadora ( que deberá estar enlazada en la página de enlaces ) Así desde el Drawer podemos acceer directamente a About y luego si desde el Drawer se elige el Stack podemos acceder a las otras pantallas del Stack.
 Pon en la carpeta navigation tanto MenuLateral.tsx como StackNavigation.tsx
@@ -277,7 +288,8 @@ Reproducir el ejemplo anterior. Girar la pantalla ¿ quéda el menú visible ? C
 
 Si, queda el menú visible, a mitad de la pantalla. Si comento la linea del drawer content, se muestra cada componente como un elemento del drawer content por defecto.
 
-<img src="../markdown/capturas/pr25.png">
+<img src="../markdown/capturas/pr25.1.jpg">
+<img src="../markdown/capturas/pr25.2.jpg">
 
 ### Practica 26
 
@@ -310,7 +322,8 @@ subnombre ( aparecerán los pokemon que en su nombre incluyan
 el texto introducido ). Cuando pulsamos sobre alguno de la lista
 obtenida nos lleva a la Screen con todos los datos del pokemon.
 
-<img src="../markdown/capturas/pr28.png">
+<img src="../markdown/capturas/pr28.1.jpg">
+<img src="../markdown/capturas/pr28.2.jpg">
 
 ### Practica 29  
 
@@ -319,7 +332,7 @@ localización en un <Text> mediante json.stringify().   En el caso de que no se 
 permisos   se   mostrará   que   no   los   hay.     Probar   a   conceder   o   no   el   permiso,   luego
 eliminarlo, etc
 
-<img src="../markdown/capturas/pr29.png">
+<img src="../markdown/capturas/pr29.jpg">
 
 ### Practica 30 
 
@@ -330,7 +343,7 @@ se soliciten ) Al pulsar en el botón se informará en un <Text> de que se ha gu
 posición que ha guardado. Habrá otro botón que se llamará “historial” que al pulsarlo lee
 del asyncstorage la lista de posiciones guardadas y las muestra en un <Text>
 
-<img src="../markdown/capturas/pr30.png">
+<img src="../markdown/capturas/pr30.jpg">
 
 _Casi del todo_
 
@@ -350,7 +363,7 @@ b) Poner dos textinput. Uno para la edad y otro para el nombre. Ahora al pulsar 
 botón, en lugar de datos aleatorios, se creará en la base de datos la persona introducida
 por el usuario
 
-<img src="../markdown/capturas/pr32.png">
+<img src="../markdown/capturas/pr32.jpg">
 
 ### Practica 33 
 
@@ -361,7 +374,7 @@ Podemos utilizar el tipo boolean en TypeORM: @Column('boolean') completada: bool
 Para decir si se completó el todo. Observar que para evitar errores, cuando corresponda
 el update y el delete de la tarea, mejor usar el id como condición
 
-<img src="../markdown/capturas/pr33.png">
+<img src="../markdown/capturas/pr33.jpg">
 
 ### Practica 34  
 
@@ -372,7 +385,8 @@ otro para precio menor que el número dado y otro para precio mayor qué el núm
 y un switch para elegir si ordenamos por nombre ascendente ( si el switch está a false no
 ordena )
 
-<img src="../markdown/capturas/pr34.png">
+<img src="../markdown/capturas/pr34.1.jpg">
+<img src="../markdown/capturas/pr34.2.jpg">
 
 _Incompleta pero cumple su función_
 
