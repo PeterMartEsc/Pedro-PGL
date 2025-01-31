@@ -18,7 +18,7 @@ type Props = {}
 
 type tokenPlayload ={
     sub: string;
-    rol: string;
+    role: string;
 }
 
 const Drawer = createDrawerNavigator();
@@ -31,9 +31,9 @@ const DrawerNavPrincipal = (props: Props) => {
     const dimensions = useWindowDimensions();
 
     useEffect(() => {
-        if(decodedToken.rol == null){
+        console.log("context token: "+context.token)
+        if(decodedToken == null){
             console.log("decoded token es nulo")
-            console.log("context token: "+context.token)
         }
     }, [])
 
@@ -52,7 +52,7 @@ const DrawerNavPrincipal = (props: Props) => {
             <Drawer.Screen name="Alumno Operations" options={{title: "Alumnos"}} component={AlumnosListPrincipal}/>
             <Drawer.Screen name="Asignatura Operations" options={{title: "Asignaturas"}} component={TabNavAsignatura}/>
             {
-                (decodedToken?.rol == "ROLE_ADMIN") &&
+                (decodedToken?.role == "ROLE_ADMIN") &&
                 <>
                 <Drawer.Screen name="Matricula Operations" options={{title: "Matriculas"}} component={TabNavMatricula}/>
                 <Drawer.Screen name="Usuario Operations" options={{title: "Usuarios"}} component={TabNavUsuario}/>
