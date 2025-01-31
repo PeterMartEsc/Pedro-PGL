@@ -7,7 +7,7 @@ type Props = {}
 
 type RegisterData = {
     nombre: string,
-    //correo: string,
+    correo: string,
     password: string,
 }
 
@@ -28,9 +28,9 @@ const Register = (props: Props) => {
         );
     }
 
-    async function login() {
+    async function register() {
         try {
-            const response = await axios.post(`http://10.108.255.4:8080/api/v1/login/`, {
+            const response = await axios.post(`http://10.108.255.4:8080/api/v1/register/`, {
                 formdata
             });
 
@@ -51,8 +51,8 @@ const Register = (props: Props) => {
             <TextInput placeholder='nombre' onChangeText={(texto) => fillFormData(texto, "nombre")} />
             {/* <TextInput placeholder='correo' keyboardType="email-address" onChangeText={(texto) => fillFormData(texto, "correo")} /> */}
             <TextInput placeholder='password' secureTextEntry={true} onChangeText={(texto) => fillFormData(texto, "password")} />
-            <TouchableHighlight onPress={login}>
-                <Text>Registrar</Text>
+            <TouchableHighlight onPress={register}>
+                <Text>Register</Text>
             </TouchableHighlight>
             <Text>
                 {JSON.stringify(formdata)}
