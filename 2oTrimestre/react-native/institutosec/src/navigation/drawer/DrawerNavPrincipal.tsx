@@ -30,12 +30,12 @@ const DrawerNavPrincipal = (props: Props) => {
 
     const dimensions = useWindowDimensions();
 
-    useEffect(() => {
+    /*useEffect(() => {
         console.log("context token: "+context.token)
         if(decodedToken == null){
             console.log("decoded token es nulo")
         }
-    }, [])
+    }, [])*/
 
     return (
         <Drawer.Navigator

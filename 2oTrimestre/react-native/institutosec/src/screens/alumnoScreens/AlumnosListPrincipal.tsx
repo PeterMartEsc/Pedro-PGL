@@ -9,49 +9,34 @@ type Props = {}
 
 type tokenPlayload ={
   sub: string;
-  rol: string;
+  role: string;
 }
 
 
 const AlumnosListPrincipal = (props: Props) => {
 
   const [listaAlumnos, setlistaAlumnos] = useState([])
-  const [uri, setUri] = useState<string>("");
+  const [version, setVersion] = useState<string>("");
   
   const context = useTokenContext();
   const { decodedToken } = useJwt<tokenPlayload>(context.token);
 
   useEffect(() => {
-    async function getAlumnos(){
+    //console.log(decodedToken.role);
+    setVersion(decodedToken?.role == "ROLE_ADMIN" ? "v3" : "v2")
+  }, [])
+  
 
-      const response = await axios.get(`${ipRoute}/api/v2/alumnos/`);
+  useEffect(() => {
+    if(version != ""){
+      async function getAlumnos(){
 
-      if(response.status === 200){
-
-        if(response.data == null){
-          Alert.alert('Necesita iniciar sesion', 
-            'No está logueado, inicie sesión o regístrese', 
-            [
-              {
-                text: 'Register',
-                onPress: () => console.log('register presed'),
-                //navigation.navigate('Register')
-                style: 'cancel',
-              },
-              {
-                text: 'Login', 
-                onPress: () => console.log('login pressed')
-                //style: 'defaul',
-              },
-            ]);
-        } else {
-          setlistaAlumnos(response.data);
-          setUri("v2");
-        }
+        const response = await axios.get(`${ipRoute}/api/${version}/alumnos/`);
+        setlistaAlumnos(response.data);
 
       }
     }
-  }, [])
+  }, [version])
   
 
   return (

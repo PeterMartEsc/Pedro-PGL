@@ -49,7 +49,7 @@ const Login = ({navigation, route}:PropsHome) => {
                 throw new Error("An error has occurred "+response.status);
             }
         } catch (error) {
-            console.log("An error has occurred" +error.message);
+            console.log("An error has occurred aqui" +error.message);
 
         }
     }
