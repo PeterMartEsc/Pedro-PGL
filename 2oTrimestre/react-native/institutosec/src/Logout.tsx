@@ -21,7 +21,6 @@ const Logout = ({navigation, route}:PropsHome) => {
         removeToken();
         navigation.navigate('Login');
     }, [])
-    
 
     return (
         <View>

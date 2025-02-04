@@ -2,10 +2,10 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/Ionicons';
-import PrincipalStackNavAlumno from '../stack/alumno/PrincipalStackNavAlumno';
-import CreateStackNavAlumno from '../stack/alumno/CreateStackNavAlumno';
 import { useTokenContext } from '../../context/AppContext';
 import { useJwt } from 'react-jwt';
+import PrincipalStackNavAlumno from '../stack/alumno/PrincipalStackNavAlumno';
+import AlumnosCreate from '../../screens/alumnoScreens/AlumnosCreate';
 
 type Props = {}
 
@@ -37,7 +37,7 @@ const TabNavAlumno = (props: Props) => {
       {
         (decodedToken?.role == 'ROLE_ADMIN') &&
         <>
-        <Tab.Screen name="Stack Create" component={CreateStackNavAlumno}
+        <Tab.Screen name="Stack Create" component={AlumnosCreate}
           options={{
               tabBarIcon: ({focused}) => <Icon name={(focused) ? 'search' : 'search-outline'} size={30}/>,
               tabBarLabel: 'Create',

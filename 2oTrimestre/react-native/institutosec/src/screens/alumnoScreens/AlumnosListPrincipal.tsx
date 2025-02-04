@@ -4,6 +4,7 @@ import axios from 'axios'
 import ipRoute from '../../globals/Globals'
 import { useTokenContext } from '../../context/AppContext'
 import { useJwt } from 'react-jwt'
+import { NativeStackScreenProps } from '@react-navigation/native-stack'
 
 type Props = {}
 
@@ -12,51 +13,54 @@ type tokenPlayload ={
   role: string;
 }
 
+export type StackParamList = {
+  AlumnosList: undefined,
+  AlumnosCreate : undefined,
+}
 
-const AlumnosListPrincipal = (props: Props) => {
+type PropsHome = NativeStackScreenProps<StackParamList, 'AlumnosList'>
+const AlumnosListPrincipal = ({navigation, route}:PropsHome) => {
 
   const [listaAlumnos, setlistaAlumnos] = useState([])
-  const [version, setVersion] = useState<string>("");
-  
+  //const [version, setVersion] = useState<string>("");
+
   const context = useTokenContext();
   const { decodedToken } = useJwt<tokenPlayload>(context.token);
 
   useEffect(() => {
-    //console.log(decodedToken.role);
-    setVersion(decodedToken?.role == "ROLE_ADMIN" ? "v3" : "v2")
-  }, [])
-  
 
-  useEffect(() => {
-    if(version != ""){
-      async function getAlumnos(){
-
-        const response = await axios.get(`${ipRoute}/api/${version}/alumnos/`);
-        setlistaAlumnos(response.data);
-
+    //console.log("pepe");
+    async function getAlumnos(){
+      const response = await axios.get(`${ipRoute}/api/v2/alumnos`,
+      {
+        headers: {
+          Authorization: `Bearer ${context.token}`,
+        },
       }
+      );
+      //console.log("Data: "+response.data);
+      setlistaAlumnos(response.data);
     }
-  }, [version])
+
+    getAlumnos();
+    //console.log("papa" + version)
+
+  }, [])
   
 
   return (
     <View>
-      <View>
-        <Text>Hola</Text>
-      </View>
       <FlatList
         data={listaAlumnos}
         renderItem={({item, index}) => {
-
           return(
-            <TouchableOpacity /*onPress={()=> navigation.navigate('PokemonShow', {idPokemon: item.id})}*/>
+            <TouchableOpacity onPress={()=> navigation.navigate('AlumnosCreate'/*, {idPokemon: item.id}*/)}>
               <View /*style={styles.nameList}*/>
                 <Text>
                     {item.nombre}
-                    {item.password}
+                    {item.apellido}
                 </Text>
               </View>
-
               {/* 
               <Image 
                     source={{uri: item.sprites.front_default}}
@@ -66,7 +70,7 @@ const AlumnosListPrincipal = (props: Props) => {
             </TouchableOpacity>
           )
         }}
-        keyExtractor={(item, index) => item.name+index}
+        keyExtractor={(item, index) => 'alumno '+index}
       />
     </View>
   )

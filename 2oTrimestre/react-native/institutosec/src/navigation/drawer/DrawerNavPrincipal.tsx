@@ -21,6 +21,11 @@ type tokenPlayload ={
     role: string;
 }
 
+export type StackParamList = {
+    Login: undefined,
+    Logout: undefined,
+}
+
 const Drawer = createDrawerNavigator();
 
 const DrawerNavPrincipal = (props: Props) => {
@@ -49,7 +54,7 @@ const DrawerNavPrincipal = (props: Props) => {
             }}
             // drawerContent={(props) => drawerPersonalizadoPr25(props)}
         >
-            <Drawer.Screen name="Alumno Operations" options={{title: "Alumnos"}} component={AlumnosListPrincipal}/>
+            <Drawer.Screen name="Alumno Operations" options={{title: "Alumnos"}} component={TabNavAlumno}/>
             <Drawer.Screen name="Asignatura Operations" options={{title: "Asignaturas"}} component={TabNavAsignatura}/>
             {
                 (decodedToken?.role == "ROLE_ADMIN") &&

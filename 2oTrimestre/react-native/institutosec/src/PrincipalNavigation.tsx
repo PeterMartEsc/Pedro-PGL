@@ -4,6 +4,9 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import DrawerNavPrincipal from './navigation/drawer/DrawerNavPrincipal';
 import Login from './screens/Auth/Login';
 import Logout from './Logout';
+import { useTokenContext } from './context/AppContext';
+import { useJwt } from 'react-jwt';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 
 type Props = {}
 
@@ -13,9 +16,17 @@ export type StackParamList = {
   Logout: undefined,
 }
 
+type tokenPlayload ={
+  sub: string;
+  role: string;
+}
+
 const Stack = createNativeStackNavigator<StackParamList>();
 
 const PrincipalNavigation = (props: Props) => {
+
+  const context = useTokenContext();
+  const { decodedToken } = useJwt<tokenPlayload>(context.token);
 
   return (
     <Stack.Navigator
@@ -26,9 +37,18 @@ const PrincipalNavigation = (props: Props) => {
         //title: 'Pokemon Wiki'
         headerShown: false,
       }}>
-      <Stack.Screen name="Login" component={Login}/>
-      <Stack.Screen name="DrawerNavPrincipal" component={DrawerNavPrincipal}/>
-      <Stack.Screen name="Logout" component={Logout}/>
+      {
+        (AsyncStorage.getItem("token") == undefined) ? 
+        <>
+        <Stack.Screen name="Login" component={Login}/>
+        <Stack.Screen name="DrawerNavPrincipal" component={DrawerNavPrincipal}/>
+        </> :
+        <>
+        <Stack.Screen name="DrawerNavPrincipal" component={DrawerNavPrincipal}/>
+        <Stack.Screen name="Logout" component={Logout}/>
+        <Stack.Screen name="Login" component={Login}/>
+        </>
+      }
     </Stack.Navigator>
   )
 
