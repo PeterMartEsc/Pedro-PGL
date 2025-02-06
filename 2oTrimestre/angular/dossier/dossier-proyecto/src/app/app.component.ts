@@ -5,6 +5,8 @@ import { GenteComponent } from '../practicas/pr4-gente/gente.component';
 import { CommonModule } from '@angular/common';
 import { Pr7GatosComponent } from '../practicas/pr7-gatos/pr7-gatos.component';
 import { TablaMultiplicarComponent } from './tareas-clase/tabla-multiplicar/tabla-multiplicar.component';
+import { Pr8PiedraPapelTijeraComponent } from '../practicas/pr8-piedra-papel-tijera/pr8-piedra-papel-tijera.component';
+import { Pr9DobleEnlazadoComponent } from '../practicas/pr9-doble-enlazado/pr9-doble-enlazado.component';
 
 @Component({
   selector: 'app-root',
@@ -15,7 +17,9 @@ import { TablaMultiplicarComponent } from './tareas-clase/tabla-multiplicar/tabl
     //PruebaComponent, //Pr3
     //GenteComponent,  //Pr4
     //Pr7GatosComponent,
-    TablaMultiplicarComponent,
+    //TablaMultiplicarComponent,
+    //Pr8PiedraPapelTijeraComponent,
+    Pr9DobleEnlazadoComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'

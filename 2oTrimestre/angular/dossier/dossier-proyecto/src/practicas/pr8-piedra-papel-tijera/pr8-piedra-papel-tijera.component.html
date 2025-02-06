@@ -1,0 +1,16 @@
+<main>
+  <b>Piedra papel tijera</b>
+  <!-- <p>Opción elegida Jugador: {{ ele }}</p> -->
+  <p>Opción elegida Máquina: {{ eleccionMaquina }}</p>
+  <form [formGroup]="partidaFormData" (submit)="realizarJugada()">
+    Elegir:
+    <select formControlName="eleccion" id="ppt">
+      <option value="piedra">Piedra</option>
+      <option value="papel">Papel</option>
+      <option value="tijeras">Tijeras</option>
+    </select>
+    <button type="submit" >Acertar</button>
+  </form>
+
+  <p>Resultado: {{ resultado }}</p>
+</main>
