@@ -39,15 +39,17 @@ const Login = ({navigation, route}:PropsHome) => {
             const response = await axios.post(`${ipRoute}/api/v1/login/`, {
                 nombre, password
             });
-
+            
             if (response.status === 200) {
                 saveToken(response.data);
-                Alert.alert('Bienvenido ', '' ,[
-                {text: 'OK', onPress: () => navigation.navigate('DrawerNavPrincipal')},
-                ])
-            } else {
-                throw new Error("An error has occurred "+response.status);
             }
+            //     saveToken(response.data);
+            //     Alert.alert('Bienvenido ', '' ,[
+            //     {text: 'OK', onPress: () => navigation.navigate('DrawerNavPrincipal')},
+            //     ])
+            // } else {
+            //     throw new Error("An error has occurred "+response.status);
+            // }
         } catch (error) {
             console.log("An error has occurred aqui" +error.message);
 

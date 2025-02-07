@@ -25,6 +25,7 @@ const AppContext = (props: any) => {
         .then((storedToken) => {
             if (storedToken) {
                 setToken(storedToken);
+                console.log(storedToken);
                 console.log("token obtenido del storage");
             }
         })
@@ -35,7 +36,7 @@ const AppContext = (props: any) => {
      * @param token jwt
      */
     const saveToken = (tokenEspecf: string) => {
-        AsyncStorage.setItem("token", token);
+        AsyncStorage.setItem("token", tokenEspecf);
         setToken(tokenEspecf);
         console.log("token guardado");
     }

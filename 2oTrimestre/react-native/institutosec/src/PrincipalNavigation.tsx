@@ -38,17 +38,15 @@ const PrincipalNavigation = (props: Props) => {
         headerShown: false,
       }}>
       {
-        (AsyncStorage.getItem("token") == undefined) ? 
+        (context.token) ? 
         <>
-        <Stack.Screen name="Login" component={Login}/>
         <Stack.Screen name="DrawerNavPrincipal" component={DrawerNavPrincipal}/>
         </> :
         <>
-        <Stack.Screen name="DrawerNavPrincipal" component={DrawerNavPrincipal}/>
-        <Stack.Screen name="Logout" component={Logout}/>
         <Stack.Screen name="Login" component={Login}/>
         </>
       }
+      
     </Stack.Navigator>
   )
 

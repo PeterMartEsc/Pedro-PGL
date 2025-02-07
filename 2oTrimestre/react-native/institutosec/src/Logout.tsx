@@ -19,7 +19,6 @@ const Logout = ({navigation, route}:PropsHome) => {
 
     useEffect(() => {
         removeToken();
-        navigation.navigate('Login');
     }, [])
 
     return (
