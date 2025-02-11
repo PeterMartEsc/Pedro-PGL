@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { PruebaComponent } from '../practicas/pr3-prueba/prueba.component';
 import { GenteComponent } from '../practicas/pr4-gente/gente.component';
 import { CommonModule } from '@angular/common';
@@ -11,10 +11,12 @@ import { CalculoImcComponent } from '../practicas/calculo-imc/calculo-imc.compon
 
 @Component({
   selector: 'app-root',
-  //standalone: true,
+  standalone: true,
   imports: [
     CommonModule,
-    //RouterOutlet,
+    RouterOutlet,
+    RouterModule,
+    RouterLink,
     //PruebaComponent, //Pr3
     //GenteComponent,  //Pr4
     //Pr7GatosComponent,

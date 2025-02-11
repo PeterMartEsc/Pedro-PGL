@@ -1,8 +1,8 @@
 <div>
   <form [formGroup]="formulario" (submit)="calcularImc()">
     <input type="text" id="nombre" formControlName="nombre" placeholder="nombre" /><br>
-    <input type="text" id="peso" formControlName="peso" placeholder="peso" /><br>
-    <input type="text" id="altura" formControlName="altura" placeholder="altura" /><br>
+    <input type="number" id="peso" formControlName="peso" placeholder="peso" /><br>
+    <input type="number" id="altura" formControlName="altura" placeholder="altura" /><br>
     <br>
     <button type="submit" >Guardar</button>
   </form>

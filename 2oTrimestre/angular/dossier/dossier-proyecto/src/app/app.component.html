@@ -24,7 +24,12 @@
   <!-- Pr8 -->
   <!-- <app-pr8-piedra-papel-tijera></app-pr8-piedra-papel-tijera> -->
   <!--<app-pr9-doble-enlazado></app-pr9-doble-enlazado>-->
-  <app-calculo-imc></app-calculo-imc>
+  <!--<app-calculo-imc></app-calculo-imc>-->
+  <ul>
+    <li><a [routerLink]="['/']">Volver a home</a></li>
+    <li><a [routerLink]="['/imc']">Ver cálculo imc</a></li>
+    <li><a [routerLink]="['/gatos']">Ver operaciones gatos</a></li>
+  </ul>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -36,6 +41,6 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 
-<!--
+
   <router-outlet />
--->
+
