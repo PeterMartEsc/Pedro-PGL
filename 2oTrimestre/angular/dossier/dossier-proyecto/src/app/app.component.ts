@@ -7,6 +7,7 @@ import { Pr7GatosComponent } from '../practicas/pr7-gatos/pr7-gatos.component';
 import { TablaMultiplicarComponent } from './tareas-clase/tabla-multiplicar/tabla-multiplicar.component';
 import { Pr8PiedraPapelTijeraComponent } from '../practicas/pr8-piedra-papel-tijera/pr8-piedra-papel-tijera.component';
 import { Pr9DobleEnlazadoComponent } from '../practicas/pr9-doble-enlazado/pr9-doble-enlazado.component';
+import { CalculoImcComponent } from '../practicas/calculo-imc/calculo-imc.component';
 
 @Component({
   selector: 'app-root',
@@ -19,7 +20,8 @@ import { Pr9DobleEnlazadoComponent } from '../practicas/pr9-doble-enlazado/pr9-d
     //Pr7GatosComponent,
     //TablaMultiplicarComponent,
     //Pr8PiedraPapelTijeraComponent,
-    Pr9DobleEnlazadoComponent,
+    //Pr9DobleEnlazadoComponent,
+    CalculoImcComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
@@ -28,5 +30,4 @@ export class AppComponent {
   title = 'dossier-proyecto';
   nombre : string = "Pedro";
   apellidos : string = "Martín Escuela";
-
 }

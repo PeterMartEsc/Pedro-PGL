@@ -1,0 +1,18 @@
+<div>
+  <form [formGroup]="formulario" (submit)="calcularImc()">
+    <input type="text" id="nombre" formControlName="nombre" placeholder="nombre" /><br>
+    <input type="text" id="peso" formControlName="peso" placeholder="peso" /><br>
+    <input type="text" id="altura" formControlName="altura" placeholder="altura" /><br>
+    <br>
+    <button type="submit" >Guardar</button>
+  </form>
+
+  <ul>
+    <li *ngFor="let persona of personas">
+      <p>Nombre: {{ persona.nombre }}</p>
+      <p>Peso: {{ persona.peso }}</p>
+      <p>Altura: {{ persona.altura }}</p>
+      <p>IMC: {{ persona.imc }}</p>
+    </li>
+  </ul>
+</div>
