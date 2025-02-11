@@ -7,8 +7,6 @@
 <!-- * * * * * * * to get started with your project! * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
-
-
 <main>
   <!-- Pr1 - Pr2 -->
   <!-- <h3>{{title}}</h3>
@@ -25,11 +23,13 @@
   <!-- <app-pr8-piedra-papel-tijera></app-pr8-piedra-papel-tijera> -->
   <!--<app-pr9-doble-enlazado></app-pr9-doble-enlazado>-->
   <!--<app-calculo-imc></app-calculo-imc>-->
-  <ul>
+  <!-- <ul>
     <li><a [routerLink]="['/']">Volver a home</a></li>
-    <li><a [routerLink]="['/imc']">Ver cálculo imc</a></li>
+    <li><a [routerLink]="['/imc', 25]">Ver cálculo imc</a></li>
     <li><a [routerLink]="['/gatos']">Ver operaciones gatos</a></li>
-  </ul>
+  </ul> -->
+  <!-- Pr13 -->
+  <app-pr13-gatos></app-pr13-gatos>
 </main>
 
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
@@ -42,5 +42,5 @@
 
 
 
-  <router-outlet />
+<router-outlet />
 
