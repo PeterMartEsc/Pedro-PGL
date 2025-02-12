@@ -1,0 +1,33 @@
+PGL:
+
+- Acceso: Local o en Red
+
+    - Local:
+
+        - Home:
+
+            - Nueva Partida:
+
+            - Lista de partidas (Cargar partida):
+
+    - Red:
+
+        - Login || Register:
+
+            - Cargando-
+
+            - Home: 
+
+                - Buscar Partida:
+
+                    - A la espera -
+
+                - Espectar Partida (solo partidas no acabadas):
+
+                    - A la espera -
+
+                    - Partidas ? 
+
+                        elegir partida || partida aleatoria 
+                        : 
+                        intentar más tarde

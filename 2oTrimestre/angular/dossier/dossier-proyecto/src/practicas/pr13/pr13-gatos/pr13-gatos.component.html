@@ -1,0 +1,8 @@
+<div class="contenedor">
+    <div *ngFor="let foto of gatosApiArray">
+      <!-- <a [routerLink]="['/pr13/{{foto.id}}']">Ver gato {{ foto.id }}</a> -->
+      <img [src]="foto.url" alt="Foto de gato {{foto.id}}" />
+    </div>
+</div>
+
+<router-outlet />

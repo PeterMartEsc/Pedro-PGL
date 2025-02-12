@@ -8,6 +8,7 @@ import { TablaMultiplicarComponent } from './tareas-clase/tabla-multiplicar/tabl
 import { Pr8PiedraPapelTijeraComponent } from '../practicas/pr8-piedra-papel-tijera/pr8-piedra-papel-tijera.component';
 import { Pr9DobleEnlazadoComponent } from '../practicas/pr9-doble-enlazado/pr9-doble-enlazado.component';
 import { CalculoImcComponent } from '../practicas/calculo-imc/calculo-imc.component';
+import { Pr13GatosComponent } from '../practicas/pr13/pr13-gatos/pr13-gatos.component';
 
 @Component({
   selector: 'app-root',
@@ -23,7 +24,8 @@ import { CalculoImcComponent } from '../practicas/calculo-imc/calculo-imc.compon
     //TablaMultiplicarComponent,
     //Pr8PiedraPapelTijeraComponent,
     //Pr9DobleEnlazadoComponent,
-    CalculoImcComponent,
+    //CalculoImcComponent,
+    Pr13GatosComponent,
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
