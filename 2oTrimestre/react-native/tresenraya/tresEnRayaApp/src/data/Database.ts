@@ -1,31 +1,21 @@
 
-import {DataSource} from 'typeorm';
+import { DataSource } from 'typeorm';
 
 import { EjemploEntity } from './entity/EjemploEntity';
+import Partida from './entity/Partida';
 
 
 
 export const dataSource = new DataSource({
-  database: 'ejemplodb.db',
+  database: 'partidas.db',
   entities: [
-    EjemploEntity
+    Partida,
   ],
   location: 'default',
-  //logging: [],
   logging: ['error', 'query', 'schema'],
   synchronize: true,
- 
   type: 'react-native',
 });
 
 
-export const EjemploRepository = dataSource.getRepository(EjemploEntity);
-
-
-
-
-
-
-
-
-
+export const PartidaRepository = dataSource.getRepository(Partida);

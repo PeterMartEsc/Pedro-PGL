@@ -14,7 +14,7 @@ import {
 import { NavigationContainer } from '@react-navigation/native';
 import "reflect-metadata";
 import { dataSource } from './src/data/Database';
-import PrincipalStack from './src/navigations/PruebaStack';
+import PrincipalStack from './src/navigations/PrincipalStack';
 
 
 
@@ -28,10 +28,13 @@ function App(): React.JSX.Element {
       try {
         await dataSource.initialize();
         console.log("Base de datos inicializada correctamente");
-        //cargar();
         setDbInitilized(true);
-      } catch (e) { console.error("no arranca la ddbb" + e) }
+
+      } catch (e) { 
+        console.error("no ARRANCAR ARRANCAR, ESPADA la ddbb" + e) 
+      }
     }
+
     iniciarDDBB();
 
   }, [])
