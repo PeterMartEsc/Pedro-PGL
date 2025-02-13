@@ -35,18 +35,20 @@ const Juego = ({navigation,route}:PropsLocal) => {
       {
         partidaCargada ? 
         (
-          <View>
+          <View style={{flex: 1}}>
             <View style={styles.partida}>
-              <Text style={{textAlign: 'center'}}>Juego</Text>
+              <Text style={{textAlign: 'center', marginBottom: 10}}>Juego</Text>
               <View style={styles.tablero}>
                 
               </View>
             </View>
 
-            <View style={styles.regresar}>
-                <TouchableOpacity >
-                  <Text style={{textAlign: 'center'}}>Gardar y salir</Text>
-                </TouchableOpacity>
+            <View style={styles.zonaRegresar}>
+              <View style={styles.botonRegresar}>
+                  <TouchableOpacity >
+                    <Text style={{textAlign: 'center'}}>Gardar y salir</Text>
+                  </TouchableOpacity>
+              </View>
             </View>
           </View>
         ) : (
@@ -63,19 +65,30 @@ export default Juego
 
 const styles = StyleSheet.create({
 
-  partida:{
+  partida:{    
+    flex: 2,
 
+    backgroundColor: 'blue'
   },
 
   tablero:{
-    width: 400,
+    alignSelf: 'center',
+
+    width: 300,
     height: 400,
 
     borderWidth: 2,
     borderRadius: 4,
   },
 
-  regresar:{
+  zonaRegresar:{
+    flex: 1,
+    backgroundColor: 'red',
+  },
+
+  botonRegresar:{
+    alignSelf: 'center',
+
     width: 200,
     marginBottom: 10,
     padding: 10,
