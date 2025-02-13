@@ -6,34 +6,18 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PruebaStackParamList } from '../navigations/PruebaStack';
 
 
-
-
 type PropsOtra = NativeStackScreenProps<PruebaStackParamList, 'Otra'>;
-function OtraScreen({navigation,route}:PropsOtra) {
+function OtraScreen({ navigation, route }: PropsOtra) {
 
-   
-
-
-
-
-    
-        
-
-
- 
+  return (
+    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center', marginTop: 36 }}>
+      <Text>otra screen</Text>
 
 
 
-    return (
-      <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' ,marginTop: 36}}>
-        <Text>otra screen</Text>
-        
-
-      
-      </View>
-    );
+    </View>
+  );
 }
-
 
 const styles = StyleSheet.create({})
 

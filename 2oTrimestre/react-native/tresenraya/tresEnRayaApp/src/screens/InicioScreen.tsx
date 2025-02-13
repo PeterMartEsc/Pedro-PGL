@@ -8,8 +8,6 @@ import { PruebaStackParamList } from '../navigations/PruebaStack';
 import axios from 'axios';
 
 
-
-
 type PropsInicio = NativeStackScreenProps<PruebaStackParamList, 'Inicio'>;
 function InicioScreen({navigation,route}:PropsInicio) {
 
