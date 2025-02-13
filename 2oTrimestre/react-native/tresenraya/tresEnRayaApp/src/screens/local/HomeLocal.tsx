@@ -12,6 +12,7 @@ type PropsInicio = NativeStackScreenProps<LocalStackParamList, 'Home'>;
 const HomeLocal = ({navigation,route}:PropsInicio) => {
 
   const [listaPartidas, setListaPartidas] = useState<Partida[]>();
+  // const [partidaCreada, setPartidaCreada] = useState<boolean>(false);
 
   useEffect(() => {
     async function grabarYcargar(){
@@ -19,7 +20,7 @@ const HomeLocal = ({navigation,route}:PropsInicio) => {
       try {
         const partidas : Partida[] = await PartidaRepository.find();
         setListaPartidas(partidas);
-        console.log("cargados ejemplos : " + JSON.stringify(partidas));
+        console.log("cargadas partidas : " + JSON.stringify(partidas));
 
       } catch (e) {
         console.log(e.message);
@@ -30,14 +31,16 @@ const HomeLocal = ({navigation,route}:PropsInicio) => {
   }, [])
   
   function partidaNueva(){
-    
     crearGuardarPartida();
-
     navigation.navigate('Juego');
   }
 
   async function crearGuardarPartida(){
-
+    let partidaNueva = new Partida();
+    partidaNueva.nombre = new Date().toDateString();
+    partidaNueva.contenido = "";
+    PartidaRepository.save(partidaNueva);
+    console.log('Partida: '+partidaNueva.nombre+ ' creada');
   }
 
   return (
