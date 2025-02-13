@@ -7,9 +7,9 @@ import { PartidaRepository } from '../../data/Database';
 
 type Props = {}
 
-type PropsInicio = NativeStackScreenProps<LocalStackParamList, 'Home'>;
+type PropsLocal = NativeStackScreenProps<LocalStackParamList, 'Home'>;
 
-const HomeLocal = ({navigation,route}:PropsInicio) => {
+const HomeLocal = ({navigation,route}:PropsLocal) => {
 
   const [listaPartidas, setListaPartidas] = useState<Partida[]>();
   // const [partidaCreada, setPartidaCreada] = useState<boolean>(false);
@@ -44,7 +44,7 @@ const HomeLocal = ({navigation,route}:PropsInicio) => {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={{flex: 1}}>
       <View style={styles.titulo}>
         <Text style={{textAlign: 'center'}} >Bienvenido</Text>
         <Text style={{textAlign: 'center'}}>Está jugando en Local</Text>
@@ -62,9 +62,9 @@ const HomeLocal = ({navigation,route}:PropsInicio) => {
           data={listaPartidas}
           renderItem={({ item, index }) => {
               return (
-                <View style={styles.partidaLista} >
+                <View style={styles.partidaLista}>
                     <Text>
-                        {item.nombre}
+                        {item.id + " " + item.nombre}
                     </Text>
                 </View>
               )
@@ -79,10 +79,6 @@ const HomeLocal = ({navigation,route}:PropsInicio) => {
 export default HomeLocal
 
 const styles = StyleSheet.create({
-  container:{
-    flex: 1,
-
-  },
 
   titulo:{
     flex: 1,
@@ -112,5 +108,6 @@ const styles = StyleSheet.create({
     borderColor: 'black',
     borderWidth: 2,
 
+    marginBottom: 10,
   }
 })
