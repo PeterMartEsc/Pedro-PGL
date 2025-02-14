@@ -7,7 +7,7 @@ import Partida from './entity/Partida';
 
 
 export const dataSource = new DataSource({
-  database: 'partidas.db',
+  database: 'partidas2.db',
   entities: [
     Partida,
   ],

@@ -5,7 +5,7 @@ type Props = {}
 
 type PartidaContextType = {
     idPartidaActual: number,
-    saveToken: (id: number) => void,
+    saveIdPartida: (id: number) => void,
     // removeToken: () => void
 }
 
@@ -20,15 +20,15 @@ const AppContext = (props: any) => {
     }, [])
 
     
-    const saveToken = (id: number) => {
+    const saveIdPartida = (id: number) => {
         setIdActual(id);
-        console.log("id de la partida guardada");
+        console.log("id de la partida guardada "+id);
     }
 
 
     const contextValues = {
         idPartidaActual,   //idPartidaActual
-        saveToken,
+        saveIdPartida,
     }
 
     return (

@@ -5,6 +5,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PartidaRepository } from '../../data/Database';
 import { useAppContext } from '../../contexts/AppContext';
 import Partida from '../../data/entity/Partida';
+import Celda from '../../data/entity/Celda';
 
 type Props = {}
 
@@ -16,6 +17,12 @@ const Juego = ({navigation,route}:PropsLocal) => {
 
   const [partidaActual, setPartidaActual] = useState<Partida>();
   const [partidaCargada, setPartidaCargada] = useState<boolean>(false);
+  const [arrayCeldas, setArrayCeldas] = useState<Celda[][]>([]);
+
+  //Permitir jugadas
+  const [jugadorActual, setjugadorActual] = useState("X");
+  const [celdaActual, setceldaActual] = useState<Celda>();
+  const [ganador, setganador] = useState<string>("");
 
   useEffect(() => {
     const id = idPartidaActual;
@@ -23,6 +30,7 @@ const Juego = ({navigation,route}:PropsLocal) => {
     async function cargarPartidaPorId(){
       const partidaById = await PartidaRepository.findOne({where: {id}}); 
       setPartidaActual(partidaById);
+      generarPartida(partidaById);
       setPartidaCargada(true);
       console.log("cargada partida : " + JSON.stringify(partidaById));
     }
@@ -30,27 +38,183 @@ const Juego = ({navigation,route}:PropsLocal) => {
     cargarPartidaPorId();
   }, [])
 
+  function generarPartida(partida : Partida){
+    //console.log("está aqui "+JSON.stringify(partida.contenido));
+    let idSetear = 1;
+    let celdas : Celda[][] = [];
+
+    try{
+      celdas = JSON.parse(partida.contenido);
+      for(let fila = 0; fila<3; fila++){
+        for(let celda = 0; celda<3; celda++){
+          //console.log(" heeey "+celdas[fila][celda].id)
+          let celdaNueva = new Celda();
+          celdaNueva.id = idSetear;
+          celdaNueva.valor = " ";
+          idSetear++;
+          celdas[fila][celda] = celdaNueva;
+          console.log("heeey "+JSON.stringify(celdas[fila][celda].id)+ fila,celda);
+        }
+      }
+    } catch(err){
+      console.log("ha habido un error" + err);
+    }
+
+    setArrayCeldas(celdas);
+  }
+
+  function handleCell(fila : number, columna: number){
+    //console.log(celda.id)
+    let celda = arrayCeldas[fila][columna];
+    setceldaActual(celda);
+
+    if(celda.valor != " "){
+      return;
+    }
+
+    celda.valor = "X";
+
+    //Se reestructura el array para que se actualice su valor
+    arrayCeldas[fila][columna] = celda;
+    setArrayCeldas([...arrayCeldas]);
+    setjugadorActual("0");
+  }
+
+  useEffect(() => {
+    if(jugadorActual == "0"){
+
+      let terminado = false;
+      while(!terminado){
+        let randomX = Math.floor(Math.random()*3);
+        let randomY = Math.floor(Math.random()*3);
+        let celdaMaquina = arrayCeldas[randomX][randomY];
+        if(celdaMaquina.valor != "X"){
+          celdaMaquina.valor = "O";
+          arrayCeldas[randomX][randomY] = celdaMaquina;
+          setArrayCeldas([...arrayCeldas]);
+          terminado = true;
+        }
+      }
+    }
+    setjugadorActual("X");
+  }, [jugadorActual])
+
+
+  useEffect(() => {
+    console.log("el jugador actual es "+ jugadorActual);
+    if(hayGanador()){
+      setganador(jugadorActual == "X" ? "Has ganado" : "Ha ganado la máquina");
+    }
+
+  }, [jugadorActual])
+  
+  function hayGanador(){
+    return true;
+  }
+
+  // function hayGanador() : boolean{
+
+  //       let hayLineas = comprobarLineas();
+  //       let hayDiagonales = comprobarDiagonales();
+
+  //       if(hayDiagonales || hayLineas){
+  //           return true;
+  //       }
+
+  //       return false;
+  // }
+
+
+  // function comprobarLineas() : boolean{
+
+  //       let contadorX = 0;
+  //       let contadorY = 0;
+
+  //       for(let x = 0; x< 3; x++){
+  //           for(let j = 0 ; j<3; j++){
+  //               if(arrayCeldas[x][j].valor == jugadorActual || arrayCeldas[x][j].valor == jugadorActual ){
+  //                   contadorX++;
+  //               } else if (arrayCeldas[j][x].valor == jugadorActual || arrayCeldas[j][x].valor == jugadorActual){
+  //                   contadorY++;
+  //               }
+  //           }
+  //           if(contadorX == 3|| contadorY == 3){
+  //               return true;
+  //           }
+
+  //           contadorX = 0;
+  //           contadorY = 0;
+  //       }
+  //       return false;
+
+  // }
+
+
+  // function comprobarDiagonales() : boolean{
+  //   let diagonalIzq = 0;
+  //   let diagonalDer = 0;
+
+  //   for(let x = 0; x< 3; x++){
+  //       if(arrayCeldas[x][x].valor == jugadorActual){
+  //           diagonalIzq++;
+  //       }
+  //       if(arrayCeldas[x][x-1].valor == jugadorActual){
+  //           diagonalDer++;
+  //       }
+
+  //   }
+  //   if(diagonalIzq == 3|| diagonalDer == 3){
+  //       return true;
+  //   }
+
+  //   return false;
+  // }
+
   return (
     <>
       {
         partidaCargada ? 
         (
           <View style={{flex: 1}}>
-            <View style={styles.partida}>
-              <Text style={{textAlign: 'center', marginBottom: 10}}>Juego</Text>
+            <View style={styles.zonaPartida}>
+              <View style={styles.title}>
+                <Text style={{textAlign: 'center', marginBottom: 10}}>Juego</Text>
+              </View>
+
               <View style={styles.tablero}>
-                
+                {
+                  arrayCeldas.map((fila, indexI) => {
+                    return (
+                      <View key={indexI} style={styles.fila}>
+                        {
+                          fila.map((celda, indexJ) => {
+                            return (
+                              <TouchableOpacity key={indexJ} style={styles.celda} /*onPress={()=> console.log(celda.id)}*/ onPress={()=> handleCell(indexI, indexJ)}>
+                                <Text style={{textAlign: 'center'}}>{celda.valor.toString()}</Text>
+                              </TouchableOpacity>
+                            )
+                          })
+                        }
+                      </View>
+                    )
+                  })
+                }
+              </View>
+
+              <View>
+                <Text>{ganador}</Text>
               </View>
             </View>
 
             <View style={styles.zonaRegresar}>
               <View style={styles.botonRegresar}>
-                  <TouchableOpacity >
+                  <TouchableOpacity>
                     <Text style={{textAlign: 'center'}}>Gardar y salir</Text>
                   </TouchableOpacity>
               </View>
             </View>
           </View>
+
         ) : (
           <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
             <Text>Cargando...</Text>
@@ -65,25 +229,43 @@ export default Juego
 
 const styles = StyleSheet.create({
 
-  partida:{    
+  zonaPartida:{    
     flex: 2,
+    alignItems: 'center',
+    //backgroundColor: 'red'
+  },
 
-    backgroundColor: 'blue'
+  title:{
+    marginTop: 5,
   },
 
   tablero:{
-    alignSelf: 'center',
+    justifyContent: 'center',
+    alignItems: 'center',
 
     width: 300,
-    height: 400,
+    height: 300,
 
     borderWidth: 2,
     borderRadius: 4,
   },
 
+  fila:{
+    flexDirection: 'row',
+  },
+
+  celda:{
+    //backgroundColor: 'blue',
+    width: 90,
+    height: 90,
+    margin: 2,
+    borderColor: 'black',
+    borderWidth: 2,
+  },
+
   zonaRegresar:{
     flex: 1,
-    backgroundColor: 'red',
+    //backgroundColor: 'red',
   },
 
   botonRegresar:{

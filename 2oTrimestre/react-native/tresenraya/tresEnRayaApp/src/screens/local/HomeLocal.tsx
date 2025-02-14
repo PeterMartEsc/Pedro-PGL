@@ -4,6 +4,7 @@ import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { LocalStackParamList } from '../../navigations/Local';
 import Partida from '../../data/entity/Partida';
 import { PartidaRepository } from '../../data/Database';
+import { useAppContext } from '../../contexts/AppContext';
 
 type Props = {}
 
@@ -12,6 +13,8 @@ type PropsLocal = NativeStackScreenProps<LocalStackParamList, 'Home'>;
 const HomeLocal = ({navigation,route}:PropsLocal) => {
 
   const [listaPartidas, setListaPartidas] = useState<Partida[]>();
+  const {saveIdPartida} =  useAppContext();
+
   // const [partidaCreada, setPartidaCreada] = useState<boolean>(false);
 
   useEffect(() => {
@@ -38,9 +41,20 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
   async function crearGuardarPartida(){
     let partidaNueva = new Partida();
     partidaNueva.nombre = new Date().toDateString();
-    partidaNueva.contenido = "";
-    PartidaRepository.save(partidaNueva);
-    console.log('Partida: '+partidaNueva.nombre+ ' creada');
+    let tablero = [
+      ["", "", ""],
+      ["", "", ""],
+      ["", "", ""]
+    ];
+    partidaNueva.contenido = JSON.stringify(tablero);
+
+    try{
+        let partidaAlmacenada = await PartidaRepository.save(partidaNueva);
+        saveIdPartida(partidaAlmacenada.id);
+        console.log('Partida: '+partidaAlmacenada.id+ ' creada');
+    } catch (e) {
+      console.log("nuevo error "+ e);
+    }
   }
 
   return (

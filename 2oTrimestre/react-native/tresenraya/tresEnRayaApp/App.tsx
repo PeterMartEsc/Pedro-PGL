@@ -15,6 +15,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import "reflect-metadata";
 import { dataSource } from './src/data/Database';
 import PrincipalStack from './src/navigations/PrincipalStack';
+import AppContext from './src/contexts/AppContext';
 
 
 
@@ -44,7 +45,9 @@ function App(): React.JSX.Element {
       {
         dbInitilized ? (
           <NavigationContainer >
-            <PrincipalStack/>
+            <AppContext>
+              <PrincipalStack/>
+            </AppContext>
           </NavigationContainer>
         ) : (
           <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
