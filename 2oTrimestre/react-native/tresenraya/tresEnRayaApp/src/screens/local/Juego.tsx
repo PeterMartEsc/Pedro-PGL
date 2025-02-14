@@ -24,6 +24,7 @@ const Juego = ({navigation,route}:PropsLocal) => {
   const [celdaActual, setceldaActual] = useState<Celda>();
   const [ganador, setganador] = useState<string>("");
 
+
   useEffect(() => {
     const id = idPartidaActual;
 
@@ -60,6 +61,7 @@ const Juego = ({navigation,route}:PropsLocal) => {
       console.log("ha habido un error" + err);
     }
 
+    console.log(partida.terminada);
     setArrayCeldas(celdas);
   }
 
@@ -68,7 +70,7 @@ const Juego = ({navigation,route}:PropsLocal) => {
     let celda = arrayCeldas[fila][columna];
     setceldaActual(celda);
 
-    if(celda.valor != " "){
+    if(celda.valor != " " || partidaActual.terminada){
       return;
     }
 
@@ -83,12 +85,17 @@ const Juego = ({navigation,route}:PropsLocal) => {
   useEffect(() => {
     if(jugadorActual == "0"){
 
+      if(partidaActual.terminada){
+        return;
+      }
+
       let terminado = false;
       while(!terminado){
         let randomX = Math.floor(Math.random()*3);
         let randomY = Math.floor(Math.random()*3);
         let celdaMaquina = arrayCeldas[randomX][randomY];
-        if(celdaMaquina.valor != "X"){
+
+        if(celdaMaquina.valor == " "){
           celdaMaquina.valor = "O";
           arrayCeldas[randomX][randomY] = celdaMaquina;
           setArrayCeldas([...arrayCeldas]);
@@ -104,12 +111,14 @@ const Juego = ({navigation,route}:PropsLocal) => {
     console.log("el jugador actual es "+ jugadorActual);
     if(hayGanador()){
       setganador(jugadorActual == "X" ? "Has ganado" : "Ha ganado la máquina");
+      partidaActual.terminada == true;
+      setPartidaActual(partidaActual);
     }
 
   }, [jugadorActual])
   
   function hayGanador(){
-    return true;
+    return false;
   }
 
   // function hayGanador() : boolean{

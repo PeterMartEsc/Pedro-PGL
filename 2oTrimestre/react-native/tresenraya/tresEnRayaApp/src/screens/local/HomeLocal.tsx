@@ -47,6 +47,7 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
       ["", "", ""]
     ];
     partidaNueva.contenido = JSON.stringify(tablero);
+    partidaNueva.terminada = false; 
 
     try{
         let partidaAlmacenada = await PartidaRepository.save(partidaNueva);
