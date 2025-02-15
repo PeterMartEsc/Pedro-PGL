@@ -21,13 +21,12 @@ const Juego = ({navigation,route}:PropsLocal) => {
 
   //Permitir jugadas
   const [jugadorActual, setjugadorActual] = useState("X");
-  const [celdaActual, setceldaActual] = useState<Celda>();
   const [ganador, setganador] = useState<string>("");
 
 
   useEffect(() => {
     const id = idPartidaActual;
-    console.log(" idPartida actual: "+idPartidaActual);
+    //console.log(" idPartida actual: "+idPartidaActual);
 
     //Fuerza a esperar a que se setee el idPartidaActual
     if (id === null) {
@@ -36,14 +35,22 @@ const Juego = ({navigation,route}:PropsLocal) => {
     }
 
     async function cargarPartidaPorId(){
-      const partidaById = await PartidaRepository.findOne({where: {id}});
-      //Guarda el objeto partida buscado
-      setPartidaActual(partidaById);
+      try{
+        const partidaById = await PartidaRepository.findOne({where: {id}});
+      
       //Genera el array de casillas a partir del contenido de objeto partida
       generarPartida(partidaById);
+
+      //Guarda el objeto partida buscado
+      setPartidaActual(partidaById);
+      console.log("resultado "+partidaById.resultado);
+      setganador(partidaById.resultado);
       //Marca la partida como cargada
       setPartidaCargada(true);
-      console.log("cargada partida : " + JSON.stringify(partidaById));
+      //console.log("cargada partida : " + JSON.stringify(partidaById));
+      } catch (e) {
+        console.log("Error al cargar la partida: "+e);
+      }
     }
 
     cargarPartidaPorId();
@@ -56,22 +63,25 @@ const Juego = ({navigation,route}:PropsLocal) => {
 
     try{
       celdas = JSON.parse(partida.contenido);
-      for(let fila = 0; fila<3; fila++){
-        for(let celda = 0; celda<3; celda++){
-          //console.log(" heeey "+celdas[fila][celda].id)
-          let celdaNueva = new Celda();
-          celdaNueva.id = idSetear;
-          celdaNueva.valor = " ";
-          idSetear++;
-          celdas[fila][celda] = celdaNueva;
-          console.log("heeey "+JSON.stringify(celdas[fila][celda].id)+ fila,celda);
+      console.log("celdas cargadas "+JSON.stringify(celdas));
+      if(!celdas.some(fila => fila.some(celda => celda.valor === "X" || celda.valor === "0"))){
+        for(let fila = 0; fila<3; fila++){
+          for(let celda = 0; celda<3; celda++){
+            //console.log(" heeey "+celdas[fila][celda].id)
+            let celdaNueva = new Celda();
+            celdaNueva.id = idSetear;
+            celdaNueva.valor = " ";
+            idSetear++;
+            celdas[fila][celda] = celdaNueva;
+            //console.log("heeey "+JSON.stringify(celdas[fila][celda].id)+ fila,celda);
+          }
         }
       }
     } catch(err){
       console.log("ha habido un error" + err);
     }
 
-    console.log(partida.terminada);
+    //console.log(partida.terminada);
     setArrayCeldas(celdas);
   }
 
@@ -79,7 +89,6 @@ const Juego = ({navigation,route}:PropsLocal) => {
   function handleCell(fila : number, columna: number){
 
     let celda = arrayCeldas[fila][columna];
-    setceldaActual(celda);
 
     if(celda.valor != " " || partidaActual.terminada){
       return;
@@ -127,13 +136,15 @@ const Juego = ({navigation,route}:PropsLocal) => {
     if(partidaCargada && arrayCeldas.length > 0){
 
       if(!partidaActual.terminada && hayGanador(arrayComprobar)){
-        setganador(jugadorActual === "X" ? "Has ganado" : "Ha ganado la máquina");
+        let decision = jugadorActual === "X" ? "Has ganado" : "Ha ganado la máquina"
+        setganador(decision);
         partidaActual.terminada = true;
+        partidaActual.resultado = decision;
         setPartidaActual(partidaActual);
-        console.log("gana: " + jugadorActual);
+        //console.log("gana: " + jugadorActual);
       }
 
-      console.log("no hay ganador. Turno de " );
+      //console.log("no hay ganador. Turno de " );
     }
 
   }
@@ -162,55 +173,13 @@ const Juego = ({navigation,route}:PropsLocal) => {
     return false;
   }
 
-
-  /*function comprobarLineas() : boolean{
-
-        let contadorX = 0;
-        let contadorY = 0;
-
-        for(let x = 0; x< 3; x++){
-            for(let j = 0 ; j<3; j++){
-                if(arrayCeldas[x][j].valor == jugadorActual || arrayCeldas[x][j].valor == jugadorActual ){
-                    contadorX++;
-                } else if (arrayCeldas[j][x].valor == jugadorActual || arrayCeldas[j][x].valor == jugadorActual){
-                    contadorY++;
-                }
-            }
-            if(contadorX == 3|| contadorY == 3){
-                return true;
-            }
-
-            contadorX = 0;
-            contadorY = 0;
-        }
-        return false;
-
-  }
-
-
-  function comprobarDiagonales() : boolean{
-    let diagonalIzq = 0;
-    let diagonalDer = 0;
-
-    for(let x = 0; x< 3; x++){
-        if(arrayCeldas[x][x].valor == jugadorActual){
-            diagonalIzq++;
-        }
-        if(arrayCeldas[x][2-x].valor == jugadorActual){
-            diagonalDer++;
-        }
-
-    }
-    if(diagonalIzq == 3|| diagonalDer == 3){
-        return true;
-    }
-
-    return false;
-  }*/
-
   async function guardarPartida(){
-    partidaActual.contenido = JSON.stringify(arrayCeldas); // Guardar el tablero actualizado
-    await PartidaRepository.save(partidaActual); // Guardar la partida en la base de datos
+    //console.log("guardas este contenido "+JSON.stringify(arrayCeldas));
+    let actualizar = partidaActual;
+    actualizar.contenido = JSON.stringify(arrayCeldas); // Guardar el tablero actualizado
+    //console.log("contenido stringifado: "+actualizar.contenido);
+    let guardado = await PartidaRepository.save(actualizar); // Guardar la partida en la base de datos
+    console.log("guardado? "+JSON.stringify(guardado));
     navigation.navigate('Home');
   }
 

@@ -22,8 +22,8 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
 
       try {
         const partidas : Partida[] = await PartidaRepository.find();
-        setListaPartidas(partidas);
-        console.log("cargadas partidas : " + JSON.stringify(partidas));
+        setListaPartidas(partidas.reverse());
+        //console.log("cargadas partidas : " + JSON.stringify(partidas));
 
       } catch (e) {
         console.log(e.message);
@@ -46,16 +46,24 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
       ["", "", ""]
     ];
     partidaNueva.contenido = JSON.stringify(tablero);
-    partidaNueva.terminada = false; 
+    partidaNueva.terminada = false;
+    partidaNueva.resultado = "";
 
     try{
         let partidaAlmacenada = await PartidaRepository.save(partidaNueva);
         saveIdPartida(partidaAlmacenada.id);
-        console.log('Partida: '+partidaAlmacenada.id+ ' creada');
+        //console.log('Partida: '+partidaAlmacenada.id+ ' creada');
         navigation.navigate('Juego');
     } catch (e) {
       console.log("nuevo error "+ e);
     }
+  }
+
+  async function cargarPartidaExistente(idPartidaCargar : number){
+    let partidaCargar = await PartidaRepository.findOne({where: {id: idPartidaCargar}});
+    console.log("contenido cargada: "+JSON.stringify(partidaCargar));
+    saveIdPartida(partidaCargar.id);
+    navigation.navigate('Juego');
   }
 
   return (
@@ -78,9 +86,11 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
           renderItem={({ item, index }) => {
               return (
                 <View style={styles.partidaLista}>
-                    <Text>
-                        {item.id + " " + item.nombre}
-                    </Text>
+                    <TouchableOpacity onPress={()=> cargarPartidaExistente(item.id)}>
+                      <Text>
+                          {item.id + " " + item.nombre}
+                      </Text>
+                    </TouchableOpacity>
                 </View>
               )
           }}

@@ -8,4 +8,5 @@ export default class Partida {
     @Column('text') nombre : string; //fecha de creación
     @Column('text') contenido : string;
     @Column('boolean') terminada : boolean;
+    @Column('text') resultado : string;
 }
