@@ -13,11 +13,7 @@ const PartidaContext = createContext<PartidaContextType>({} as PartidaContextTyp
 
 const AppContext = (props: any) => {
 
-    const [idPartidaActual, setIdActual] = useState<number>();
-
-    useEffect(() => {
-        
-    }, [])
+    const [idPartidaActual, setIdActual] = useState<number | null>(null);
 
     
     const saveIdPartida = (id: number) => {

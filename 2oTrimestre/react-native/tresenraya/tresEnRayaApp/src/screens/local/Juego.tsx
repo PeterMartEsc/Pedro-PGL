@@ -27,11 +27,21 @@ const Juego = ({navigation,route}:PropsLocal) => {
 
   useEffect(() => {
     const id = idPartidaActual;
+    console.log(" idPartida actual: "+idPartidaActual);
+
+    //Fuerza a esperar a que se setee el idPartidaActual
+    if (id === null) {
+      console.log("ID de la partida no disponible");
+      return;
+    }
 
     async function cargarPartidaPorId(){
-      const partidaById = await PartidaRepository.findOne({where: {id}}); 
+      const partidaById = await PartidaRepository.findOne({where: {id}});
+      //Guarda el objeto partida buscado
       setPartidaActual(partidaById);
+      //Genera el array de casillas a partir del contenido de objeto partida
       generarPartida(partidaById);
+      //Marca la partida como cargada
       setPartidaCargada(true);
       console.log("cargada partida : " + JSON.stringify(partidaById));
     }
@@ -65,8 +75,9 @@ const Juego = ({navigation,route}:PropsLocal) => {
     setArrayCeldas(celdas);
   }
 
+  //Cuando el jugador pulsa la casilla, se ejcuta la funcion.
   function handleCell(fila : number, columna: number){
-    //console.log(celda.id)
+
     let celda = arrayCeldas[fila][columna];
     setceldaActual(celda);
 
@@ -79,26 +90,31 @@ const Juego = ({navigation,route}:PropsLocal) => {
     //Se reestructura el array para que se actualice su valor
     arrayCeldas[fila][columna] = celda;
     setArrayCeldas([...arrayCeldas]);
-    setjugadorActual("0");
+    comprobar(arrayCeldas);
+    setjugadorActual(jugadorActual === "X" ? "0" : "X");
   }
 
+  //Al cambiar de jugador, si es el turno de la máquina, juega
   useEffect(() => {
-    if(jugadorActual == "0"){
-
-      if(partidaActual.terminada){
-        return;
-      }
+    if(jugadorActual == "0" && !partidaActual.terminada){
 
       let terminado = false;
+
+      const celdasVacías = arrayCeldas.flat().filter(celda => celda.valor === " ");
+      if (celdasVacías.length === 0) {
+          return; // No hay celdas vacías, no puede jugar
+      }
+
       while(!terminado){
         let randomX = Math.floor(Math.random()*3);
         let randomY = Math.floor(Math.random()*3);
         let celdaMaquina = arrayCeldas[randomX][randomY];
-
+        console.log(" intenta en " +randomX + ", " +randomY);
         if(celdaMaquina.valor == " "){
           celdaMaquina.valor = "O";
           arrayCeldas[randomX][randomY] = celdaMaquina;
           setArrayCeldas([...arrayCeldas]);
+          comprobar(arrayCeldas);
           terminado = true;
         }
       }
@@ -107,77 +123,96 @@ const Juego = ({navigation,route}:PropsLocal) => {
   }, [jugadorActual])
 
 
-  useEffect(() => {
-    console.log("el jugador actual es "+ jugadorActual);
-    if(hayGanador()){
-      setganador(jugadorActual == "X" ? "Has ganado" : "Ha ganado la máquina");
-      partidaActual.terminada == true;
-      setPartidaActual(partidaActual);
+  function comprobar(arrayComprobar: Celda[][]){
+    if(partidaCargada && arrayCeldas.length > 0){
+
+      if(!partidaActual.terminada && hayGanador(arrayComprobar)){
+        setganador(jugadorActual === "X" ? "Has ganado" : "Ha ganado la máquina");
+        partidaActual.terminada = true;
+        setPartidaActual(partidaActual);
+        console.log("gana: " + jugadorActual);
+      }
+
+      console.log("no hay ganador. Turno de " );
     }
 
-  }, [jugadorActual])
+  }
   
-  function hayGanador(){
+
+  function hayGanador(arrayComprobar: Celda[][]) : boolean{
+
+         // Revisa las filas y columnas
+    for (let i = 0; i < 3; i++) {
+      if (arrayComprobar[i][0].valor !== " " && arrayComprobar[i][0].valor === arrayComprobar[i][1].valor && arrayComprobar[i][1].valor === arrayComprobar[i][2].valor) {
+          return true;
+      }
+      if (arrayComprobar[0][i].valor !== " " && arrayComprobar[0][i].valor === arrayComprobar[1][i].valor && arrayComprobar[1][i].valor === arrayComprobar[2][i].valor) {
+          return true;
+      }
+    }
+
+    // Revisa las diagonales
+    if (arrayComprobar[0][0].valor !== " " && arrayComprobar[0][0].valor === arrayComprobar[1][1].valor && arrayComprobar[1][1].valor === arrayComprobar[2][2].valor) {
+        return true;
+    }
+    if (arrayComprobar[0][2].valor !== " " && arrayComprobar[0][2].valor === arrayComprobar[1][1].valor && arrayComprobar[1][1].valor === arrayComprobar[2][0].valor) {
+        return true;
+    }
+
     return false;
   }
 
-  // function hayGanador() : boolean{
 
-  //       let hayLineas = comprobarLineas();
-  //       let hayDiagonales = comprobarDiagonales();
+  /*function comprobarLineas() : boolean{
 
-  //       if(hayDiagonales || hayLineas){
-  //           return true;
-  //       }
+        let contadorX = 0;
+        let contadorY = 0;
 
-  //       return false;
-  // }
+        for(let x = 0; x< 3; x++){
+            for(let j = 0 ; j<3; j++){
+                if(arrayCeldas[x][j].valor == jugadorActual || arrayCeldas[x][j].valor == jugadorActual ){
+                    contadorX++;
+                } else if (arrayCeldas[j][x].valor == jugadorActual || arrayCeldas[j][x].valor == jugadorActual){
+                    contadorY++;
+                }
+            }
+            if(contadorX == 3|| contadorY == 3){
+                return true;
+            }
 
+            contadorX = 0;
+            contadorY = 0;
+        }
+        return false;
 
-  // function comprobarLineas() : boolean{
-
-  //       let contadorX = 0;
-  //       let contadorY = 0;
-
-  //       for(let x = 0; x< 3; x++){
-  //           for(let j = 0 ; j<3; j++){
-  //               if(arrayCeldas[x][j].valor == jugadorActual || arrayCeldas[x][j].valor == jugadorActual ){
-  //                   contadorX++;
-  //               } else if (arrayCeldas[j][x].valor == jugadorActual || arrayCeldas[j][x].valor == jugadorActual){
-  //                   contadorY++;
-  //               }
-  //           }
-  //           if(contadorX == 3|| contadorY == 3){
-  //               return true;
-  //           }
-
-  //           contadorX = 0;
-  //           contadorY = 0;
-  //       }
-  //       return false;
-
-  // }
+  }
 
 
-  // function comprobarDiagonales() : boolean{
-  //   let diagonalIzq = 0;
-  //   let diagonalDer = 0;
+  function comprobarDiagonales() : boolean{
+    let diagonalIzq = 0;
+    let diagonalDer = 0;
 
-  //   for(let x = 0; x< 3; x++){
-  //       if(arrayCeldas[x][x].valor == jugadorActual){
-  //           diagonalIzq++;
-  //       }
-  //       if(arrayCeldas[x][x-1].valor == jugadorActual){
-  //           diagonalDer++;
-  //       }
+    for(let x = 0; x< 3; x++){
+        if(arrayCeldas[x][x].valor == jugadorActual){
+            diagonalIzq++;
+        }
+        if(arrayCeldas[x][2-x].valor == jugadorActual){
+            diagonalDer++;
+        }
 
-  //   }
-  //   if(diagonalIzq == 3|| diagonalDer == 3){
-  //       return true;
-  //   }
+    }
+    if(diagonalIzq == 3|| diagonalDer == 3){
+        return true;
+    }
 
-  //   return false;
-  // }
+    return false;
+  }*/
+
+  async function guardarPartida(){
+    partidaActual.contenido = JSON.stringify(arrayCeldas); // Guardar el tablero actualizado
+    await PartidaRepository.save(partidaActual); // Guardar la partida en la base de datos
+    navigation.navigate('Home');
+  }
 
   return (
     <>
@@ -217,7 +252,7 @@ const Juego = ({navigation,route}:PropsLocal) => {
 
             <View style={styles.zonaRegresar}>
               <View style={styles.botonRegresar}>
-                  <TouchableOpacity>
+                  <TouchableOpacity onPress={guardarPartida}>
                     <Text style={{textAlign: 'center'}}>Gardar y salir</Text>
                   </TouchableOpacity>
               </View>

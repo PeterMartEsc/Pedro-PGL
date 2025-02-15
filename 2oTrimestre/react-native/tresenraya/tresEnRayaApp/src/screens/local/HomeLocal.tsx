@@ -35,7 +35,6 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
   
   function partidaNueva(){
     crearGuardarPartida();
-    navigation.navigate('Juego');
   }
 
   async function crearGuardarPartida(){
@@ -53,6 +52,7 @@ const HomeLocal = ({navigation,route}:PropsLocal) => {
         let partidaAlmacenada = await PartidaRepository.save(partidaNueva);
         saveIdPartida(partidaAlmacenada.id);
         console.log('Partida: '+partidaAlmacenada.id+ ' creada');
+        navigation.navigate('Juego');
     } catch (e) {
       console.log("nuevo error "+ e);
     }
