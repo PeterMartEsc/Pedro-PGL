@@ -1,6 +1,6 @@
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
-import { LocalStackParamList } from '../../navigations/Local';
+import { LocalStackParamList } from '../../navigations/LocalStack';
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { PartidaRepository } from '../../data/Database';
 import { useAppContext } from '../../contexts/AppContext';

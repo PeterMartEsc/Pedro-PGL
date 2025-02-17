@@ -3,8 +3,8 @@ import React, { useEffect } from 'react'
 import { createNativeStackNavigator, NativeStackScreenProps } from '@react-navigation/native-stack';
 import Icon from 'react-native-vector-icons/Ionicons';
 import { EjemploEntity } from '../data/entity/EjemploEntity';
-import LocalStack from './Local';
-import OnlineStack from './Online';
+import LocalStack from './LocalStack';
+import OnlineStack from './OnlineStack';
 import InicioScreen from '../screens/InicioScreen';
 
 type Props = {}

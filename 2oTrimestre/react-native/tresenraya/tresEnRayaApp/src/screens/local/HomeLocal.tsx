@@ -1,7 +1,7 @@
 import { FlatList, StyleSheet, Text, TouchableHighlight, TouchableOpacity, View } from 'react-native'
 import React, { useEffect, useState } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { LocalStackParamList } from '../../navigations/Local';
+import { LocalStackParamList } from '../../navigations/LocalStack';
 import Partida from '../../data/entity/Partida';
 import { PartidaRepository } from '../../data/Database';
 import { useAppContext } from '../../contexts/AppContext';

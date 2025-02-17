@@ -32,7 +32,7 @@ function App(): React.JSX.Element {
         setDbInitilized(true);
 
       } catch (e) { 
-        console.error("no ARRANCAR ARRANCAR, ESPADA la ddbb" + e) 
+        console.error("no arranca la ddbb" + e) 
       }
     }
 
