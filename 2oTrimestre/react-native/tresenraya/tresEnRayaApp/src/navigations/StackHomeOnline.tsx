@@ -10,16 +10,17 @@ import HomeOnline from '../screens/online/HomeOnline';
 import { useAppContext } from '../contexts/AppContext';
 import { useJwt } from 'react-jwt';
 import Logout from '../screens/online/auth/Logout';
-import StackHomeOnline from './StackHomeOnline';
+import PartidaOnline from '../screens/online/PartidaOnline';
+import BuscarPartida from '../screens/online/BuscarPartida';
 
 
 type Props = {}
 
 export type OnlineStackParamList = {
-    Login: undefined,
-    Register: undefined,
-    StackHomeOnline: undefined,
+    HomeOnline: undefined,
     Logout: undefined,
+    PartidaOnline: undefined,
+    BuscarPartida: undefined,
 };
 
 type tokenPlayload ={
@@ -29,7 +30,7 @@ type tokenPlayload ={
 
 const Stack = createNativeStackNavigator<OnlineStackParamList>();
 
-function OnlineStack() {
+function StackHomeOnline() {
 
     const context = useAppContext();
     const { decodedToken } = useJwt<tokenPlayload>(context.token);
@@ -45,19 +46,12 @@ function OnlineStack() {
                 headerShown: false, // Oculta la cabecera para todas las pantallas
             }}
         >
-        {
-            (context.token) ? 
-            <>
-            <Stack.Screen name="StackHomeOnline" component={StackHomeOnline} />
-            </>
-            :
-            <>
-            <Stack.Screen name="Login" component={Login} />
-            <Stack.Screen name="Register" component={Register} />
-            </>
-        }
+        <Stack.Screen name="HomeOnline" component={HomeOnline} />
+        <Stack.Screen name="PartidaOnline" component={PartidaOnline} />
+        <Stack.Screen name="BuscarPartida" component={BuscarPartida} />
+        <Stack.Screen name="Logout" component={Logout} />
         </Stack.Navigator>
     );
 }
 
-export default OnlineStack;
+export default StackHomeOnline;

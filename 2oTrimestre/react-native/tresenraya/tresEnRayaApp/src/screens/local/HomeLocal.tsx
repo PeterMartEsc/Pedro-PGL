@@ -132,6 +132,8 @@ const styles = StyleSheet.create({
   partidaLista:{
     borderColor: 'black',
     borderWidth: 2,
+    borderRadius: 5,
+    padding: 10,
 
     marginBottom: 10,
   }

@@ -1,8 +1,8 @@
 import { StyleSheet, Text, View } from 'react-native'
 import React, { useEffect } from 'react'
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
-import { useAppContext } from '../../contexts/AppContext';
-import { OnlineStackParamList } from '../../navigations/OnlineStack';
+import { useAppContext } from '../../../contexts/AppContext';
+import { OnlineStackParamList } from '../../../navigations/OnlineStack';
 
 type Props = {}
 

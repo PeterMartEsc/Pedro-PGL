@@ -1,10 +1,10 @@
 import { Alert, StyleSheet, Text, TextInput, TouchableHighlight, View } from 'react-native'
 import React, { useState } from 'react'
 import axios from 'axios'
-import { useAppContext } from '../../contexts/AppContext'
+import { useAppContext } from '../../../contexts/AppContext'
 import { NativeStackScreenProps } from '@react-navigation/native-stack'
-import ip from '../../utilities/Globals'
-import { OnlineStackParamList } from '../../navigations/OnlineStack'
+import ip from '../../../utilities/Globals'
+import { OnlineStackParamList } from '../../../navigations/OnlineStack'
 
 type Props = {}
 
@@ -31,7 +31,7 @@ const Login = ({navigation, route}:PropsHome) => {
     async function login() {
         
         try {
-            const response = await axios.post(`${ip}/api/v1/auth/login/`, {
+            const response = await axios.post(`${ip}/api/v1/auth/login`, {
                 nombre, password
             });
             
@@ -56,7 +56,7 @@ const Login = ({navigation, route}:PropsHome) => {
 
             <View>
                 <TouchableHighlight onPress={()=> navigation.navigate('Register')}>
-                    <Text style={{color: 'blue'}}>No tengo cuenta</Text>
+                    <Text style={{color: 'blue', textAlign: 'center', margin: 20}}>No tengo cuenta</Text>
                 </TouchableHighlight>
             </View>
         </View>
